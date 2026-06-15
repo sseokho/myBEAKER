@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>myBEAKER</title>
+
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- favicon -->
+  <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+  <!-- //favicon -->
+
+  <!-- style -->
+  <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+  <!-- //style -->
+
+</head>
+
+<!-- 전달사항 :: 모달 표출시 .modal-open 붙여주세요 -->
+
+<body class="modal-open">
+
+  <!-- modal 모달 -->
+  <!-- 전달사항 :: 클래스 in 있을 때 모달 표출 -->
+  <div class="modal-backdrop fade in"></div>
+  <div id="myModal" class="modal fade in">
+    <div class="modal-dialog">
+      <div class="modal-content modal-content__width--680">
+        <div class="modal-header">
+          <!-- 2023.03.29 : mod : 타이틀 텍스트 수정 -->
+          <div class="modal-title">예산 검색</div>
+          <button type="button" class="modal-close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="board-top">
+            <div class="search-bar__row search-bar__row--modal">
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key search-bar__width--70">수행년도</dt>
+                <dd class="search-bar__val search-bar__val--flexible">
+                  <div class="search-form">
+                    <div class="search-form__inner">
+                      <input type="text" class="ui-input ui-input__width--full ui-input__date">
+                    </div>
+                  </div>
+
+                </dd>
+              </dl>
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key search-bar__width--70">수행부서</dt>
+                <dd class="search-bar__val search-bar__val--flexible">
+                  <div class="search-form">
+                    <div class="search-form__inner">
+                      <select class="ui-select ui-select__width--full">
+                        <option>선택</option>
+                      </select>
+                    </div>
+                  </div>
+                </dd>
+              </dl>
+
+            </div>
+            <div class="search-bar__row search-bar__row--modal">
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key search-bar__width--70">검색</dt>
+                <dd class="search-bar__val search-bar__val--flexible">
+                  <div class="search-form">
+                    <div class="search-form__inner">
+                      <input type="text" class="ui-input ui-input__width--full" placeholder="예산코드 or 과제명 or P/L">
+                      <button type="button" class="button-search">검색</button>
+                    </div>
+                  </div>
+                </dd>
+              </dl>
+
+            </div>
+          </div>
+          <div class="ui-table__wrap">
+            <table class="ui-table text-center ui-table__td--40">
+              <colgroup>
+                <col style="width:6rem;">
+                <col style="width:13%;">
+                <col style="width:13%;">
+                <col style="width:auto;">
+                <col style="width:11%;">
+                <col style="width:11%;">
+                <col style="width:6rem"><!-- 2023.03.27 : mod : 수치 수정 -->
+              </colgroup>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>부서</th>
+                  <th>과제 유형</th>
+                  <th>과제명</th>
+                  <th>P/L</th>
+                  <th>상세</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="ui-checkbox-block">
+                      <input type="checkbox" class="ui-checkbox" checked="">
+                      <label class="ui-label">
+                        <span class="ui-checkbox-object"></span>
+                      </label>
+                    </div>
+                  </td>
+                  <td>고객감성 Lab</td>
+                  <td>과제 유형</td>
+                  <td class="tit">
+                    <div class="tit__inner">
+                      <a href="javascript:void(0)" class="tit-link">[3071774] (기2)(PF)리리코스 마린 퍼플
+                        리바이탈 슈프림앰플 </a>
+                    </div>
+                  </td>
+                  <td>신진영</td>
+                  <td>진행</td>
+                  <td>
+                    <div class="ui-buttons">
+                      <button type="button"
+                        class="ui-button ui-button__width--40 ui-button__height--23 ui-button__border--blue ui-button__radius--2">상세</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="ui-checkbox-block">
+                      <input type="checkbox" class="ui-checkbox" checked="">
+                      <label class="ui-label">
+                        <span class="ui-checkbox-object"></span>
+                      </label>
+                    </div>
+                  </td>
+                  <td>고객감성 Lab</td>
+                  <td>과제 유형</td>
+                  <td class="tit">
+                    <div class="tit__inner">
+                      <a href="javascript:void(0)" class="tit-link">[3071774] (기2)(PF)리리코스 마린 퍼플
+                        리바이탈 슈프림앰플 </a>
+                    </div>
+                  </td>
+                  <td>신진영</td>
+                  <td>진행</td>
+                  <td>
+                    <div class="ui-buttons">
+                      <button type="button"
+                        class="ui-button ui-button__width--40 ui-button__height--23 ui-button__border--blue ui-button__radius--2">상세</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="board-bottom ">
+            <div class="board-bottom__inner board-bottom__with--button">
+              <div class="pagination">
+                <div class="pagination__inner">
+                  <a href="javascript:void(0)" class="paging paging-prev"></a>
+                  <a href="javascript:void(0)" class="paging is-active">1</a>
+                  <a href="javascript:void(0)" class="paging">2</a>
+                  <a href="javascript:void(0)" class="paging">3</a>
+                  <a href="javascript:void(0)" class="paging">4</a>
+                  <a href="javascript:void(0)" class="paging">5</a>
+                  <a href="javascript:void(0)" class="paging paging-next"></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="ui-buttons ml-auto ui-buttons__right">
+              <button type="button" class="ui-button ui-button__bg--skyblue font-weight__300">적용</button>
+            </div>
+
+          </div>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+  <!--// modal 모달 -->
+
+</body>
+
+</html>

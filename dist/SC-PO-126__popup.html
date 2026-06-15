@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>myBEAKER</title>
+
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- favicon -->
+  <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+  <!-- //favicon -->
+
+  <!-- style -->
+  <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+  <!-- //style -->
+
+  <!-- 메뉴 기능 위한 스크립트 -->
+  <script src="../dist/assets/js/jquery.js"></script>
+  <script src="../dist/assets/js/ui-script.js"></script>
+</head>
+
+<!-- 전달사항 :: 모달 표출시 .modal-open 붙여주세요 -->
+<body class="modal-open">
+
+    <!-- modal 모달 -->
+    <!-- 전달사항 :: 클래스 in 있을 때 모달 표출 -->
+    <div class="modal-backdrop fade in"></div>
+    <div id="myModal" class="modal fade in">
+      <div class="modal-dialog">
+        <div class="modal-content modal-content__width--110">
+          <div class="modal-header">
+            <div class="modal-title">인벤토리 등록</div>
+            <button type="button" class="modal-close"></button>
+          </div>
+
+          <div class="modal-body">
+
+            <div class="contents-tab__body--item">
+              <div class="basic-info__table">
+                <table class="ui-table__contents">
+                  <colgroup>
+                    <col style="width:11rem">
+                    <col style="width:auto">
+                    <col style="width:14rem">
+                    <col style="width:auto">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>인벤토리명<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                      <td colspan="3">
+                        <input type="text" class="ui-input ui-input__width--full" placeholder="인벤토리명을 입력해 주세요.">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>과제<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                      <td>
+                        <div class="search-form">
+                          <div class="search-form__inner">
+                            <input type="text" class="ui-input ui-input__width--340" placeholder="검색어를 입력하세요. ">
+                            <button type="button" class="button-search">삭제</button>
+                          </div>
+                        </div>
+                      </td>
+                      <th class="pl-25">Ver / Lot<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                      <td>
+                        <div class="form-flex">
+                          <div class="ui-select-box ui-form-box__width--200 form-flex__cell--5">
+                            <select class="ui-select ui-select__width--full">
+                              <option>선택</option>
+                            </select>
+                          </div>
+                          <div class="ui-select-box ui-form-box__width--200 form-flex__cell--5">
+                            <select class="ui-select ui-select__width--full">
+                              <option>선택</option>
+                            </select>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>담당자</th>
+                      <td>
+                        <div class="search-form">
+                          <div class="search-form__inner">
+                            <input type="text" class="ui-input ui-input__width--340" placeholder="검색어를 입력하세요. ">
+                            <button type="button" class="button-search">삭제</button>
+                          </div>
+                        </div>
+                      </td>
+                      <th class="pl-25">예산 코드</th>
+                      <td>
+                        <div class="search-form">
+                          <div class="search-form__inner">
+                            <input type="text" class="ui-input ui-input__width--340" placeholder="검색어를 입력하세요. ">
+                            <button type="button" class="button-search">삭제</button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>전시회</th>
+                      <td>
+                        <div class="search-form">
+                          <div class="search-form__inner">
+                            <input type="text" class="ui-input ui-input__width--340" placeholder="검색어를 입력하세요. ">
+                            <button type="button" class="button-search">삭제</button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>SP 구분</th>
+                      <td colspan="3">
+                        <div class="ui-checkbox__list">
+                          <div class="ui-checkbox__inner">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" checked="">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">신원료 적용</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">신골격 적용</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">이중 처방</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">신공정</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">신규 루틴</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">어플리케이터</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">베네핏 융합</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">신규 향 컨셉</span>
+                              </label>
+                            </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>제품유형<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                      <td>
+                        <div class="form-flex">
+                          <div class="ui-select-box ui-form-box__width--200  form-flex__cell--5">
+                            <select class="ui-select ui-select__width--full">
+                              <option>선택</option>
+                            </select>
+                          </div>
+                          <div class="ui-select-box ui-form-box__width--200  form-flex__cell--5">
+                            <select class="ui-select ui-select__width--full">
+                              <option>선택</option>
+                            </select>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>속성<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                      <td colspan="3">
+                        <div class="ui-checkbox__list">
+                          <div class="ui-checkbox__inner">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" checked="">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">보습</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">수분</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">안티에이징</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">미백</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">트러블</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">민감</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">더마</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">각질</span>
+                              </label>
+                            </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>One-Point<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                      <td colspan="3">
+                        <input type="text" class="ui-input ui-input__width--full" placeholder="One-Point를 입력해 주세요.">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th>고객베네핏<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                      <td colspan="3">
+                        <input type="text" class="ui-input ui-input__width--full" placeholder="고객베네핏을 입력해 주세요.">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th>제안배경<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                      <td colspan="3">
+                        <input type="text" class="ui-input ui-input__width--full" placeholder="ex) 중국 백화점 경로, 선케어 Top 1, 특이 외관 구현">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th>상품화가능시기<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                      <td colspan="3">
+                        <input type="text" class="ui-input ui-input__width--full" placeholder="ex) 3개월 (16년 9월)">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th>내용물단가</th>
+                      <td colspan="3">
+                        <input type="text" class="ui-input ui-input__width--full" placeholder="ex) 1200원 / 10ml">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th>부재료/ 미용법</th>
+                      <td colspan="3">
+                        <input type="text" class="ui-input ui-input__width--full" placeholder="부재료/미용법을 입력해 주세요.">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th>SPEC</th>
+                      <td colspan="3">
+                        <input type="text" class="ui-input ui-input__width--full" placeholder="ex) 점/경도, pH 등">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th>첨부파일</th>
+                      <td colspan="3">
+                        <div class="file-upload">
+                          <div class="file-upload__inner">
+                            <div class="file-upload__button">
+                              <button type="button" class="ui-button ui-button__bg--blue font-weight__300">첨부파일</button>
+                            </div>
+                            <ul class="ui-list file-upload__lists">
+                              <li class="file-upload__list">
+                                <span class="file-upload__name">제품 basic information.pptx</span>
+                                <button type="button" class="file-upload__button--delete"></button>
+                              </li>
+                              <li class="file-upload__list">
+                                <span class="file-upload__name">제품 basic information.pptx</span>
+                                <button type="button" class="file-upload__button--delete"></button>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+             <div class="board-bottom ">
+                  <div class="board-bottom__inner">
+                    <div class="ui-buttons ui-buttons__right">
+                      <button type="button" class="ui-button ui-button__border--blue">임시저장</button>
+                      <button type="button" class="ui-button ui-button__bg--skyblue">저장</button>
+                      <button type="button" class="ui-button ui-button__bg--lightgray">닫기</button>
+                    </div>
+                  </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+    <!--// modal 모달 -->
+
+</body>
+
+</html>

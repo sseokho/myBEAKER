@@ -1,0 +1,2262 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>myBEAKER</title>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- favicon -->
+  <!-- <link rel="icon" href="./dist/assets/images/common/favicon.ico" type="image/x-icon" /> -->
+  <!-- //favicon -->
+
+  <!-- style -->
+  <link type="text/css" rel="stylesheet" href="./dist/assets/css/common.css" />
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .is-emphasis {
+      font-weight: 700;
+      color: #ff706e;
+    }
+
+    .index-wrap {
+      box-sizing: border-box;
+      min-width: 1900px;
+      padding: 20px;
+    }
+
+    .index-title {
+      font-size: 30px;
+      line-height: 40px;
+      margin: 0 0 20px;
+    }
+
+    .index-links:before {
+      content: "";
+      display: table;
+    }
+
+    .index-links__inner {
+      margin: -10px 0 0 -10px;
+    }
+
+    .index-links__inner:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .index-links a {
+      display: block;
+      margin: 10px 0 0 10px;
+      float: left;
+      padding: 5px 15px;
+      font-size: 14px;
+      line-height: 20px;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      background: #666;
+    }
+
+    .index-gnb {
+      margin: 20px 0;
+    }
+
+    .index-bottom {
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      min-width: 1900px;
+      box-sizing: border-box;
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .index-bottom a {
+      background-color: #066cb3;
+    }
+
+    .index-section {
+      border-radius: 5px;
+      background-color: #fff;
+    }
+
+    .index-section+.index-section {
+      margin-top: 20px;
+    }
+
+    .index-section--clicked {
+      -webkit-animation: index-section-clicked 0.8s linear;
+      animation: index-section-clicked 0.8s linear;
+    }
+
+    @-webkit-keyframes index-section-clicked {
+      0% {
+        background-color: rgba(255, 255, 255, 1);
+      }
+
+      30% {
+        background-color: rgba(255, 202, 222, 1);
+      }
+
+      70% {
+        background-color: rgba(255, 202, 222, 1);
+      }
+
+      100% {
+        background-color: rgba(255, 255, 255, 1);
+      }
+    }
+
+    @keyframes index-section-clicked {
+      0% {
+        background-color: rgba(255, 255, 255, 1);
+      }
+
+      30% {
+        background-color: rgba(255, 202, 222, 1);
+      }
+
+      70% {
+        background-color: rgba(255, 202, 222, 1);
+      }
+
+      100% {
+        background-color: rgba(255, 255, 255, 1);
+      }
+    }
+
+    .index-section__title {
+      margin: 0;
+      padding: 5px 15px;
+      font-size: 14px;
+      line-height: 20px;
+      color: #fff;
+      border-radius: 5px 5px 0 0;
+      background: #333;
+    }
+
+    .index-table>table {
+      width: 100%;
+      table-layout: fixed;
+      margin: 0;
+      padding: 0;
+      border-spacing: 0;
+      box-sizing: border-box;
+    }
+
+    .index-table>table>thead>tr>th,
+    .index-table>table>tbody>tr>th,
+    .index-table>table>tbody>tr>td {
+      box-sizing: border-box;
+      font-size: 12px;
+      line-height: 18px;
+      text-align: left;
+      padding: 5px 15px;
+      border: 0 solid #cdcdcd;
+      border-width: 0 1px 1px 0;
+      background: none;
+      word-break: keep-all;
+      word-wrap: break-word;
+    }
+
+    .index-table>table>tbody>tr:hover>th,
+    .index-table>table>tbody>tr:hover>td {
+      background-color: #f6f6f6;
+    }
+
+    .index-table>table>thead>tr>th:first-child,
+    .index-table>table>tbody>tr>th:first-child,
+    .index-table>table>tbody>tr>td:first-child {
+      border-left-width: 1px;
+    }
+
+    .index-table>table>thead>tr>th {
+      border-top-width: 1px;
+    }
+
+    .index-table>table>thead>tr>th,
+    .index-table>table>tbody>tr>th {
+      background-color: #e8e8e8;
+    }
+
+    .index-table>table>tbody>tr:last-child>td:first-child {
+      border-radius: 0 0 0 5px;
+    }
+
+    .index-table>table>tbody>tr:last-child>td:last-child {
+      border-radius: 0 0 5px 0;
+    }
+
+    .index-status {
+      display: inline-block;
+      vertical-align: top;
+      padding: 3px 8px;
+      margin: -3px 0;
+      background: #999;
+      color: #fff;
+      border-radius: 5px;
+    }
+
+    .index-status--ing {
+      background-color: #ffb01a;
+    }
+
+    .index-status--end {
+      background-color: #4886ff;
+    }
+
+    .index-status--end2 {
+      font-size: 11px;
+      background-color: #008bce;
+    }
+
+    .index-status--moding {
+      background-color: #ff4594;
+    }
+
+    .index-log {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .index-log__item {
+      position: relative;
+      padding-left: 80px;
+    }
+
+    .index-log__item__date {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .index-text {
+      margin-bottom: 20px;
+    }
+
+    .index-type {
+      color: #2b5cd9;
+    }
+  </style>
+  <!-- //style -->
+</head>
+
+<body>
+  <div class="index-wrap">
+    <h1 class="index-title"></h1>
+    <div class="index-gnb">
+      <div class="index-links">
+        <div class="index-links__inner">
+          
+          <a href="./guide-component.html" target="_blank">컴포넌트 가이드</a>
+          <!-- <a href="./guide-popup.html" target="_blank">팝업 가이드</a> -->
+        </div>
+      </div>
+    </div>
+    <div class="index-bottom">
+      <div class="index-links">
+        <div class="index-links__inner" id="nav"></div>
+      </div>
+    </div>
+
+    <!--
+      <div class="index-text">기타 문구</div>
+      -->
+
+    <div class="index-datas" id="indexTable"></div>
+  </div>
+
+  <div class="index-fake-botttom"></div>
+
+  <!-- script -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    var title = "myBEAKER";
+    var tableData = [
+      /*
+      {
+        depth1: '',
+        data: [
+          {
+            id: '',
+            depth2: '',
+            depth3: '',
+            depth4: '',
+            depth5: '',
+            depth6: '',
+            path: '',
+            status: 'ing, end, end2, except',
+            create: '20xx.xx.xx',
+            update: '',
+            log: [
+              //{ date: '', text: '', },
+            ],
+          },
+        ],
+      },
+      */
+
+      {
+        depth1: "레이아웃",
+        data: [{
+            id: "",
+            depth2: "MAIN Layout",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/_main-layout.html",
+            status: "end",
+            create: "2023.03.13",
+            log: [
+              { date: "2023.04.07",  text: "left-menu toggle 메뉴 추가"}, 
+            ],
+          },
+          {
+            id: "",
+            depth2: "상세 Layout",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/_detail-layout.html",
+            status: "end",
+            create: "2023.03.13",
+            log: [
+            { date: "2023.04.07",  text: "left-menu toggle 메뉴 추가"}, 
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "",
+            depth2: "right menu",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/_right-menu.html",
+            status: "end",
+            create: "2023.04.20",
+            log: [
+            //{ date: "2023.04.07",  text: "left-menu toggle 메뉴 추가"}, 
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+        ],
+      },
+      {
+        depth1: "공통",
+        data: [{
+            id: "error-404",
+            depth2: "404",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/error-404.html",
+            status: "end",
+            create: "2023.03.20",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "error-500",
+            depth2: "500",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/error-500.html",
+            status: "end",
+            create: "2023.03.20",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "CO-PA-001",
+            depth2: "로그인",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/CO-PA-001.html",
+            status: "end",
+            create: "2023.03.14",
+            log: [
+              { date: "2023.04.11",  text: "비주얼 변경, 스위치 토글 색상 변경 및 check 표시"}, 
+            ],
+          },
+          
+          {
+            id: "CO-PA-002",
+            depth2: "MAIN",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/CO-PA-002.html",
+            status: "end",
+            create: "2023.03.14",
+            log: [
+              { date: "2023.04.03",  text: "디자인 변경으로 인한 레이아웃 수정"}, 
+              { date: "2023.04.11",  text: "이미지 전체 변경, 오버 이미지 제거&색상 추가"}, 
+            ],
+          },
+
+        ],
+      },
+      {
+        depth1: "MAIN",
+        data: [{
+            id: "CO-PA-003",
+            depth2: "알림 팝업",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/CO-PA-003.html",
+            status: "end",
+            create: "2023.03.15",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "CO-PA-004",
+            depth2: "설정 팝업",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/CO-PA-004.html",
+            status: "end",
+            create: "2023.03.16",
+            log: [
+              { date: "2023.04.26",  text: "설정 화면 두개의 영역으로 변경 요청"}, 
+              { date: "2023.04.27",  text: "설정 화면 두개의 영역으로 변경 요청 재수정"}, 
+            ],
+          },
+          {
+            id: "CO-PA-005",
+            depth2: "문의 팝업",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/CO-PA-005.html",
+            status: "end",
+            create: "2023.03.16",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "CO-PA-006",
+            depth2: "QR 팝업",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/CO-PA-006.html",
+            status: "end",
+            create: "2023.03.16",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "CO-PA-007",
+            depth2: "Left Menu",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/CO-PA-007.html",
+            status: "end",
+            create: "2023.04.07",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "CO-PA-008",
+            depth2: "Right Menu \n ( communication )",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            //path: "/CO-PA-008_communication.html",
+            path: "/_right-menu.html",
+            
+            status: "end",
+            create: "2023.04.07",
+            log: [
+              { date: "2023.04.20",  text: "Com. → Comment 텍스트 수정"}, 
+            ],
+          },
+          {
+            id: "CO-PA-008",
+            depth2: "Right Menu \n ( schedule )",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            //path: "/CO-PA-008_schedule.html",
+            path: "/_right-menu.html",
+            status: "end",
+            create: "2023.04.07",
+            log: [
+              { date: "2023.04.20",  text: "Com. → Comment 텍스트 수정"}, 
+            ],
+          },
+          {
+            id: "CO-PO-010",
+            depth2: "사용자 조회 팝업",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/CO-PO-010.html",
+            status: "end",
+            create: "2023.03.16",
+            log: [
+              { date: "2023.03.27",  text: "파일명 수정"}, 
+              { date: "2023.04.07",  text: "직위 칼럼 삭제"}, 
+            ],
+          },
+          {
+            id: "CO-PA-011",
+            depth2: "결재함",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-001__payment-box.html",
+            status: "end",
+            create: "2023.03.16",
+            log: [{
+              date: "2023.04.10",
+              text: "빠진페이지 등록"
+            }, ],
+          },
+          {
+            id: "CO-PA-011",
+            depth2: "결재함",
+            depth3: "결재 리스트(미결)",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/CO-PA-011.html",
+            status: "end",
+            create: "2023.03.16",
+            log: [{
+              date: "2022.03.22",
+              text: "col width 걊 변경"
+            }, ],
+          },
+          {
+            id: "CO-PA-013",
+            depth2: "결재함",
+            depth3: "결재 완료 리스트",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/CO-PA-013.html",
+            status: "end",
+            create: "2023.03.17",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+        ]
+      },
+      {
+        depth1: "스킨케어-제품개발",
+        data: [{
+            id: "CO-PO-119",
+            depth2: "제품개발 상세",
+            depth3: "Issue Track",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/CO-PO-119.html",
+            status: "end",
+            create: "2023.03.22",
+            log: [
+              { date: "2023.04.07",  text: "Issue Track 구분 button 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PA-001",
+            depth2: "My Board",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-001.html",
+            status: "end",
+            create: "2023.03.15",
+            log: [{
+                date: "2023.03.22",
+                text: "Memo width값, left 값 수정"
+              },
+              {
+                date: "2023.03.27",
+                text: "Examination 테이블 col width 수치 & 날짜 형식 수정, .contents-box__large&.contents-box__small 클래스 수정"
+              },
+            ],
+          },
+          {
+            id: "SC-PA-001",
+            depth2: "My Board",
+            depth3: "Assign Reseacher Tab 클릭 시",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-001__Assign-Reseacher.html",
+            status: "end",
+            create: "2023.03.27",
+            log: [
+              // {date: "2023.03.22", text: "Memo width값, left 값 수정"}, 
+              // {date: "2023.03.27", text: "Examination 테이블 col width 수치 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PA-001",
+            depth2: "My Board",
+            depth3: "Assign Reseacher Tab 클릭 시 담당자 지정 popup",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-001__popup--Assign-Reseacher.html",
+            status: "end",
+            create: "2023.03.27",
+            log: [
+              {date: "2023.04.07", text: "담당자 지정 앞에 문구 추가"}, 
+            ],
+          },
+          {
+            id: "SC-PA-001",
+            depth2: "My Board (결재함)",
+            depth3: "결재의견보기 popup",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-001__popup--viewOpinion.html",
+            status: "end",
+            create: "2023.03.27",
+            log: [],
+          },
+          {
+            id: "SC-PA-001",
+            depth2: "My Board (결재함)",
+            depth3: "의견작성",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-001__popup--writeOpinion.html",
+            status: "end",
+            create: "2023.03.27",
+            log: [],
+          },
+
+          {
+            id: "SC-PA-002",
+            depth2: "내용물 리스트",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-002.html",
+            status: "end",
+            create: "2023.03.17",
+            log: [
+              //{ date: "2023.03.20",  text: "progress 수정 중"}, 
+            ],
+          },
+          {
+            id: "SC-PA-003",
+            depth2: "내용물 등록",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-003.html",
+            status: "end",
+            create: "2023.03.20",
+            log: [
+              {date: "2023.03.24", text: "출국국가/시기 추가"}, 
+              {date: "2023.03.27", text: "기능성 항목 버튼 수정"}, 
+              {date: "2023.04.06", text: "출시 국가/시기 - 아시아,아세안,기타 부분 클래스 수정"}, 
+              
+            ],
+          },
+          {
+            id: "SC-PA-003",
+            depth2: "내용물 등록",
+            depth3: "내용물 검색 popup",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-003__popup--searchContents.html",
+            status: "end",
+            create: "2023.03.21",
+            log: [
+              //{ date: "2023.03.20",  text: "progress 수정 중"}, 
+            ],
+          },
+          {
+            id: "SC-PA-003",
+            depth2: "내용물 등록",
+            depth3: "사용자 검색 popup",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-003__popup--searchUser.html",
+            status: "end",
+            create: "2023.03.21",
+            log: [
+              //{ date: "2023.03.20",  text: "progress 수정 중"}, 
+            ],
+          },
+          {
+            id: "CO-FU-014",
+            depth2: "내용물 등록",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/CO-FU-014.html",
+            status: "end",
+            create: "2023.03.22",
+            log: [{
+              date: "2023.03.27",
+              text: ".min-height__unset 삭제"
+            }, ],
+          },
+          {
+            id: "SC-PO-004",
+            depth2: "내용물 등록",
+            depth3: "예산검색 popup",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-004.html",
+            status: "end",
+            create: "2023.03.22",
+            log: [
+              { date: "2023.03.27", text: "colgroup width 수치 수정"},
+              { date: "2023.03.29", text: "타이틀 텍스트 수정"},
+           ],
+          },
+          {
+            id: "SC-PO-005",
+            depth2: "내용물 등록",
+            depth3: "과제검색 popup",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-005.html",
+            status: "end",
+            create: "2023.03.22",
+            log: [
+              //{ date: "2023.03.20",  text: "progress 수정 중"}, 
+            ],
+          },
+          {
+            id: "SC-PO-006",
+            depth2: "내용물 등록",
+            depth3: "골격처방 검색 popup",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-006.html",
+            status: "end",
+            create: "2023.03.22",
+            log: [
+              //{ date: "2023.03.20",  text: "progress 수정 중"}, 
+            ],
+          },
+          {
+            id: "SC-PO-007",
+            depth2: "내용물 등록",
+            depth3: "원료조회 popup",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-007.html",
+            status: "end",
+            create: "2023.03.22",
+            log: [
+              { date: "2023.03.27",  text: "구조 및 클래스 수정"},
+              { date: "2023.03.28",  text: "원료 태그 추가"}, 
+              { date: "2023.04.27",  text: ".material-wrap__pop 추가"}, 
+            ],
+          },
+          {
+            id: "SC-PO-200",
+            depth2: "내용물 등록",
+            depth3: "심사번호 찾기",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-200.html",
+            status: "end",
+            create: "2023.03.27",
+            log: [
+              { date: "2023.03.29",  text: "검색조건 추가"}, 
+            ],
+          },
+          {
+            id: "SC-PO-008",
+            depth2: "내용물 개요 상세",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-008.html",
+            status: "end",
+            create: "2023.03.17",
+            log: [
+              { date: "2023.03.29",  text: "마케터 공유하기 버튼 추가"}, 
+              { date: "2023.04.06",  text: "출시 완료 버튼 추가"}, 
+              { date: "2023.04.11",  text: "Product 버전별 탭 추가"}, 
+              { date: "2023.04.13",  text: "변경이력보기 버튼 추가, 출시완료 버튼 클래스 수정"}, 
+              { date: "2023.04.26",  text: "하단 버튼 추가"}, 
+            ],
+          },
+          {
+            id: "",
+            depth2: "마케터 공유하기",
+            depth3: "마케터 입력 요청 항목 선택 popup",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/marketerShare_popup.html", 
+            status: "end",
+            create: "2023.04.11",
+            log: [
+              { date: "2023.04.11",  text: "popup 추가"}, 
+            ],
+          },
+          {
+            id: "",
+            depth2: "마케터 공유하기",
+            depth3: "마케터 공유발송 메일 폼",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/marketerShare_emailForm.html", 
+            status: "end",
+            create: "2023.04.11",
+            log: [
+              { date: "2023.04.11",  text: "메일폼 추가"}, 
+            ],
+          },
+          {
+            id: "SC-PA-011\nSC-PA-023",
+            depth2: "원료 배합 등록 \n( default 화면)",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-011__step01.html",
+            status: "ing",
+            create: "2023.04.24",
+            log: [
+              //{ date: "2023.04.10",  text: "디자인 및 레이아웃 전체 수정"}, 
+              //{ date: "2023.04.12",  text: "무소구 가능 항목 숫자 버튼으로 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PA-011\nSC-PA-023",
+            depth2: "원료 배합 등록\n( lot 펼쳤을 경우 )",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-011__lot.html",
+            status: "ing",
+            create: "2023.04.03",
+            log: [
+              { date: "2023.04.12",  text: "무소구 가능 항목 숫자 버튼으로 수정"}, 
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          // {
+          //   id: "SC-PA-011\nSC-PA-023",
+          //   depth2: "원료 배합 등록",
+          //   depth3: "",
+          //   depth4: "",
+          //   depth5: "",
+          //   depth6: "",
+          //   path: "/SC-PA-011_p56.html",
+          //   status: "moding",
+          //   create: "2023.03.30",
+          //   log: [
+          //     //{ date: "2022.08.12",  text: "오타 수정"}, 
+          //   ],
+          // },
+          {
+            id: "SC-PA-011\nSC-PA-023",
+            depth2: "원료 배합 등록 \n(설정 및 우클릭 기능)",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-011_p57.html",
+            status: "end",
+            create: "2023.03.31",
+            log: [
+              { date: "2023.04.07",  text: "버튼 추가 & 버튼 아이콘 수정"}, 
+              { date: "2023.04.20",  text: "Select information : radio → checkbox로 수정"}, 
+            ],
+          },
+          // {
+          //   id: "SC-PA-011\nSC-PA-023",
+          //   depth2: "원료 배합 등록",
+          //   depth3: "",
+          //   depth4: "",
+          //   depth5: "",
+          //   depth6: "",
+          //   path: "/SC-PA-011_p58.html",
+          //   status: "moding",
+          //   create: "2023.03.31",
+          //   log: [
+          //     //{ date: "2022.08.12",  text: "오타 수정"}, 
+          //   ],
+          // },
+          {
+            id: "SC-PA-011\nSC-PA-023",
+            depth2: "원료 배합 등록",
+            depth3: "무소구 가능항목 상세보기 popup",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-011_p58_popup.html",
+            status: "end",
+            create: "2023.04.03",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          // {
+          //   id: "SC-PA-011\nSC-PA-023",
+          //   depth2: "원료 배합 등록",
+          //   depth3: "",
+          //   depth4: "",
+          //   depth5: "",
+          //   depth6: "",
+          //   path: "/SC-PA-011_p59.html",
+          //   status: "moding",
+          //   create: "2023.04.03",
+          //   log: [
+          //     //{ date: "2022.08.12",  text: "오타 수정"}, 
+          //   ],
+          // },
+          
+          {
+            id: "SC-PA-011\nSC-PA-023",
+            depth2: "원료 배합 등록",
+            depth3: "BOM 임시 전송 시 뜨는 확인 popup",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-011__lot--popup.html",
+            status: "end",
+            create: "2023.04.03",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PA-011\nSC-PA-023",
+            depth2: "원료 배합 등록",
+            depth3: "확대 기능 popup",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-011_p63_popup.html",
+            status: "end",
+            create: "2023.04.03",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          // {
+          //   id: "CO-PA-008",
+          //   depth2: "Right Menu(status)",
+          //   depth3: "",
+          //   depth4: "",
+          //   depth5: "",
+          //   depth6: "",
+          //   path: "/CO-PA-008.html",
+          //   status: "end",
+          //   create: "2023.04.03",
+          //   log: [
+          //     { date: "2023.04.05",  text: "마케팅 송부 한줄로 수정, 해제 버튼 추가"}, 
+          //     { date: "2023.04.06",  text: "Recent, Favorite 전체 수정"}, 
+          //   ],
+          // },
+          // {
+          //   id: "SC-PA-011",
+          //   depth2: "원료 배합",
+          //   depth3: "조색 설정 추가",
+          //   depth4: "",
+          //   depth5: "",
+          //   depth6: "",
+          //   path: "/SC-PA-011__toning.html",
+          //   status: "ing",
+          //   create: "2023.04.12",
+          //   log: [
+          //     // { date: "2023.04.05",  text: "마케팅 송부 한줄로 수정, 해제 버튼 추가"}, 
+          //     // { date: "2023.04.06",  text: "Recent, Favorite 전체 수정"}, 
+          //   ],
+          // },
+          {
+            id: "SC-PO-012",
+            depth2: "원료 배합 등록",
+            depth3: "원료검색 SAP코드 검색",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-012__popup1.html",
+            status: "end",
+            create: "2023.03.29",
+            log: [
+              { date: "2023.04.25",  text: ".material-wrap__pop 추가"}, 
+            ],
+          },
+          {
+            id: "SC-PO-012",
+            depth2: "원료 배합 등록",
+            depth3: "원료검색 임시코드 검색",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-012__popup2.html",
+            status: "end",
+            create: "2023.03.29",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PO-012",
+            depth2: "원료 배합 등록",
+            depth3: "원료검색 즐겨찾기 원료",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-012__popup3.html",
+            status: "end",
+            create: "2023.03.29",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PO-013",
+            depth2: "원료 배합 등록",
+            depth3: "처방불러오기 기존처방",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-013__popup1.html",
+            status: "end",
+            create: "2023.03.30",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PO-013",
+            depth2: "원료 배합 등록",
+            depth3: "처방불러오기 자사카운터",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-013__popup2.html",
+            status: "end",
+            create: "2023.03.30",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PO-013",
+            depth2: "원료 배합 등록",
+            depth3: "처방불러오기 SAP SYNC",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-013__popup3.html",
+            status: "end",
+            create: "2023.03.30",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PO-015",
+            depth2: "원료 배합 등록",
+            depth3: "무소구 가능항목 상세보기",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-015__popup.html",
+            status: "end",
+            create: "2023.04.04",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PO-016",
+            depth2: "원료 배합 등록",
+            depth3: "문제이력",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-016__popup1.html",
+            status: "end",
+            create: "2023.04.04",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PO-016",
+            depth2: "원료 배합 등록",
+            depth3: "글로벌 금지",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-016__popup2.html",
+            status: "end",
+            create: "2023.04.04",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PO-016",
+            depth2: "원료 배합 등록",
+            depth3: "글로벌 제한",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-016__popup3.html",
+            status: "end",
+            create: "2023.04.04",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PO-017",
+            depth2: "원료 배합 시험의뢰",
+            depth3: "부향",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-017__popup.html",
+            status: "end",
+            create: "2023.04.04",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PO-018",
+            depth2: "원료 배합 시험의뢰",
+            depth3: "안전성",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-018__popup.html",
+            status: "end",
+            create: "2023.04.05",
+            log: [
+              { date: "2023.04.18",  text: "삭제 버튼 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PO-019",
+            depth2: "원료 배합 시험의뢰",
+            depth3: "방부",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-019__popup.html",
+            status: "end",
+            create: "2023.04.06",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PO-020",
+            depth2: "원료 배합 시험의뢰",
+            depth3: "기능성",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-020__popup.html",
+            status: "end",
+            create: "2023.04.07",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PO-021",
+            depth2: "원료 배합 시험의뢰",
+            depth3: "효능임상",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-021__popup.html",
+            status: "end",
+            create: "2023.04.07",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PO-022",
+            depth2: "원료 배합 시험의뢰",
+            depth3: "무소구",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-022__popup.html",
+            status: "end",
+            create: "2023.04.07",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PO-025",
+            depth2: "실험결과 등록",
+            depth3: "전성분보기",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-025.html",
+            status: "end",
+            create: "2023.04.05",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PO-026",
+            depth2: "실험결과 등록",
+            depth3: "전성분 미리보기",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-026.html",
+            status: "end",
+            create: "2023.04.06",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PO-026",
+            depth2: "실험결과 등록",
+            depth3: "전성분 미리보기",
+            depth4: "배합규제 popup",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-026__popup2.html",
+            status: "end",
+            create: "2023.04.06",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+
+          {
+            id: "SC-PA-028",
+            depth2: "시험의뢰 현황",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-028.html",
+            status: "end",
+            create: "2023.03.23",
+            log: [
+              { date: "2023.04.13",  text: "내용물명 툴팁 추가"}, 
+            ],
+          },
+          {
+            id: "SC-PA-029",
+            depth2: "시험의뢰 현황",
+            depth3: "QR코드생성",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-029.html",
+            status: "end",
+            create: "2023.03.23",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PO-110",
+            depth2: "원료 배합 시험의뢰",
+            depth3: "내용물 검색",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-110__popup1.html",
+            status: "end",
+            create: "2023.04.06",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PO-110",
+            depth2: "원료 배합 시험의뢰",
+            depth3: "내용물 검색",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-110__popup2.html",
+            status: "end",
+            create: "2023.04.06",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PO-121",
+            depth2: "원료 배합 시험의뢰",
+            depth3: "내용물 검색",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-121__popup1.html",
+            status: "end",
+            create: "2023.04.07",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PO-121",
+            depth2: "원료 배합 시험의뢰",
+            depth3: "내용물 검색",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-121__popup2.html",
+            status: "end",
+            create: "2023.04.07",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          
+
+        ],
+      },
+
+
+      //스킨케어 - 프로세스
+      {
+        depth1: "스킨케어-제품개발-프로세스",
+        data: [
+          {
+            id: "SC-PA-031",
+            depth2: "제품개발",
+            depth3: "프로세스",
+            depth4: "개발의뢰",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-031.html",
+            status: "end",
+            create: "2023.03.27",
+            log: [
+              { date: "2023.04.05",  text: "progress 높이 수정으로 인한 process-bar__set width 값 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PA-032",
+            depth2: "제품개발",
+            depth3: "프로세스",
+            depth4: "BOM 전송",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-032.html",
+            status: "end",
+            create: "2023.03.27",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PA-034",
+            depth2: "제품개발",
+            depth3: "프로세스",
+            depth4: "파일럿",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-034.html",
+            status: "end",
+            create: "2023.03.27",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PA-034",
+            depth2: "제품개발",
+            depth3: "프로세스",
+            depth4: "파일럿(탭형식)",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-034__tab.html",
+            status: "end",
+            create: "2023.03.27",
+            log: [
+              { date: "2023.03.29",  text: "BOM 정보 테이블 .inside-td__table--borderR-none 추가"}, 
+            ],
+          },
+          {
+            id: "SC-PA-036",
+            depth2: "제품개발",
+            depth3: "프로세스",
+            depth4: "처방확정",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-036.html",
+            status: "end",
+            create: "2023.03.28",
+            log: [
+              { date: "2023.04.26",  text: "처방 확정 추가"}, 
+            ],
+          },
+          {
+            id: "SC-PA-037",
+            depth2: "제품개발",
+            depth3: "프로세스",
+            depth4: "기능성 허가",
+            depth5: "확정 제품명1",
+            depth6: "",
+            path: "/SC-PA-037.html",
+            status: "end",
+            create: "2023.03.28",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PA-038",
+            depth2: "제품개발",
+            depth3: "프로세스",
+            depth4: "기능성 허가",
+            depth5: "확정 제품명2",
+            depth6: "",
+            path: "/SC-PA-038.html",
+            status: "end",
+            create: "2023.03.28",
+            log: [
+              { date: "2023.04.24",  text: "결재선, 참조처 위치 이동"}, 
+            ],
+          },
+          {
+            id: "SC-PA-039",
+            depth2: "제품개발",
+            depth3: "프로세스",
+            depth4: "기능성 허가",
+            depth5: "시험 성적서",
+            depth6: "",
+            path: "/SC-PA-039.html",
+            status: "end",
+            create: "2023.03.28",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PA-040",
+            depth2: "제품개발",
+            depth3: "프로세스",
+            depth4: "기능성 허가",
+            depth5: "시험 성적서",
+            depth6: "Ver #01",
+            path: "/SC-PA-040.html",
+            status: "end",
+            create: "2023.03.28",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PA-043",
+            depth2: "제품개발",
+            depth3: "프로세스",
+            depth4: "전성분 승인",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-043.html",
+            status: "end",
+            create: "2023.03.29",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PO-044",
+            depth2: "제품개발",
+            depth3: "프로세스",
+            depth4: "전성분 승인",
+            depth5: "전성분 등록 popup",
+            depth6: "",
+            path: "/SC-PO-044.html",
+            status: "end",
+            create: "2023.03.29",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PA-077",
+            depth2: "제품개발",
+            depth3: "프로세스",
+            depth4: "전성분 승인",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-077.html",
+            status: "end",
+            create: "2023.03.29",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PO-122",
+            depth2: "제품개발",
+            depth3: "프로세스",
+            depth4: "전성분 승인",
+            depth5: "알러젠 비교 popup",
+            depth6: "",
+            path: "/SC-PO-122.html",
+            status: "end",
+            create: "2023.03.29",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PA-046\nSC-PA-047",
+            depth2: "제품개발",
+            depth3: "프로세스",
+            depth4: "개발 완료",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-046.html",
+            status: "end",
+            create: "2023.03.29",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+        ],
+      },
+
+
+
+      //스킨케어 - 반제품(4자)
+      {
+        depth1: "스킨케어-반제품(4자)",
+        data: [{
+            id: "SC-PA-048",
+            depth2: "내용물 리스트",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-048.html",
+            status: "end",
+            create: "2023.03.24",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PA-049",
+            depth2: "내용물 리스트",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-049.html",
+            status: "end",
+            create: "2023.03.24",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PA-050",
+            depth2: "내용물 개요 상세",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-050.html",
+            status: "end",
+            create: "2023.03.24",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PO-124",
+            depth2: "내용물 개요 상세",
+            depth3: "플랜트 확장 가능 popup",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-124.html",
+            status: "end",
+            create: "2023.03.24",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          // {
+          //   id: "SC-PA-053",
+          //   depth2: "원료배합",
+          //   depth3: "",
+          //   depth4: "",
+          //   depth5: "",
+          //   depth6: "",
+          //   path: "/SC-PA-053.html",
+          //   status: "waiting",
+          //   create: "",
+          //   log: [
+          //     //{ date: "2022.08.12",  text: "오타 수정"}, 
+          //   ],
+          // },
+          {
+            id: "SC-PA-057",
+            depth2: "시험의뢰 현황",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-057.html",
+            status: "end",
+            create: "2023.03.24",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PA-059",
+            depth2: "프로세스",
+            depth3: "개발의뢰",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-059.html",
+            status: "end",
+            create: "2023.03.24",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+        ],
+      },
+
+      // 스킨케어 - 과제
+      {
+        depth1: "스킨케어-과제",
+        data: [{
+            id: "SC-PA-063",
+            depth2: "내용물 리스트",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-063.html",
+            status: "end",
+            create: "2023.03.24",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PA-064",
+            depth2: "내용물 등록",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-064.html",
+            status: "end",
+            create: "2023.03.24",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PA-065",
+            depth2: "내용물 상세",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-065.html",
+            status: "end",
+            create: "2023.03.27",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PA-065",
+            depth2: "내용물 상세",
+            depth3: "3자코드 채번 popup",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-125.html",
+            status: "end",
+            create: "2023.03.27",
+            log: [
+              { date: "2023.04.06",  text: "파일명 수정, 닫기 버튼 추가"}, 
+            ],
+          },
+          {
+            id: "SC-PA-065",
+            depth2: "내용물 상세",
+            depth3: "열람권한 popup",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-065__popup2.html",
+            status: "end",
+            create: "2023.03.27",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PO-126",
+            depth2: "내용물 상세",
+            depth3: "인벤토리 등록 popup",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PO-126__popup.html",
+            status: "end",
+            create: "2023.03.28",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PA-072",
+            depth2: "시험의뢰 현황",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-072.html",
+            status: "end",
+            create: "2023.03.28",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+        ],
+      },
+
+      // Discussion lab
+      {
+        depth1: "Discussion lab",
+        data: [{
+            id: "SC-PA-074",
+            depth2: "제품개발 상세",
+            depth3: "d-lab 게시판 목록",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-074.html",
+            status: "end",
+            create: "2023.03.20",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SC-PA-075",
+            depth2: "제품개발 상세",
+            depth3: "d-lab 내용 등록",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-075.html",
+            status: "end",
+            create: "2023.03.20",
+            log: [
+              { date: "2023.04.06",  text: "TAGS input 레이아웃 수정, .page-bottom 위치 이동"}, 
+            ],
+          },
+          {
+            id: "SC-PA-076",
+            depth2: "제품개발 상세",
+            depth3: "d-lab 상세",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SC-PA-076.html",
+            status: "end",
+            create: "2023.03.20",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+        ],
+      },
+
+      {
+        depth1: "검색 & 원료DB",
+        data: [{
+            id: "CO-PA-115",
+            depth2: "원료 검색",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/CO-PA-115.html",
+            status: "end",
+            create: "2023.03.17",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "CO-PO-118",
+            depth2: "원료 검색",
+            depth3: "검색부서 권한관리 popup",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/CO-PO-118.html",
+            status: "end",
+            create: "2023.03.20",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "CO-PO-128",
+            depth2: "원료 검색",
+            depth3: "내용물 상세보기 popup",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/CO-PO-128.html",
+            status: "end",
+            create: "2023.03.20",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "CO-PA-116",
+            depth2: "카운터맵",
+            depth3: "",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/CO-PA-116.html",
+            status: "end",
+            create: "2023.03.20",
+            log: [{
+              date: "2023.03.22",
+              text: "비교 선택 내용 레이아웃 수정"
+            }, ],
+          },
+          {
+            id: "CO-PO-117",
+            depth2: "카운터맵",
+            depth3: "내용물 비교하기 popup",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/CO-PO-117.html",
+            status: "end",
+            create: "2023.03.20",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "MU-PA-058",
+            depth2: "메이크업 > 원료 DB",
+            depth3: "May Contain 원료 DB",
+            depth4: "원료 DB 리스트",
+            depth5: "",
+            depth6: "",
+            path: "/MU-PA-058.html",
+            status: "end",
+            create: "2023.03.27",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "MU-PA-059",
+            depth2: "메이크업 > 원료 DB",
+            depth3: "May Contain 원료 DB",
+            depth4: "원료 DB 등록/수정",
+            depth5: "",
+            depth6: "",
+            path: "/MU-PA-059.html",
+            status: "end",
+            create: "2023.03.27",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SA-PA-056",
+            depth2: "의외약품 > 원료 DB",
+            depth3: "원료 DB 리스트",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SA-PA-056.html",
+            status: "end",
+            create: "2023.03.27",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+          {
+            id: "SA-PA-057",
+            depth2: "의외약품 > 원료 DB",
+            depth3: "원료 DB 등록/수정",
+            depth4: "",
+            depth5: "",
+            depth6: "",
+            path: "/SA-PA-057.html",
+            status: "end",
+            create: "2023.03.27",
+            log: [
+              //{ date: "2022.08.12",  text: "오타 수정"}, 
+            ],
+          },
+        ],
+      },
+
+    ];
+
+    var html = "";
+    var navHTML = "";
+    var totalIndex = 0;
+    var dates = (function () {
+      var array = [];
+
+      function add(date) {
+        if (
+          typeof date === "string" &&
+          date.length &&
+          array.indexOf(date) === -1
+        ) {
+          array.push(date);
+        }
+      }
+
+      $.each(tableData, function (i) {
+        var sectionData = tableData[i].data;
+        $.each(sectionData, function (j) {
+          add(this.create);
+          $.each(sectionData[j].log, function (l) {
+            add(this.date);
+          });
+        });
+      });
+
+      array.sort();
+
+      return array;
+    })();
+    var latestDate = dates[dates.length - 1];
+
+    $.each(tableData, function (i) {
+      var sectionIndex = i;
+      var sectionData = tableData[i].data;
+      var tableHTML = "";
+
+      $.each(sectionData, function (j) {
+        var returnVal = function (key, secondTestKey) {
+          var val = sectionData[j][key];
+          var secondTestVal = sectionData[j][secondTestKey];
+          var prevIndex = j - 1;
+          var isPrint = true;
+          if (prevIndex >= 0) {
+            if (sectionData[prevIndex][key] === val) {
+              isPrint = false;
+            }
+            if (
+              typeof secondTestKey === "string" &&
+              secondTestKey.length &&
+              !sectionData[j].depthOnly
+            ) {
+              if (
+                sectionData[prevIndex][key] === val &&
+                sectionData[prevIndex][secondTestKey] === secondTestVal
+              ) {
+                isPrint = false;
+              } else {
+                isPrint = true;
+              }
+            }
+          }
+          return isPrint ? val.replace(/\n/g, "<br>") : "";
+        };
+        var id = returnVal("id");
+        //var type = returnVal('type', 'depth2');
+        var depth2 = returnVal("depth2");
+        var depth3 = returnVal("depth3");
+        var depth4 = returnVal("depth4");
+        var depth5 = returnVal("depth5");
+        var depth6 = returnVal("depth6");
+        var path = (function () {
+          var val = sectionData[j].path;
+          var href = "";
+          if (val.match(/^\.\//g)) {
+            href = val;
+          } else {
+            href = "./dist" + val;
+          }
+          return val.length ?
+            '<a href="' + href + '" target="_blank">' + val + "</a>" :
+            "";
+        })();
+        var status = (function () {
+          var val = sectionData[j].status;
+          var text = "";
+          if (val === "ing") {
+            text = "작업중";
+          } else if (val === "end") {
+            text = "작업완료";
+          } else if (val === "end2") {
+            // 워드앤코드 작업 완료
+            text = "wc작업완료";
+          } else if (val === "except") {
+            // 워드앤코드 제거
+            text = "제거";
+          } else if (val === "moding") {
+            text = "수정중";
+          }else if (val === "waiting") {
+            text = "예정";
+          }
+
+          return val.length ?
+            '<span class="index-status index-status--' +
+            val +
+            '">' +
+            text +
+            "</span>" :
+            "";
+        })();
+        var create = this.create;
+        var update = "";
+        var log = (function () {
+          var val = sectionData[j].log;
+          var length = val.length;
+          var html = '<ul class="index-log">';
+          $.each(val, function (l) {
+            var date = this.date;
+            html +=
+              '<li class="index-log__item' +
+              (date === latestDate ? " is-emphasis" : "") +
+              '"><div class="index-log__item__date">[' +
+              date +
+              "]</div>" +
+              this.text.replace(/\n/g, "<br>") +
+              "</li>";
+            if (length - 1 === l) {
+              update = date;
+            }
+          });
+          html += "</ul>";
+
+          return html;
+        })();
+
+        tableHTML +=
+          "<tr>" +
+          "<td>" +
+          (j + 1) +
+          "</td>" +
+          "<td>" +
+          id +
+          "</td>" +
+          //'<td class="index-type">' +
+          //type +
+          //'</td>' +
+          "<td>" +
+          depth2 +
+          "</td>" +
+          "<td>" +
+          depth3 +
+          "</td>" +
+          "<td>" +
+          depth4 +
+          "</td>" +
+          "<td>" +
+          depth5 +
+          "</td>" +
+          "<td>" +
+          depth6 +
+          "</td>" +
+          "<td>" +
+          path +
+          "</td>" +
+          "<td>" +
+          status +
+          "</td>" +
+          '<td class="' +
+          (create === latestDate ? " is-emphasis" : "") +
+          '">' +
+          create +
+          "</td>" +
+          '<td class="' +
+          (update === latestDate ? " is-emphasis" : "") +
+          '">' +
+          update +
+          "</td>" +
+          "<td>" +
+          log +
+          "</td>" +
+          "</tr>";
+
+        totalIndex++;
+      });
+
+      navHTML +=
+        '<a href="#section' + i + '">' + tableData[i].depth1 + "</a>";
+
+      html +=
+        '<div class="index-section" id="section' +
+        i +
+        '">' +
+        '<h2 class="index-section__title">' +
+        tableData[i].depth1 +
+        status +
+        "</h2>" +
+        '<div class="index-table">' +
+        "<table>" +
+        "<colgroup>" +
+        '<col width="50px" />' +
+        '<col width="160px" />' +
+        //'<col width="80px" />' +
+        '<col width="160px" />' +
+        '<col width="160px" />' +
+        '<col width="160px" />' +
+        '<col width="120px" />' +
+        '<col width="120px" />' +
+        '<col width="" />' +
+        '<col width="100px" />' +
+        '<col width="110px" />' +
+        '<col width="110px" />' +
+        '<col width="300px" />' +
+        "</colgroup>" +
+        "<thead>" +
+        "<tr>" +
+        "<th>No</th>" +
+        "<th>ID</th>" +
+        //'<th>type</th>' +
+        "<th>depth2</th>" +
+        "<th>depth3</th>" +
+        "<th>depth4</th>" +
+        "<th>depth5</th>" +
+        "<th>depth6</th>" +
+        "<th>path</th>" +
+        "<th>status</th>" +
+        "<th>create</th>" +
+        "<th>update</th>" +
+        "<th>log</th>" +
+        "</tr>" +
+        "</thead>" +
+        "<tbody>" +
+        tableHTML +
+        "</tbody>" +
+        "</table>" +
+        "</div>" +
+        "</div>";
+    });
+
+    $("title, .index-title").text(title);
+    $("#nav").append(navHTML);
+    $("#indexTable").append(html);
+
+    var $nav = $(".index-bottom");
+    var $doc = $(document);
+    var $win = $(window);
+
+    function paddingBottom() {
+      $(".index-fake-botttom").css("height", $nav.outerHeight());
+    }
+
+    var clickedTimer = null;
+
+    $doc.on("click", "#nav a", function () {
+      var $this = $(this);
+      var href = $this.attr("href");
+      var $target = $(href);
+      var $sections = $(".index-section");
+
+      $sections.removeClass("index-section--clicked");
+
+      clearTimeout(clickedTimer);
+
+      clickedTimer = setTimeout(function () {
+        $target.addClass("index-section--clicked");
+      }, 100);
+    });
+
+    $win
+      .on("scroll", function () {
+        var scrollLeft = $win.scrollLeft();
+        $nav.css("margin-left", -scrollLeft);
+      })
+      .on("resize", function () {
+        paddingBottom();
+      })
+      .on("load", function () {
+        paddingBottom();
+      });
+  </script>
+  <!-- //script -->
+
+</body>
+
+</html>

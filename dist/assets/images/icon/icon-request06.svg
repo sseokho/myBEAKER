@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.87 61.71">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4b7ae4;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+
+      .cls-1, .cls-3 {
+        stroke: #232323;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #373737;
+      }
+
+      .cls-3 {
+        fill: #ffce00;
+      }
+    </style>
+  </defs>
+  <g id="_타이틀" data-name="타이틀">
+    <g>
+      <g>
+        <line class="cls-2" x1="57.12" y1="30.52" x2="43.48" y2="16.87"/>
+        <line class="cls-2" x1="43.48" y1="30.52" x2="57.12" y2="16.87"/>
+      </g>
+      <circle class="cls-3" cx="22.91" cy="14.64" r="13.89" transform="translate(3.39 33.58) rotate(-76.72)"/>
+      <path class="cls-1" d="m45.07,60.96v-6.35c0-12.24-9.92-22.16-22.16-22.16S.75,42.37.75,54.61v6.35h44.32Z"/>
+    </g>
+  </g>
+</svg>

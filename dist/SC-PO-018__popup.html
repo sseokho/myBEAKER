@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>myBEAKER</title>
+
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- favicon -->
+  <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+  <!-- //favicon -->
+
+  <!-- style -->
+  <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+  <!-- //style -->
+</head>
+
+<!-- 전달사항 :: 모달 표출시 .modal-open 붙여주세요 -->
+
+<body class="modal-open">
+  <!-- modal 모달 -->
+  <!-- 전달사항 :: 클래스 in 있을 때 모달 표출 -->
+  <div class="modal-backdrop fade in"></div>
+  <div id="myModal" class="modal fade in">
+    <div class="modal-dialog">
+      <div class="modal-content modal-content__width--122">
+        <div class="modal-header">
+          <div class="modal-title">시험의뢰 (안전성)</div>
+          <button type="button" class="modal-close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="search-detail-table">
+            <div class="search-detail-table__inner">
+              <table class="ui-table__modal pd">
+                <colgroup>
+                  <col style="width:10%">
+                  <col style="width:17%">
+                  <col style="width:auto">
+                  <col style="width:12%">
+                  <col style="width:17%">
+                  <col style="width:17%">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>대표</th>
+                    <th>내용물코드/제품코드</th>
+                    <th>내용물명</th>
+                    <th>플랜트</th>
+                    <th>LOT</th>
+                    <th>비고 </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="ui-radio-block">
+                        <input type="radio" class="ui-radio" checked="">
+                        <label class="ui-label jc-c">
+                          <span class="ui-radio-object"></span>
+                        </label>
+                      </div>
+                    </td>
+                    <td>3102760 / 11060004</td>
+                    <td>
+                      <div class="tit__inner">
+                        <a href="javascript:void(0)" class="tit-link">(PF)(기) 베리떼 라이트터치선스틱 SPF50+ PA++++</a>
+                      </div>
+                     </td>
+                    <td>1110</td>
+                    <td>
+                      <div class="ui-select-block">
+                        <select class="ui-select" title="title">
+                            <option value="">선택</option>
+                        </select>
+                    </div>
+                    </td>
+                    <td></td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="tableTitle mt-2">정보 입력</div>
+          <div class="board-top mb-0">
+            <div class="search-bar__row search-bar__row--modal">
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key search-bar__width--100">완료요청일</dt>
+                <dd class="search-bar__val search-bar__val--flexible">
+                  <div class="search-form">
+                    <div class="search-form__inner">
+                      <input type="text" class="ui-input ui-input__width--full ui-input__date">
+                    </div>
+                  </div>
+
+                </dd>
+              </dl>
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key search-bar__width--100">제형</dt>
+                <dd class="search-bar__val search-bar__val--flexible">
+                  <div class="search-form">
+                    <div class="search-form__inner">
+                      <select class="ui-select ui-select__width--full">
+                        <option>선택</option>
+                      </select>
+                    </div>
+                  </div>
+                </dd>
+              </dl>
+
+            </div>
+            <div class="search-bar__row search-bar__row--modal">
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dd class="search-bar__val search-bar__val--flexible">
+                  <div class="text-left">-</div>
+                </dd>
+              </dl>
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key search-bar__width--100">pH</dt>
+                <dd class="search-bar__val search-bar__val--flexible">
+                  <input type="text" class="ui-input ui-input__width--full">
+                </dd>
+              </dl>
+            </div>
+            <div class="search-bar__row search-bar__row--modal">
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key search-bar__width--100">One-Point<span class="ui-require"><span class="for-a11y">(필수)</span></span></dt>
+                <dd class="search-bar__val search-bar__val--flexible">
+                  <input type="text" class="ui-input ui-input__width--full">
+                </dd>
+              </dl>
+            </div>
+            <div class="search-bar__row search-bar__row--modal">
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key search-bar__width--100">시험법</dt>
+                <dd class="search-bar__val search-bar__val--flexible">
+                  <div class="form-flex">
+                    <div class="form-flex-cell form-flex__cell--5">
+                      <div class="ui-checkbox__list">
+                        <div class="ui-checkbox__inner">
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox" checked="">
+                            <label for="" class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="ui-label__text">인체피부일차(사내첨포) 3주</span>
+                            </label>
+                          </div>
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox">
+                            <label for="" class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="ui-label__text">피부과 (6주 ~ 8주)</span>
+                            </label>
+                          </div>
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox">
+                            <label for="" class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="ui-label__text">논코메도제닉 (8주)</span>
+                            </label>
+                          </div>
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox">
+                            <label for="" class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="ui-label__text">하이포알러제닉 (12주)</span>
+                            </label>
+                          </div>
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox">
+                            <label for="" class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="ui-label__text">안과 (8주)</span>
+                            </label>
+                          </div>
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox">
+                            <label for="" class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="ui-label__text">안자극 (4주)</span>
+                            </label>
+                          </div>
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox">
+                            <label for="" class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="ui-label__text">민감성 (8주)</span>
+                            </label>
+                          </div>
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox">
+                            <label for="" class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="ui-label__text">두피 (8주)</span>
+                            </label>
+                          </div>
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox">
+                            <label for="" class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="ui-label__text">기타</span>
+                            </label>
+                            <input type="text" class="ui-input ui-input__width--200 ml-5">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </dd>
+              </dl>
+            </div>
+            <div class="search-bar__row search-bar__row--modal">
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key search-bar__width--100">무방부/무향</dt>
+                <dd class="search-bar__val search-bar__val--flexible">
+                  <div class="form-flex">
+                    <div class="form-flex-cell form-flex__cell--5">
+                      <div class="ui-checkbox__list">
+                        <div class="ui-checkbox__inner">
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox" checked="">
+                            <label for="" class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="ui-label__text">무방부</span>
+                            </label>
+                          </div>
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox">
+                            <label for="" class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="ui-label__text">무향</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </dd>
+              </dl>
+            </div>
+
+            <div class="search-bar__row search-bar__row--modal">
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key search-bar__width--100">모제품 코드</dt>
+                <dd class="search-bar__val search-bar__val--flexible">
+                  <div class="search-form">
+                    <div class="search-form__inner">
+                      <input type="text" class="ui-input ui-input__width--340">
+                      <button type="button" class="button-search">추가</button>
+                    </div>
+
+                    <div class="search-result-table mt-15">
+                      <table class="ui-table__reset ui-table__search-result text-center pop-padding">
+                        <colgroup>
+                          <col style="width:15%">
+                          <col style="width:auto">
+                          <col style="width:10%">
+                          <col style="width:10%">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>내용물코드</th>
+                            <th>내용물명</th>
+                            <th>LOT</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>3075933</td>
+                            <td>베리베 선스틱 SPF50+ PA+++</td>
+                            <td>Lot #02</td>
+
+                            <!-- 2023.04.18 : mod : 삭제 버튼 수정 -->
+                            <td><button type="button" class="ui-button ui-button__width--40 ui-button__height--23 ui-button__border--blue ui-button__radius--2">삭제</button></td>
+                          </tr>
+                          <tr>
+                            <td>3075933</td>
+                            <td>베리베 선스틱 SPF50+ PA+++</td>
+                            <td>Lot #02</td>
+                            <td><button type="button" class="ui-button ui-button__width--40 ui-button__height--23 ui-button__border--blue ui-button__radius--2">삭제</button></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+            <div class="search-bar__row search-bar__row--modal">
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key search-bar__width--100 mt-m3">메시지</dt>
+                <dd class="search-bar__val search-bar__val--flexible">
+                  <div class="ui-textarea-box ui-textarea-box__height--140">
+                    <textarea class="ui-textarea" placeholder="내용을 입력해 주세요."></textarea>
+                  </div>
+                  <div class="num-characters">
+                    <span class="num-characters__now">0 /</span> 2,000
+                  </div>
+                </dd>
+              </dl>
+
+            </div>
+          </div>
+          <div class="board-bottom ">
+            <div class="board-bottom__inner">
+              <div class="ui-buttons ml-auto ui-buttons__right">
+                <button type="button" class="ui-button ui-button__bg--skyblue font-weight__300">시험의뢰</button>
+                <button type="button" class="ui-button ui-button__bg--lightgray">닫기</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+  </div>
+  <!--// modal 모달 -->
+
+</body>
+
+</html>

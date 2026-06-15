@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>myBEAKER</title>
+
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- favicon -->
+  <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+  <!-- //favicon -->
+
+  <!-- style -->
+  <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+  <!-- //style -->
+
+  <!-- 메뉴 기능 위한 스크립트 -->
+  <script src="../dist/assets/js/jquery.js"></script>
+  <script src="../dist/assets/js/ui-script.js"></script>
+</head>
+
+<body>
+
+  <div class="wrap">
+    <header class="header">
+      <div class="header__inner">
+        <div class="header-logo">
+          <a href="javascript:void(0)" class="header-logo__link"></a>
+        </div>
+        <div class="header-menu">
+          <div class="header-menu__inner">
+            <!-- 전달사항 :: 클릭시 클래스 is-active 추가 됩니다. -->
+            <div class="header-menu__item header-menu__inquiry">
+              <a href="javascript:void(0)" class="header-menu__link"></a>
+              <div class="header-menu__dropdown">
+                <div class="header-menu__dropdown--inner">
+                  <div class="header-menu__dropdown--body">
+                    <div class="ui-buttons">
+                      <a href="javascript:void(0)" class="ui-button ui-button__link ui-button__bg--blue">오류/일반 문의</a>
+                      <a href="javascript:void(0)" class="ui-button ui-button__link ui-button__bg--blue">my BEAKER 개선
+                        제안</a>
+                      <a href="javascript:void(0)" class="ui-button ui-button__link ui-button__bg--blue">데이터 수정/추출</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-menu__item header-menu__qr">
+              <a href="javascript:void(0)" class="header-menu__link"></a>
+              <div class="header-menu__dropdown">
+                <div class="header-menu__dropdown--inner">
+                  <div class="header-menu__dropdown--header">
+                    <div class="header-menu__dropdown--title">QR코드를 스캔해 주세요.</div>
+                  </div>
+                  <div class="header-menu__dropdown--body">
+                    <div class="qr-img__wrap">
+                      <div class="qr-img">
+                        <img src="./assets/images/_dummy/img-qr.png" alt="">
+                      </div>
+                      <div class="qr-text">사각 테두리안에 QR코드를 <br>
+                        인식해 주세요.</div>
+                    </div>
+                    <div class="qr-checkbox">
+                      <div class="ui-checkbox__list">
+                        <div class="ui-checkbox__inner">
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox">
+                            <label for="" class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="ui-label__text">웹캠사용</span>
+                            </label>
+                          </div>
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox" checked="">
+                            <label for="" class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="ui-label__text">새창으로</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 전달사항 :: 미확인 알람 있을때 클래스 is-alarm 추가 됩니다. -->
+            <div class="header-menu__item header-menu__alarm is-alarm">
+              <a href="javascript:void(0)" class="header-menu__link"></a>
+              <div class="header-menu__dropdown">
+                <div class="header-menu__dropdown--inner">
+                  <div class="header-menu__dropdown--body header-menu__dropdown--body-alarm">
+                    <div class="dropdown-alarm">
+                      <div class="dropdown-alarm__inner">
+                        <ul class="ui-list dropdown-alarm__lists">
+                          <li class="dropdown-alarm__list">
+                            <a href="javascript:void(0)" class="dropdown-alarm__link">
+                              <span class="font-weight__600">김상현</span>님이 <span class="font-weight__600">3102376 프리메라
+                                에센셜
+                                마사지크림(22AD)</span> BOM을 전송했습니다.
+                            </a>
+                            <span class="dropdown-alarm__time">12 minutes ago</span>
+                          </li>
+                          <li class="dropdown-alarm__list">
+                            <a href="javascript:void(0)" class="dropdown-alarm__link">
+                              <span class="font-weight__600">김상현</span>님이 <span class="font-weight__600">3102376 프리메라
+                                에센셜
+                                마사지크림(22AD)</span> BOM을 전송했습니다.
+                            </a>
+                            <span class="dropdown-alarm__time">12 minutes ago</span>
+                          </li>
+                          <li class="dropdown-alarm__list">
+                            <a href="javascript:void(0)" class="dropdown-alarm__link">
+                              <span class="font-weight__600">김상현</span>님이 <span class="font-weight__600">3102376 프리메라
+                                에센셜
+                                마사지크림(22AD)</span> BOM을 전송했습니다.
+                            </a>
+                            <span class="dropdown-alarm__time">12 minutes ago</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-menu__item header-menu__setting">
+              <a href="javascript:void(0)" class="header-menu__link"></a>
+              <div class="header-menu__dropdown">
+                <div class="header-menu__dropdown--inner">
+                  <div class="header-menu__dropdown--header">
+                    <div class="header-menu__dropdown--title">설정</div>
+                  </div>
+                  <div class="header-menu__dropdown--body header-menu__dropdown--body-setting">
+                    <div class="dropdown-item">
+                      <div class="dropdown-item__title">메인</div>
+                      <div class="dropdown-item__contents">
+                        <div class="setting-myBoard">
+                          <div class="setting-myBoard__inner">
+                            <ul class="ui-list setting-myBoard__lists">
+                              <!-- 전달사항 :: 클릭시 클래스 is-active 추가 됩니다. -->
+                              <li class="setting-myBoard__list is-active">
+                                <a href="javascript:void(0)" class="setting-myBoard__link setting-myBoard__link--note">
+                                  <i class="setting-myBoard__icon"></i>
+                                  <span class="setting-myBoard__title">Note</span>
+                                </a>
+                              </li>
+                              <li class="setting-myBoard__list">
+                                <a href="javascript:void(0)"
+                                  class="setting-myBoard__link setting-myBoard__link--schedule">
+                                  <i class="setting-myBoard__icon"></i>
+                                  <span class="setting-myBoard__title">Schedule</span>
+                                </a>
+                              </li>
+                              <li class="setting-myBoard__list">
+                                <a href="javascript:void(0)"
+                                  class="setting-myBoard__link setting-myBoard__link--examination">
+                                  <i class="setting-myBoard__icon"></i>
+                                  <span class="setting-myBoard__title">Examination</span>
+                                </a>
+                              </li>
+                              <li class="setting-myBoard__list">
+                                <a href="javascript:void(0)" class="setting-myBoard__link setting-myBoard__link--memo">
+                                  <i class="setting-myBoard__icon"></i>
+                                  <span class="setting-myBoard__title">Memo</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dropdown-item">
+                      <div class="dropdown-item__title">알림수신</div>
+                      <div class="dropdown-item__contents">
+                        <div class="ui-checkbox__list ui-check-list--bipartite">
+                          <div class="ui-checkbox__inner ">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">전체 수신</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" checked="">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">실험 시작</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" checked="">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">BOM 전송</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" checked="">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">내용물 입고</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" checked="">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">개발 완료</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-menu__item header-menu__logout">
+              <a href="javascript:void(0)" class="header-menu__link"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="ui-layout">
+      <div class="ui-layout__inner">
+        <!-- 전달사항 :: 메뉴 펼쳤을때 .is-open 붙습니다. -->
+        <div class="left-menu is-open">
+          <div class="left-menu__inner">
+            <button type="button" class="left-menu__button"><i class="left-menu__button--icon"></i></button>
+            <div class="left-menu__box">
+              <!-- 전달사항 :: 클릭시 .left-menu__list에 is-active 붙여주세요. -->
+              <div class="left-menu__item">
+                <ul class="ui-list left-menu__lists left-menu__lists--height-60">
+                  <li class="left-menu__list is-active">
+                    <a href="javascript:void(0)" class="left-menu__link"><i
+                        class="left-menu__icon left-menu__icon--basicInfo"></i><span class="left-menu__text">Basic
+                        Information</span><span class="left-menu__tooltip">Basic Information</span></a>
+                  </li>
+                  <li class="left-menu__list">
+                    <a href="javascript:void(0)" class="left-menu__link">
+                      <i class="left-menu__icon left-menu__icon--folmula"></i><span
+                        class="left-menu__text">Folmula</span><span class="left-menu__tooltip">Folmula</span>
+                    </a>
+                  </li>
+                  <li class="left-menu__list">
+                    <a href="javascript:void(0)" class="left-menu__link">
+                      <i class="left-menu__icon left-menu__icon--test"></i><span
+                        class="left-menu__text">Test</span><span class="left-menu__tooltip">Test</span>
+                    </a>
+                  </li>
+                  <li class="left-menu__list">
+                    <a href="javascript:void(0)" class="left-menu__link">
+                      <i class="left-menu__icon left-menu__icon--process"></i><span
+                        class="left-menu__text">Process</span><span class="left-menu__tooltip">Process</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="left-menu__copyright">© Amorepacific Corp.</div>
+          </div>
+        </div>
+
+        <div class="contents">
+          <div class="contents__inner">
+            <div class="contents-core">
+
+              <!-- 설정 및 우클릭 기능 -->
+              <div class="material-setting__wrap">
+
+                <!-- Select information -->
+                <div class="material-setting">
+                  <div class="material-setting__inner material-setting__inner--p25">
+                    <div class="material-setting__item ">
+                      <div class="material-setting__title">Select information</div>
+                      <div class="material-setting__sub-title">Show</div>
+                      <div class="material-setting__content">
+                        <div class="ui-radio__list ui-radio__list--tripartition">
+                          <div class="ui-radio__inner">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" checked="">
+                              <label class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">Ver1</span>
+                              </label>
+                            </div>
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio">
+                              <label class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">Ver2</span>
+                              </label>
+                            </div>
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio">
+                              <label class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">Ver3</span>
+                              </label>
+                            </div>
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio">
+                              <label class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">Ver4</span>
+                              </label>
+                            </div>
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio">
+                              <label class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">Ver5</span>
+                              </label>
+                            </div>
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio">
+                              <label class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">Ver6</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="material-setting__item">
+                      <div class="material-setting__sub-title">Lot 추가시</div>
+                      <div class="material-setting__content">
+                        <div class="ui-radio__list ui-radio__list--full">
+                          <div class="ui-radio__inner">
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio" checked="">
+                              <label class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">이전 Lot 함량 복사</span>
+                              </label>
+                            </div>
+                            <div class="ui-radio-block">
+                              <input type="radio" class="ui-radio">
+                              <label class="ui-label">
+                                <span class="ui-radio-object"></span>
+                                <span class="ui-label__text">빈 Lot 생성</span>
+                              </label>
+                            </div>
+                           
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="divide-line mt-15 mb-20"></div>
+                    <div class="mateial-setting__item">
+                      <div class="ui-buttons">
+                        <button type="button"
+                          class="ui-button ui-button__height--28 ui-button__font--12 ui-button__radius--2 ui-button__border--blue">Select
+                          all</button>
+                        <button type="button"
+                          class="ui-button ui-button__height--28 ui-button__font--12 ui-button__radius--2 ui-button__border--blue">Clear
+                          all</button>
+                      </div>
+
+                      <div class="mt-15">
+                        <div class="ui-checkbox__list">
+                          <div class="ui-checkbox__inner">
+                            <div class="ui-checkbox-block ui-checkbox-block__width--full">
+                              <input type="checkbox" class="ui-checkbox" checked="">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">단가 1g</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block ui-checkbox-block__width--full">
+                              <input type="checkbox" class="ui-checkbox" checked="">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">내용물단가 100g</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block ui-checkbox-block__width--full">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">내용물 단가 합계 (행)</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block ui-checkbox-block__width--full">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">배합한도</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block ui-checkbox-block__width--full">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">필수함량</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block ui-checkbox-block__width--full">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">카운터 함량</span>
+                              </label>
+                            </div>
+
+                            <div class="ui-checkbox-block ui-checkbox-block__width--full">
+                              <input type="checkbox" class="ui-checkbox" checked="">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">원료 정보 태그</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block ui-checkbox-block__width--full">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">무소구 가능 항목</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block ui-checkbox-block__width--full">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">가격 합계</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block ui-checkbox-block__width--full">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">NOI 지수</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block ui-checkbox-block__width--full">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">생분해도 지수</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block ui-checkbox-block__width--full">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">LOT 메모</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <!-- //Select information -->
+
+                <!-- 2023.04.20 : add : radio → checkbox로 수정 -->
+                <div class="material-setting">
+                  <div class="material-setting__inner material-setting__inner--p25">
+                    <div class="material-setting__item ">
+                      <div class="material-setting__title">Select information</div>
+                      <div class="material-setting__sub-title">Show</div>
+                      <div class="material-setting__content">
+                        <div class="ui-checkbox__list ui-checkbox__list--tripartition">
+                          <div class="ui-checkbox__inner">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" checked="">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">Ver1</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">Ver2</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">Ver3</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">Ver4</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">Ver5</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">Ver6</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="material-setting__item">
+                      <div class="material-setting__sub-title">Lot 추가시</div>
+                      <div class="material-setting__content">
+                        <div class="ui-checkbox__list ui-checkbox__list--full">
+                          <div class="ui-checkbox__inner">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" checked="">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">이전 Lot 함량 복사</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">빈 Lot 생성</span>
+                              </label>
+                            </div>
+                           
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- //2023.04.20 : add : radio → checkbox로 수정 -->
+
+                <!-- 우클릭 메뉴 -->
+                <div class="material-setting">
+                  <div class="material-setting__inner">
+                    <div class="material-setting__item">
+                      <div class="material-setting__buttons">
+                        <!-- 2023.04.07 : mod : 아이콘 수정, 버튼 추가 -->
+                        <button class="material-setting__button"><i class="material-setting__button--icon material-setting__button--icon-insert"></i><span class="material-setting__button--text">행 삽입</span><span class="material-setting__button--key">Ctrl + I</span></button>
+                        <button class="material-setting__button"><i class="material-setting__button--icon material-setting__button--icon-delete"></i><span class="material-setting__button--text">행 삭제</span><span class="material-setting__button--key">Ctrl + D</span></button>
+                        <button class="material-setting__button"><i class="material-setting__button--icon material-setting__button--icon-hide"></i><span class="material-setting__button--text">행 숨기기</span><span class="material-setting__button--key">Ctrl + H</span></button>
+                        <button class="material-setting__button"><i class="material-setting__button--icon material-setting__button--icon-group"></i><span class="material-setting__button--text">그룹 만들기</span><span class="material-setting__button--key">Ctrl + G</span></button>
+
+                        <button class="material-setting__button"><i class="material-setting__button--icon material-setting__button--icon-arrow__up"></i><span class="material-setting__button--text">순서 바꾸기</span><span class="material-setting__button--key">Alt + ↑</span></button>
+                        <button class="material-setting__button"><i class="material-setting__button--icon material-setting__button--icon-arrow__down"></i><span class="material-setting__button--text">순서 바꾸기</span><span class="material-setting__button--key">Alt + ↓</span></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="icon-sigmaPercenter">
+                    <i class="icon-sigma"></i>
+                    <i class="icon-percent"></i>
+                  </div>
+                </div>
+                <!--// 우클릭 메뉴 -->
+
+                <!-- 함량 우클릭 메뉴 -->
+                <div class="material-setting">
+                  <div class="material-setting__inner">
+                    <div class="material-setting__item">
+                      <div class="material-setting__buttons">
+                        <button class="material-setting__button"><i class="material-setting__button--icon material-setting__button--icon-copy"></i><span class="material-setting__button--text">함량 복사</span><span class="material-setting__button--key">Ctrl + C</span></button>
+                        <button class="material-setting__button"><i class="material-setting__button--icon "></i><span class="material-setting__button--text">함량 붙여넣기</span><span class="material-setting__button--key">Ctrl + V</span></button>
+                        <button class="material-setting__button"><i class="material-setting__button--icon material-setting__button--icon-delete"></i><span class="material-setting__button--text">함량 삭제</span><span class="material-setting__button--key">Ctrl + D</span></button>
+
+                        <button class="material-setting__button"><i class="material-setting__button--icon material-setting__button--icon-insert"></i><span class="material-setting__button--text">그람 추가</span><span class="material-setting__button--key">Ctrl + G</span></button>
+
+                        <button class="material-setting__button"><i class="material-setting__button--icon material-setting__button--icon-delete"></i><span class="material-setting__button--text">그람 삭제</span><span class="material-setting__button--key">Ctrl + D</span></button>
+                          
+                        <button class="material-setting__button"><i class="material-setting__button--icon material-setting__button--icon-enroll"></i><span class="material-setting__button--text">기존 처방 등록하기</span></button>
+                        <button class="material-setting__button"><i class="material-setting__button--icon material-setting__button--icon-print"></i><span class="material-setting__button--text">일반 라벨 출력</span></button>
+                        <button class="material-setting__button"><i class="material-setting__button--icon material-setting__button--icon-print"></i><span class="material-setting__button--text">표준품 라벨 출력</span></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--// 함량 우클릭 메뉴 -->
+
+                <!-- 공유하기 버튼 클릭시 -->
+                <div class="material-setting">
+                  <div class="material-setting__inner">
+                    <div class="material-setting__item">
+                      <div class="material-setting__buttons">
+                        <!-- 2023.04.07 : mod : 노트 공유하기 아이콘 수정, 엑셀 양식 다운로드 버튼 추가, 이력보기 아이콘 추가 -->
+                        <button class="material-setting__button"><i class="material-setting__button--icon material-setting__button--icon-note__share"></i><span class="material-setting__button--text">노트 공유하기</span></button>
+
+                        <button class="material-setting__button"><i class="material-setting__button--icon material-setting__button--icon-upload"></i><span class="material-setting__button--text">엑셀 업로드</span></button>
+
+                        <button class="material-setting__button"><i class="material-setting__button--icon material-setting__button--icon-download"></i><span class="material-setting__button--text">엑셀 다운로드</span></button>
+
+                        <button class="material-setting__button"><i class="material-setting__button--icon material-setting__button--icon-download"></i><span class="material-setting__button--text">엑셀 양식 다운로드</span></button>
+
+                        <button class="material-setting__button"><i class="material-setting__button--icon material-setting__button--icon-share"></i><span class="material-setting__button--text">이력보기</span></button>
+
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--// 공유하기 버튼 클릭시 -->
+
+                
+
+
+              </div>
+
+              <!--// 설정 및 우클릭 기능 -->
+
+            </div>
+          </div>
+          <!--//.contents__inner -->
+        </div>
+
+        <!-- 전달사항 :: 메뉴 펼쳤을때 .is-open 붙습니다. -->
+        <div class="right-menu is-open">
+          <div class="right-menu__inner">
+            <button type="button" class="right-menu__button"><i class="right-menu__button--icon"></i></button>
+            <div class="right-menu__tab">
+              <div class="right-menu__tab--header">
+                <ul class="ui-list right-menu__tab--lists">
+                  <!-- 전달사항 :: 활성 tab에 .is-active 붙습니다. -->
+                  <li class="right-menu__tab--list is-active"><a href="javascript:void(0)"
+                      class="right-menu__tab--link">ing.</a></li>
+                  <li class="right-menu__tab--list"><a href="javascript:void(0)"
+                      class="right-menu__tab--link">status</a></li>
+                  <li class="right-menu__tab--list"><a href="javascript:void(0)"
+                      class="right-menu__tab--link">comment</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="right-menu__tab--body">
+                <div class="right-menu__tab--body-inner">
+
+                  <div class="material-right__ing">
+                    <div class="material-right__ing--inner">
+
+                      <div class="material-search">
+                        <input type="text" class="material-search__input" placeholder="Search...">
+                        <button class="button-search"></button>
+                      </div>
+
+                      <div class="right-content__box right-content__box--gray">
+                        <div class="right-content__title">문제이력</div>
+
+                        <div class="problem-history">
+                          <div class="problem-history__box">
+                            <div class="problem-history__title">3009215</div>
+                            <div class="problem-history__item">쿠션 담지제에 따라 역가 하락 다름</div>
+                            <div class="problem-history__item">투명(A5)의 재질과 반등으로 수지 높은 <br>
+                              가능 (내용물 닫는 부위 사용 위험)</div>
+                            <div class="problem-history__item">내용물 골격, 용기, 담지제 변경시 <br>
+                              반드시 사전 기시적합성 확인</div>
+                          </div>
+
+                        </div>
+                      </div>
+
+                      <div class="right-content__box">
+                        <div class="right-content__title--wrap">
+                          <div class="right-content__title">Recent</div>
+                        </div>
+
+
+                        <!-- 2023.04.05 : mod : 레이아웃 수정 -->
+                        <!-- 전달사항 :: 활성화시 .is-active 붙습니다. -->
+                        <div class="recent-lists__wrap">
+                          <ul class="ui-list recent-lists">
+                            <li class="recent-list">
+                              <a href="javascript:void(0)" class="recent-list__link">
+                                <span class="recent-list__text">
+                                  <span class="recent-list__code">3102381</span>
+                                  <span class="recent-list__title">프리메라 에센셜 마사지크림프리메라 에센셜 마사지크림프리메라 에센셜 마사지크림</span>
+                                </span>
+                                <button class="recent-button"></button>
+                              </a>
+                            </li>
+                            <li class="recent-list">
+                              <a href="javascript:void(0)" class="recent-list__link">
+                                <span class="recent-list__text">
+                                  <span class="recent-list__code">3102381</span>
+                                  <span class="recent-list__title">한율 극진 2종 기획 세트 (125ml+125ml)</span>
+                                </span>
+                                <button class="recent-button"></button>
+                              </a>
+                            </li>
+                            <li class="recent-list">
+                              <a href="javascript:void(0)" class="recent-list__link">
+                                <span class="recent-list__text">
+                                  <span class="recent-list__code">3102381</span>
+                                  <span class="recent-list__title">프리메라 NEW 리페어링 세캡슐 UV포뮬라프리메라 NEW 리페어링 세캡슐 UV포뮬라프리메라
+                                    NEW 리페어링 세캡슐 UV포뮬라</span>
+                                </span>
+                                <button class="recent-button"></button>
+                              </a>
+                            </li>
+                            <li class="recent-list">
+                              <a href="javascript:void(0)" class="recent-list__link">
+                                <span class="recent-list__text">
+                                  <span class="recent-list__code">3102381</span>
+                                  <span class="recent-list__title">헤라 UV프 멀티디펜스 SPF50+++ / PA+++...</span>
+                                </span>
+                                <button class="recent-button"></button>
+                              </a>
+                            </li>
+                            <li class="recent-list">
+                              <a href="javascript:void(0)" class="recent-list__link">
+                                <span class="recent-list__text">
+                                  <span class="recent-list__code">3102381</span>
+                                  <span class="recent-list__title">프리메라 알파인베리 워터 크림 100ml</span>
+                                </span>
+                                <button class="recent-button"></button>
+                              </a>
+                            </li>
+                            <li class="recent-list">
+                              <a href="javascript:void(0)" class="recent-list__link">
+                                <span class="recent-list__text">
+                                  <span class="recent-list__code">3102381</span>
+                                  <span class="recent-list__title">헤라 쿼드 아이 섀도우 10.5g</span>
+                                </span>
+                                <button class="recent-button"></button>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+
+
+                      </div>
+
+                      <div class="right-content__box">
+                        <div class="right-content__title--wrap">
+                          <div class="right-content__title">Favorites</div>
+                          <button class="button-plus"></button>
+                        </div>
+
+                        <!-- 전달사항 :: 활성화시 .is-active 붙습니다. -->
+                        <div class="favorites-lists__wrap">
+                          <ul class="ui-list favorites-lists">
+                            <li class="favorites-list is-active">
+                              <a href="javascript:void(0)" class="favorites-list__link">
+                                <span class="favorites-list__text">
+                                  <span class="favorites-list__code">3102381</span>
+                                  <span class="favorites-list__title">프리메라 에센셜 마사지크림프리메라 에센셜 마사지크림프리메라 에센셜
+                                    마사지크림</span>
+                                </span>
+                                <button class="favorites-button"></button>
+                              </a>
+                            </li>
+                            <li class="favorites-list is-active">
+                              <a href="javascript:void(0)" class="favorites-list__link">
+                                <span class="favorites-list__text">
+                                  <span class="favorites-list__code">3102381</span>
+                                  <span class="favorites-list__title">한율 극진 2종 기획 세트 (125ml+125ml)</span>
+                                </span>
+                                <button class="favorites-button"></button>
+                              </a>
+                            </li>
+                            <li class="favorites-list is-active">
+                              <a href="javascript:void(0)" class="favorites-list__link">
+                                <span class="favorites-list__text">
+                                  <span class="favorites-list__code">3102381</span>
+                                  <span class="favorites-list__title">프리메라 NEW 리페어링 세캡슐 UV포뮬라프리메라 NEW 리페어링 세캡슐
+                                    UV포뮬라프리메라 NEW 리페어링 세캡슐 UV포뮬라</span>
+                                </span>
+                                <button class="favorites-button"></button>
+                              </a>
+                            </li>
+                            <li class="favorites-list is-active">
+                              <a href="javascript:void(0)" class="favorites-list__link">
+                                <span class="favorites-list__text">
+                                  <span class="favorites-list__code">3102381</span>
+                                  <span class="favorites-list__title">헤라 UV프 멀티디펜스 SPF50+++ / PA+++...</span>
+                                </span>
+                                <button class="favorites-button"></button>
+                              </a>
+                            </li>
+                            <li class="favorites-list is-active">
+                              <a href="javascript:void(0)" class="favorites-list__link">
+                                <span class="favorites-list__text">
+                                  <span class="favorites-list__code">3102381</span>
+                                  <span class="favorites-list__title">프리메라 알파인베리 워터 크림 100ml</span>
+                                </span>
+                                <button class="favorites-button"></button>
+                              </a>
+                            </li>
+                            <li class="favorites-list is-active">
+                              <a href="javascript:void(0)" class="favorites-list__link">
+                                <span class="favorites-list__text">
+                                  <span class="favorites-list__code">3102381</span>
+                                  <span class="favorites-list__title">헤라 쿼드 아이 섀도우 10.5g</span>
+                                </span>
+                                <button class="favorites-button"></button>
+                              </a>
+                            </li>
+                            <li class="favorites-list is-active">
+                              <a href="javascript:void(0)" class="favorites-list__link">
+                                <span class="favorites-list__text">
+                                  <span class="favorites-list__code">3102381</span>
+                                  <span class="favorites-list__title">프리메라 NEW 리페어링 세캡슐 UV포뮬라프리메라 NEW 리페어링 세캡슐
+                                    UV포뮬라프리메라 NEW 리페어링 세캡슐 UV포뮬라</span>
+                                </span>
+                                <button class="favorites-button"></button>
+                              </a>
+                            </li>
+                            <li class="favorites-list is-active">
+                              <a href="javascript:void(0)" class="favorites-list__link">
+                                <span class="favorites-list__text">
+                                  <span class="favorites-list__code">3102381</span>
+                                  <span class="favorites-list__title">헤라 UV프 멀티디펜스 SPF50+++ / PA+++...</span>
+                                </span>
+                                <button class="favorites-button"></button>
+                              </a>
+                            </li>
+                            <li class="favorites-list is-active">
+                              <a href="javascript:void(0)" class="favorites-list__link">
+                                <span class="favorites-list__text">
+                                  <span class="favorites-list__code">3102381</span>
+                                  <span class="favorites-list__title">프리메라 알파인베리 워터 크림 100ml</span>
+                                </span>
+                                <button class="favorites-button"></button>
+                              </a>
+                            </li>
+                            <li class="favorites-list is-active">
+                              <a href="javascript:void(0)" class="favorites-list__link">
+                                <span class="favorites-list__text">
+                                  <span class="favorites-list__code">3102381</span>
+                                  <span class="favorites-list__title">헤라 쿼드 아이 섀도우 10.5g</span>
+                                </span>
+                                <button class="favorites-button"></button>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

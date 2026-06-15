@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>myBEAKER</title>
+
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- favicon -->
+  <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+  <!-- //favicon -->
+
+  <!-- style -->
+  <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+  <!-- //style -->
+
+  <!-- 메뉴 기능 위한 스크립트 -->
+  <script src="../dist/assets/js/jquery.js"></script>
+  <script src="../dist/assets/js/ui-script.js"></script>
+</head>
+
+<body>
+
+  <div class="wrap">
+    <header class="header">
+      <div class="header__inner">
+        <div class="header-logo">
+          <a href="javascript:void(0)" class="header-logo__link"></a>
+        </div>
+        <div class="header-menu">
+          <div class="header-menu__inner">
+            <!-- 전달사항 :: 클릭시 클래스 is-active 추가 됩니다. -->
+            <div class="header-menu__item header-menu__inquiry">
+              <a href="javascript:void(0)" class="header-menu__link"></a>
+              <div class="header-menu__dropdown">
+                <div class="header-menu__dropdown--inner">
+                  <div class="header-menu__dropdown--body">
+                    <div class="ui-buttons">
+                      <a href="javascript:void(0)" class="ui-button ui-button__link ui-button__bg--blue">오류/일반 문의</a>
+                      <a href="javascript:void(0)" class="ui-button ui-button__link ui-button__bg--blue">my BEAKER 개선
+                        제안</a>
+                      <a href="javascript:void(0)" class="ui-button ui-button__link ui-button__bg--blue">데이터 수정/추출</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-menu__item header-menu__qr">
+              <a href="javascript:void(0)" class="header-menu__link"></a>
+              <div class="header-menu__dropdown">
+                <div class="header-menu__dropdown--inner">
+                  <div class="header-menu__dropdown--header">
+                    <div class="header-menu__dropdown--title">QR코드를 스캔해 주세요.</div>
+                  </div>
+                  <div class="header-menu__dropdown--body">
+                    <div class="qr-img__wrap">
+                      <div class="qr-img">
+                        <img src="./assets/images/_dummy/img-qr.png" alt="">
+                      </div>
+                      <div class="qr-text">사각 테두리안에 QR코드를 <br>
+                        인식해 주세요.</div>
+                    </div>
+                    <div class="qr-checkbox">
+                      <div class="ui-checkbox__list">
+                        <div class="ui-checkbox__inner">
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox">
+                            <label for="" class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="ui-label__text">웹캠사용</span>
+                            </label>
+                          </div>
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox" checked="">
+                            <label for="" class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="ui-label__text">새창으로</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 전달사항 :: 미확인 알람 있을때 클래스 is-alarm 추가 됩니다. -->
+            <div class="header-menu__item header-menu__alarm is-alarm">
+              <a href="javascript:void(0)" class="header-menu__link"></a>
+              <div class="header-menu__dropdown">
+                <div class="header-menu__dropdown--inner">
+                  <div class="header-menu__dropdown--body header-menu__dropdown--body-alarm">
+                    <div class="dropdown-alarm">
+                      <div class="dropdown-alarm__inner">
+                        <ul class="ui-list dropdown-alarm__lists">
+                          <li class="dropdown-alarm__list">
+                            <a href="javascript:void(0)" class="dropdown-alarm__link">
+                              <span class="font-weight__600">김상현</span>님이 <span class="font-weight__600">3102376 프리메라
+                                에센셜
+                                마사지크림(22AD)</span> BOM을 전송했습니다.
+                            </a>
+                            <span class="dropdown-alarm__time">12 minutes ago</span>
+                          </li>
+                          <li class="dropdown-alarm__list">
+                            <a href="javascript:void(0)" class="dropdown-alarm__link">
+                              <span class="font-weight__600">김상현</span>님이 <span class="font-weight__600">3102376 프리메라
+                                에센셜
+                                마사지크림(22AD)</span> BOM을 전송했습니다.
+                            </a>
+                            <span class="dropdown-alarm__time">12 minutes ago</span>
+                          </li>
+                          <li class="dropdown-alarm__list">
+                            <a href="javascript:void(0)" class="dropdown-alarm__link">
+                              <span class="font-weight__600">김상현</span>님이 <span class="font-weight__600">3102376 프리메라
+                                에센셜
+                                마사지크림(22AD)</span> BOM을 전송했습니다.
+                            </a>
+                            <span class="dropdown-alarm__time">12 minutes ago</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-menu__item header-menu__setting">
+              <a href="javascript:void(0)" class="header-menu__link"></a>
+              <div class="header-menu__dropdown">
+                <div class="header-menu__dropdown--inner">
+                  <div class="header-menu__dropdown--header">
+                    <div class="header-menu__dropdown--title">설정</div>
+                  </div>
+                  <div class="header-menu__dropdown--body header-menu__dropdown--body-setting">
+                    <div class="dropdown-item">
+                      <div class="dropdown-item__title">메인</div>
+                      <div class="dropdown-item__contents">
+                        <div class="setting-myBoard">
+                          <div class="setting-myBoard__inner">
+                            <ul class="ui-list setting-myBoard__lists">
+                              <!-- 전달사항 :: 클릭시 클래스 is-active 추가 됩니다. -->
+                              <li class="setting-myBoard__list is-active">
+                                <a href="javascript:void(0)" class="setting-myBoard__link setting-myBoard__link--note">
+                                  <i class="setting-myBoard__icon"></i>
+                                  <span class="setting-myBoard__title">Note</span>
+                                </a>
+                              </li>
+                              <li class="setting-myBoard__list">
+                                <a href="javascript:void(0)"
+                                  class="setting-myBoard__link setting-myBoard__link--schedule">
+                                  <i class="setting-myBoard__icon"></i>
+                                  <span class="setting-myBoard__title">Schedule</span>
+                                </a>
+                              </li>
+                              <li class="setting-myBoard__list">
+                                <a href="javascript:void(0)"
+                                  class="setting-myBoard__link setting-myBoard__link--examination">
+                                  <i class="setting-myBoard__icon"></i>
+                                  <span class="setting-myBoard__title">Examination</span>
+                                </a>
+                              </li>
+                              <li class="setting-myBoard__list">
+                                <a href="javascript:void(0)" class="setting-myBoard__link setting-myBoard__link--memo">
+                                  <i class="setting-myBoard__icon"></i>
+                                  <span class="setting-myBoard__title">Memo</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dropdown-item">
+                      <div class="dropdown-item__title">알림수신</div>
+                      <div class="dropdown-item__contents">
+                        <div class="ui-checkbox__list ui-check-list--bipartite">
+                          <div class="ui-checkbox__inner ">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">전체 수신</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" checked="">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">실험 시작</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" checked="">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">BOM 전송</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" checked="">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">내용물 입고</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" checked="">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">개발 완료</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-menu__item header-menu__logout">
+              <a href="javascript:void(0)" class="header-menu__link"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="ui-layout">
+      <div class="ui-layout__inner">
+        <!-- 전달사항 :: 메뉴 펼쳤을때 .is-open 붙습니다. -->
+        <div class="left-menu is-open">
+          <div class="left-menu__inner">
+            <button type="button" class="left-menu__button"><i class="left-menu__button--icon"></i></button>
+            <div class="left-menu__box">
+              <!-- 전달사항 :: 클릭시 .left-menu__list에 is-active 붙여주세요. -->
+              <div class="left-menu__item">
+                <ul class="ui-list left-menu__lists left-menu__lists--height-60">
+                  <li class="left-menu__list ">
+                    <a href="javascript:void(0)" class="left-menu__link"><i
+                        class="left-menu__icon left-menu__icon--basicInfo"></i><span class="left-menu__text">Basic
+                        Information</span><span class="left-menu__tooltip">Basic Information</span></a>
+                  </li>
+                  <li class="left-menu__list">
+                    <a href="javascript:void(0)" class="left-menu__link">
+                      <i class="left-menu__icon left-menu__icon--folmula"></i><span
+                        class="left-menu__text">Folmula</span><span class="left-menu__tooltip">Folmula</span>
+                    </a>
+                  </li>
+                  <li class="left-menu__list">
+                    <a href="javascript:void(0)" class="left-menu__link">
+                      <i class="left-menu__icon left-menu__icon--test"></i><span
+                        class="left-menu__text">Test</span><span class="left-menu__tooltip">Test</span>
+                    </a>
+                  </li>
+                  <li class="left-menu__list is-active">
+                    <a href="javascript:void(0)" class="left-menu__link">
+                      <i class="left-menu__icon left-menu__icon--process"></i><span
+                        class="left-menu__text">Process</span><span class="left-menu__tooltip">Process</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="left-menu__copyright">© Amorepacific Corp.</div>
+          </div>
+        </div>
+
+        <div class="contents">
+          <div class="contents__inner">
+
+            <div class="contents-core">
+              <div class="contents-cell__wrap">
+                <div class="contents-cell flex-none">
+                  <div class="contents-box ">
+                    <div class="contents-box__inner p-0 min-height__unset">
+
+                      <nav class="history-tab">
+                        <h2 class="for-a11y">History Tab</h2>
+                        <div class="history-tab__inner">
+                          <div class="">
+                            <div class="">
+                              <ul class="ui-list history-tab__list">
+                                <!-- DD : 현재 페이지면 is-active 클래스 값 추가 -->
+                                <li class="history-tab__item is-active">
+                                  <div class="history-tab__block">
+                                    <a href="" class="history-tab__link">3012376</a>
+                                    <button type="button" class="ui-button history-tab__delete">
+                                      <span class="for-a11y">삭제</span>
+                                    </button>
+                                  </div>
+                                </li>
+                                <li class="history-tab__item">
+                                  <div class="history-tab__block">
+                                    <a href="" class="history-tab__link">3012544</a>
+                                    <button type="button" class="ui-button history-tab__delete">
+                                      <span class="for-a11y">삭제</span>
+                                    </button>
+                                  </div>
+                                </li>
+                                <li class="history-tab__item">
+                                  <div class="history-tab__block">
+                                    <a href="" class="history-tab__link">3012648</a>
+                                    <button type="button" class="ui-button history-tab__delete">
+                                      <span class="for-a11y">삭제</span>
+                                    </button>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </nav>
+
+                      <div class="nav nav-inside">
+                        <div class="nav__inner">
+                          <div class="nav-title">Process</div>
+                          <ul class="ui-list nav-lists">
+                            <li class="nav-list nav-list__home"><a href="javascript:void(0)" class="nav-link"></a>
+                            </li>
+                            <li class="nav-list nav-list__depth2"><a href="javascript:void(0)" class="nav-link">ALL LAB
+                                NOTES</a></li>
+                            <li class="nav-list nav-list__depth3 is-active"><a href="javascript:void(0)"
+                                class="nav-link">PROCESS</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="ui-process ui-process--big">
+                        <div class="ui-process__inner">
+                          <div class="process-bar">
+                            <!-- 전달사항 :: width 값 다르게 설정 됩니다.
+                                    개발의뢰 : width:30px;
+                                    실험중 : width:185px;
+                                    파일럿 : width:338px;
+                                    처방확정 : width:492px;
+                                    전성분 승인 : width:646px;
+                                    개발완료 : width:100%;
+                                -->
+                            <div class="process-bar__set" style="width:492px;"></div>
+                          </div>
+                          <div class="ui-process__text--wrap">
+                            <ul class="ui-list ui-process__lists">
+                              <li class="ui-process__list is-past">
+                                <div class="ui-process__icon"></div>
+                                <div class="ui-process__text">
+                                  <span class="ui-process__text--title">개발의뢰</span>
+                                </div>
+                              </li>
+                              <li class="ui-process__list is-past">
+                                <div class="ui-process__icon"></div>
+                                <div class="ui-process__text">
+                                  <span class="ui-process__text--title">실험중</span>
+                                </div>
+                              </li>
+                              <li class="ui-process__list is-past">
+                                <div class="ui-process__icon"></div>
+                                <div class="ui-process__text">
+                                  <span class="ui-process__text--title">파일럿</span>
+                                </div>
+                              </li>
+                              <li class="ui-process__list is-active">
+                                <div class="ui-process__icon"></div>
+                                <div class="ui-process__text">
+                                  <span class="ui-process__text--title">처방확정</span>
+                                </div>
+                              </li>
+                              <li class="ui-process__list">
+                                <div class="ui-process__icon"></div>
+                                <div class="ui-process__text">
+                                  <span class="ui-process__text--title">전성분 승인</span>
+                                </div>
+                              </li>
+                              <li class="ui-process__list">
+                                <div class="ui-process__icon"></div>
+                                <div class="ui-process__text">
+                                  <span class="ui-process__text--title">개발완료</span>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="contents-cell">
+                  <div class="contents-box contents-box__full contents-box__with--tab min-height__unset">
+                    <div class="contents-box__tab">
+                      <div class="contents-box__tab--inner">
+                        <ul class="ui-list contents-box__tab--list">
+                          <li class="contents-box__tab--item">
+                            <div class="contents-box__tab--block">
+                              <a href="" class="contents-box__tab--link">처방 확정</a>
+                            </div>
+                          </li>
+                          <li class="contents-box__tab--item is-active">
+                            <div class="contents-box__tab--block">
+                              <a href="" class="contents-box__tab--link">기능성 허가</a>
+                            </div>
+                          </li>
+                          <li class="contents-box__tab--item ">
+                            <div class="contents-box__tab--block">
+                              <a href="" class="contents-box__tab--link">PILOT</a>
+                            </div>
+                          </li>
+                          <li class="contents-box__tab--item ">
+                            <div class="contents-box__tab--block">
+                              <a href="" class="contents-box__tab--link">BOM</a>
+                            </div>
+                          </li>
+                          <li class="contents-box__tab--item ">
+                            <div class="contents-box__tab--block">
+                              <a href="" class="contents-box__tab--link">TIME LINE</a>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="contents-box__inner">
+
+                      <div class="version-tab__top">
+                        <div class="version-tab__top__inner">
+                          <ul class="ui-list version-tab__top__lists version-tab__top__lists--l">
+                            <li class="version-tab__top__list"><a href="#" class="version-tab__top__link">확정
+                                제품명</a></li>
+                            <li class="version-tab__top__list is-active"><a href="#" class="version-tab__top__link">시험 성적서</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="version-tab__top">
+                        <div class="version-tab__top__inner">
+                          <ul class="ui-list version-tab__top__lists">
+                            <li class="version-tab__top__list is-active"><a href="#" class="version-tab__top__link">Ver
+                                #01</a></li>
+                            <li class="version-tab__top__list"><a href="#" class="version-tab__top__link">Ver #02</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="search-bar__row search-bar__row--mt12">
+                        <dl class="search-bar__item">
+                          <dt class="search-bar__key search-bar__key--width-220">내용물 정보</dt>
+                          <dd class="search-bar__val search-bar__val--flexible">
+                            <div class="note-table">
+                              <div class="note-table__inner">
+                                <table class="ui-table ui-table__td--40 text-center">
+                                  <colgroup>
+                                    <col style="width:12%;">
+                                    <col style="width:13rem;">
+                                    <col style="width:25%;">
+                                    <col style="width:auto;">
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th>내용물 코드</th>
+                                      <th>LOT</th>
+                                      <th>차수 / 일자 / 제조번호</th>
+                                      <th>내용물 명</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>3095783</td>
+                                      <td>
+                                        <div class="ui-select-block">
+                                          <select class="ui-select ui-select__width--120" title="title">
+                                            <option>선택</option>
+                                          </select>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div class="ui-select-block">
+                                          <select class="ui-select ui-select__width--full" title="title">
+                                            <option>선택</option>
+                                          </select>
+                                      </td>
+                                      <td class="tit">
+                                        <div class="tit__inner">
+                                          <a href="javascript:void(0)" class="tit-link">(검출) 프리메라 에센셜 마사지 크림 (22AD) 마이비커
+                                            실험</a>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+
+
+                              </div>
+                            </div>
+                          </dd>
+                        </dl>
+                      </div>
+                      <div class="search-bar__row search-bar__row--mt12">
+                        <dl class="search-bar__item">
+                          <dt class="search-bar__key search-bar__key--width-220">주성분 원료코드/원료명/함량</dt>
+                          <dd class="search-bar__val search-bar__val--flexible">
+                            <table class="ui-table__reset ui-table__ver">
+                              <colgroup>
+                                <col style="width:13rem">
+                                <col style="width:auto">
+                              </colgroup>
+                              <tbody>
+                                <tr>
+                                  <th>자외선 차단</th>
+                                  <td>
+
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th>관련근거</th>
+                                  <td>보고</td>
+                                </tr>
+                                <tr>
+                                  <th>제형</th>
+                                  <td>
+                                    <div class="form-flex">
+                                      <div class="form-flex-cell">
+                                        1제: , 2제: , 3제:
+                                      </div>
+                                      <div class="form-flex-cell ml-40">
+                                        <div class="ui-checkbox__list">
+                                          <div class="ui-checkbox__inner">
+                                            <div class="ui-checkbox-block">
+                                              <input type="checkbox" class="ui-checkbox">
+                                              <label for="" class="ui-label">
+                                                <span class="ui-checkbox-object"></span>
+                                                <span class="ui-label__text">웹캠사용</span>
+                                              </label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th>심사번호</th>
+                                  <td><span class="color-lightblue">TEST20211208</span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <div class="note-table mt-12">
+                              <div class="note-table__inner">
+                                <table class="ui-table ui-table__td--40 text-center">
+                                  <colgroup>
+                                    <col style="width:15%;">
+                                    <col style="width:20%;">
+                                    <col style="width:12%;">
+                                    <col style="width:auto;">
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th>원료 코드</th>
+                                      <th>원료명</th>
+                                      <th>함량</th>
+                                      <th>비고</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>6000005</td>
+                                      <td>이온프로텍션 틴티드 PB</td>
+                                      <td>100</td>
+                                      <td class="text-left">틴트에 사용하는 원료</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+
+
+                              </div>
+                            </div>
+                          </dd>
+                        </dl>
+                      </div>
+
+                      <div class="search-bar__row search-bar__row--mt12">
+                        <dl class="search-bar__item">
+                          <dt class="search-bar__key search-bar__key--width-220">브랜드 담당 PM</dt>
+                          <dd class="search-bar__val search-bar__val--flexible">배서윤 (AP35002695 / 연구인프라운영 Lab)</dd>
+                        </dl>
+                      </div>
+
+                      <div class="search-bar__row search-bar__row--mt12">
+                        <dl class="search-bar__item">
+                          <dt class="search-bar__key search-bar__key--width-220">제품연구원</dt>
+                          <dd class="search-bar__val search-bar__val--flexible">함은혜 (AP491472 / 스킨케어2 Lab)</dd>
+                        </dl>
+                      </div>
+
+                      <div class="search-bar__row search-bar__row--mt12">
+                        <dl class="search-bar__item">
+                          <dt class="search-bar__key search-bar__key--width-220">출시지역</dt>
+                          <dd class="search-bar__val search-bar__val--flexible">한국 (2022.08)</dd>
+                        </dl>
+                      </div>
+
+                      <div class="search-bar__row search-bar__row--mt12">
+                        <dl class="search-bar__item">
+                          <dt class="search-bar__key search-bar__key--width-220">파일럿 시기</dt>
+                          <dd class="search-bar__val search-bar__val--flexible">2022.12</dd>
+                        </dl>
+                      </div>
+
+                      <div class="search-bar__row search-bar__row--mt12">
+                        <dl class="search-bar__item">
+                          <dt class="search-bar__key search-bar__key--width-220">양산일</dt>
+                          <dd class="search-bar__val search-bar__val--flexible">2023.12</dd>
+                        </dl>
+                      </div>
+
+                      <div class="search-bar__row search-bar__row--mt12">
+                        <dl class="search-bar__item">
+                          <dt class="search-bar__key search-bar__key--width-220"></dt>
+                          <dd class="search-bar__val search-bar__val--flexible">
+                            <div class="text-caution">
+                              <p class="text-caution__text text-caution__text--ps color-tomato">참고: 내용물 코드별로 홋수명 기재바랍니다.
+                                <br>
+                                홋수명은 제품 포장(용기,단상자)에 표시되는 홋수대로 기재해야 하니, 반드시 담당PM에게 확인하여 최종 확정된 홋수명으로 의뢰해야 합니다. <br>
+                                단일홋수 제품이어도 제품 포장에 홋수명이 표시되어 있으면 보고 의뢰시 홋수명 기재하시기 바랍니다.</p>
+                              <p class="text-caution__text text-caution__text--ps color-tomato">홋수명이 보고사항과 일치하지 않을 경우
+                                기능성 미보고 또는 표시 오류로 처분 대상이 되므로 주의 필요 <br>
+                                예시) 용기/ 단상자: 21호 라이트 베이지, 23호 그린 베이지</p>
+                              <p class="text-caution__text color-tomato ml-45">
+                                → (O) 312345: 21호, 312346: 23호 <br>
+                                → (X)  312345: 1호, 312346: 2호</p>
+                            </div>
+                            <div class="mt-20">
+                              <div class="ui-textarea-box ui-textarea-box__height--100">
+                                <textarea class="ui-textarea ui-textarea__placeholder--red"  placeholder="※제품명에 포함될 홋수명 입력"></textarea>
+                              </div>
+                            </div>
+                          </dd>
+                        </dl>
+                      </div>
+
+                      <div class="search-bar__row search-bar__row--mt12">
+                        <dl class="search-bar__item">
+                          <dt class="search-bar__key search-bar__key--width-220">
+                            총TiO2, ZnO 함량 <br>
+                            (자외선차단제일 경우만 해당)
+                          </dt>
+                          <dd class="search-bar__val search-bar__val--flexible">
+                            <div class="note-table mt-12">
+                              <div class="note-table__inner">
+                                <table class="ui-table ui-table__td--40 text-center">
+                                  <colgroup>
+                                    <col style="width:50%;">
+                                    <col style="width:50%;">
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th>TiO2 함량</th>
+                                      <th>ZNO 함량</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <div class="ui-textarea-box ui-textarea-box__height--100">
+                                          <textarea class="ui-textarea ui-textarea__placeholder--red" placeholder="※홋수명 구분  요망"></textarea>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div class="ui-textarea-box ui-textarea-box__height--100">
+                                          <textarea class="ui-textarea ui-textarea__placeholder--red" placeholder="※홋수명 구분  요망"></textarea>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+
+
+                              </div>
+                            </div>
+                          </dd>
+                        </dl>
+                      </div>
+
+                      <div class="search-bar__row search-bar__row--mt12">
+                        <dl class="search-bar__item">
+                          <dt class="search-bar__key search-bar__key--width-220">제조원</dt>
+                          <dd class="search-bar__val search-bar__val--flexible">
+                            <p class="text-caution__text text-caution__text--ps color-tomato mt-0">반드시 샘플 제품을 포함하여 일부공정위탁(외부임가공)상의 제조원을 모두 기재해주시기 바랍니다. <br>
+                              (특히, 팩트성형, 마스크류 제품은 주의하여 기입 부탁 드립니다)</p>
+
+                              <div class="ui-radio__list mt-30 mb-10">
+                                <div class="ui-radio__inner">
+                                  <div class="ui-radio-block">
+                                    <input type="radio" class="ui-radio" checked="">
+                                    <label class="ui-label">
+                                      <span class="ui-radio-object"></span>
+                                      <span class="ui-label__text">AP 오산플랜트</span>
+                                    </label>
+                                  </div>
+                                  <div class="ui-radio-block">
+                                    <input type="radio" class="ui-radio">
+                                    <label class="ui-label">
+                                      <span class="ui-radio-object"></span>
+                                      <span class="ui-label__text">AP 대전플랜트</span>
+                                    </label>
+                                  </div>
+                                  <div class="ui-radio-block">
+                                    <input type="radio" class="ui-radio">
+                                    <label class="ui-label">
+                                      <span class="ui-radio-object"></span>
+                                      <span class="ui-label__text">코스비전 대전플랜트</span>
+                                    </label>
+                                  </div>
+                                  <div class="ui-radio-block">
+                                    <input type="radio" class="ui-radio">
+                                    <label class="ui-label">
+                                      <span class="ui-radio-object"></span>
+                                      <span class="ui-label__text">기타</span>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                          </dd>
+                        </dl>
+                      </div>
+
+                      <div class="search-bar__row search-bar__row--mt12">
+                        <dl class="search-bar__item search-bar__item--width-100">
+                          <dt class="search-bar__key search-bar__key--width-220">PH(기준치±1.0)</dt>
+                          <dd class="search-bar__val search-bar__val--flexible">
+                            <div class="ui-input-block">
+                              <input type="text" class="ui-input ui-input__width--full" title="title" placeholder="">
+                            </div>
+                          </dd>
+                        </dl>
+                      </div>
+
+                      <div class="search-bar__row search-bar__row--mt12">
+                        <dl class="search-bar__item search-bar__item--width-100">
+                          <dt class="search-bar__key search-bar__key--width-220">첨부파일</dt>
+                          <dd class="search-bar__val search-bar__val--flexible">
+                            <div class="file-upload">
+                              <div class="file-upload__inner">
+                                <div class="file-upload__button">
+                                  <button type="button" class="ui-button ui-button__bg--blue font-weight__300">첨부파일</button>
+                                </div>
+                                <ul class="ui-list file-upload__lists">
+                                  <li class="file-upload__list">
+                                    <span class="file-upload__name">제품 basic information.pptx</span>
+                                    <button type="button" class="file-upload__button--delete"></button>
+                                  </li>
+                                  <li class="file-upload__list">
+                                    <span class="file-upload__name">제품 basic information.pptx</span>
+                                    <button type="button" class="file-upload__button--delete"></button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </dd>
+                        </dl>
+                      </div>
+
+
+                      
+
+
+
+
+
+
+
+
+
+
+
+                      <div class="board-bottom ">
+                        <div class="board-bottom__inner">
+                          <div class="ui-buttons ui-buttons__right">
+                            <button type="button" class="ui-button ui-button__bg--skyblue">요청하기</button>
+                            <button type="button" class="ui-button ui-button__border--gray">목록</button>
+                          </div>
+                        </div>
+
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+
+
+
+              </div>
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+          <!--//.contents__inner -->
+        </div>
+
+        <!-- 전달사항 :: 메뉴 펼쳤을때 .is-open 붙습니다. -->
+        <div class="right-menu is-open">
+          <div class="right-menu__inner">
+            <button type="button" class="right-menu__button"><i class="right-menu__button--icon"></i></button>
+            <div class="right-menu__tab">
+              <div class="right-menu__tab--header">
+                <ul class="ui-list right-menu__tab--lists">
+                  <!-- 전달사항 :: 활성 tab에 .is-active 붙습니다. -->
+                  <li class="right-menu__tab--list is-active"><a href="javascript:void(0)"
+                      class="right-menu__tab--link">memo</a></li>
+                  <li class="right-menu__tab--list"><a href="javascript:void(0)"
+                      class="right-menu__tab--link">schedule</a></li>
+                  <li class="right-menu__tab--list"><a href="javascript:void(0)" class="right-menu__tab--link">issue</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="right-menu__tab--body">
+                <div class="right-menu__tab--body-inner">
+
+                  <div class="right-menu__memo">
+                    <div class="memo-notice">
+                      <div class="memo-notice__inner">
+                        <i class="memo-notice__icon"></i>
+                        <a href="javascript:void(0)" class="memo-notice__link">연구실 공지입니다.연구실
+                          공지입니다.</a>
+                      </div>
+                    </div>
+                    <div class="memo-chat">
+                      <div class="memo-chat__inner">
+                        <div class="memo-chat__view">
+
+                          <div class="memo-chat__date">
+                            <div class="memo-chat__date--inner">2월 22일 수요일</div>
+                          </div>
+
+                          <div class="memo-chat__talker memo-chat__talker--other">
+                            <div class="talker-profile">
+                              <span class="talker-profile__img"><img src="./assets/images/icon/icon-profile.png"
+                                  alt=""></span>
+                              <span class="talker-profile__detail">
+                                <span class="talker-profile__name">장동건</span>
+                                <span class="talker-profile__work">아모레 오산</span>
+                              </span>
+                            </div>
+                            <div class="talker-talk">
+                              <div class="talker-talk__content">개발중이신 제품코드를 알 수 있을까요?
+                              </div>
+                              <div class="talker-talk__time">오후 01:24</div>
+                            </div>
+
+                          </div>
+
+                          <div class="memo-chat__talker memo-chat__talker--other">
+                            <div class="talker-profile">
+                              <span class="talker-profile__img"><img src="./assets/images/icon/icon-profile.png"
+                                  alt=""></span>
+                              <span class="talker-profile__detail">
+                                <span class="talker-profile__name">이미연</span>
+                                <span class="talker-profile__work">아모레 수원</span>
+                              </span>
+                            </div>
+                            <div class="talker-talk">
+                              <div class="talker-talk__content"> AP 오산플랜트/S <br>
+                                스킨케어 저장 방식 및 <br>
+                                용기정보 보내드립니다.</div>
+                              <div class="talker-talk__time">오후 01:24</div>
+                            </div>
+                          </div>
+
+                          <div class="memo-chat__talker memo-chat__talker--my">
+                            <div class="talker-talk">
+                              <div class="talker-talk__content">네 연구원님! <br>
+                                요청하신 제품코드는 <br>
+                                11064124입니다. </div>
+                              <div class="talker-talk__time">오후 01:24</div>
+                            </div>
+                          </div>
+
+                          <div class="memo-chat__talker memo-chat__talker--other">
+                            <div class="talker-profile">
+                              <span class="talker-profile__img"><img src="./assets/images/icon/icon-profile.png"
+                                  alt=""></span>
+                              <span class="talker-profile__detail">
+                                <span class="talker-profile__name">이보영</span>
+                                <span class="talker-profile__work">아이시프트</span>
+                              </span>
+                            </div>
+                            <div class="talker-talk">
+                              <div class="talker-talk__content">일정 : 2023-02-02 <br>
+                                장소 : 아모레 본사<br>
+                                참석 : 4명</div>
+                              <div class="talker-talk__time">오후 05:40</div>
+                            </div>
+                          </div>
+
+                          <div class="memo-chat__talker memo-chat__talker--my">
+                            <div class="talker-talk">
+                              <div class="talker-talk__content">일정확인 완료 <br>
+                                13:00시 도착<br>
+                                개발협력사 및 연구원 내방</div>
+                              <div class="talker-talk__time">오후 06:03</div>
+                            </div>
+                          </div>
+
+
+                        </div>
+                        <button class="memo-chat__resize-button"></button>
+                        <div class="memo-chat__write">
+                          <div class="memo-chat__write--inner">
+                            <textarea placeholder="의견을 남겨주세요. 최소3자이상 최대200자 남기실 수 있습니다."
+                              class="memo-chat__write--text"></textarea>
+                            <button class="memo-chat__write--button">전송</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

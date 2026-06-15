@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.66 63.7">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #cce1ff;
+        stroke: #232323;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <g id="_타이틀" data-name="타이틀">
+    <polygon class="cls-1" points="32.61 62.95 32.61 30.39 55.91 .75 .75 .75 22.59 30.39 22.59 57.12 32.61 62.95"/>
+  </g>
+</svg>

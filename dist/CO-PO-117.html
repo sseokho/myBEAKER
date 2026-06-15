@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>myBEAKER</title>
+
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- favicon -->
+  <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+  <!-- //favicon -->
+
+  <!-- style -->
+  <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+  <!-- //style -->
+
+  <!-- 메뉴 기능 위한 스크립트 -->
+  <script src="../dist/assets/js/jquery.js"></script>
+  <script src="../dist/assets/js/ui-script.js"></script>
+</head>
+
+<!-- 전달사항 :: 모달 표출시 .modal-open 붙여주세요 -->
+
+<body class="modal-open">
+
+  <!-- modal 모달 -->
+  <!-- 전달사항 :: 클래스 in 있을 때 모달 표출 -->
+  <div class="modal-backdrop fade in"></div>
+  <div id="myModal" class="modal fade in">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title">내용물 비교</div>
+          <button type="button" class="modal-close"></button>
+        </div>
+
+        <div class="modal-body">
+          <div class="form-flex">
+            <div class="form-flex__cell form-flex__cell--460">
+              <div class="search-depart-table">
+                <div class="search-depart-table__inner">
+                  <table class="ui-table__td--40">
+                    <colgroup>
+                      <col style="width:9rem">
+                      <col style="width:auto">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>내용물명</th>
+                        <td>
+                          <div class="font-weight__600 color-blue">(기2)(PF)리리코스 마린 퍼플 리바이탈 슈프림 앰플</div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>연구원</th>
+                        <td>함은혜</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="search-detail-table mt-15">
+                <div class="search-detail-table__inner">
+                  <table class="ui-table__modal">
+                    <colgroup>
+                      <col style="width:8.2rem">
+                      <col style="width:auto">
+                      <col style="width:15rem">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>원료코드</th>
+                        <th>원료명</th>
+                        <th>LOT #01 함량</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>6021804</td>
+                        <td class="text-left pl-10">슈퍼베리 추출액(Superberry extract)</td>
+                        <td>92.5</td>
+                      </tr>
+                      <tr>
+                        <td>6021804</td>
+                        <td class="text-left pl-10">슈퍼베리 추출액(Superberry extract)</td>
+                        <td>92.5</td>
+                      </tr>
+                      <tr>
+                        <td>6021804</td>
+                        <td class="text-left pl-10">슈퍼베리 추출액(Superberry extract)</td>
+                        <td>92.5</td>
+                      </tr>
+                      <tr>
+                        <td>6021804</td>
+                        <td class="text-left pl-10">슈퍼베리 추출액(Superberry extract)</td>
+                        <td>92.5</td>
+                      </tr>
+                      <tr>
+                        <td>6021804</td>
+                        <td class="text-left pl-10">슈퍼베리 추출액(Superberry extract)</td>
+                        <td>92.5</td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="search-detail-total">
+                <div class="search-detail-total__inner">
+                  <div class="search-detail-total__text">합계</div>
+                  <div class="search-detail-total__num search-detail-total__num--width-150">99.79</div>
+                </div>
+              </div>
+            </div>
+            <div class="form-flex__cell form-flex__cell--460">
+              <div class="search-depart-table">
+                <div class="search-depart-table__inner">
+                  <table class="ui-table__td--40">
+                    <colgroup>
+                      <col style="width:9rem">
+                      <col style="width:auto">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>내용물명</th>
+                        <td>
+                          <div class="font-weight__600 color-blue">(기2)(PF)리리코스 마린 퍼플 리바이탈 슈프림 앰플</div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>연구원</th>
+                        <td>함은혜</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="search-detail-table mt-15">
+                <div class="search-detail-table__inner">
+                  <table class="ui-table__modal">
+                    <colgroup>
+                      <col style="width:8.2rem">
+                      <col style="width:auto">
+                      <col style="width:15rem">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>원료코드</th>
+                        <th>원료명</th>
+                        <th>LOT #01 함량</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>6021804</td>
+                        <td class="text-left pl-10">슈퍼베리 추출액(Superberry extract)</td>
+                        <td>92.5</td>
+                      </tr>
+                      <tr>
+                        <td>6021804</td>
+                        <td class="text-left pl-10">슈퍼베리 추출액(Superberry extract)</td>
+                        <td>92.5</td>
+                      </tr>
+                      <tr>
+                        <td>6021804</td>
+                        <td class="text-left pl-10">슈퍼베리 추출액(Superberry extract)</td>
+                        <td>92.5</td>
+                      </tr>
+                      <tr>
+                        <td>6021804</td>
+                        <td class="text-left pl-10">슈퍼베리 추출액(Superberry extract)</td>
+                        <td>92.5</td>
+                      </tr>
+                      <tr>
+                        <td>6021804</td>
+                        <td class="text-left pl-10">슈퍼베리 추출액(Superberry extract)</td>
+                        <td>92.5</td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="search-detail-total">
+                <div class="search-detail-total__inner">
+                  <div class="search-detail-total__text">합계</div>
+                  <div class="search-detail-total__num search-detail-total__num--width-150">99.79</div>
+                </div>
+              </div>
+            </div>
+            <div class="form-flex__cell form-flex__cell--460">
+              <div class="search-depart-table">
+                <div class="search-depart-table__inner">
+                  <table class="ui-table__td--40">
+                    <colgroup>
+                      <col style="width:9rem">
+                      <col style="width:auto">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>내용물명</th>
+                        <td>
+                          <div class="font-weight__600 color-blue">(기2)(PF)리리코스 마린 퍼플 리바이탈 슈프림 앰플</div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>연구원</th>
+                        <td>함은혜</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="search-detail-table mt-15">
+                <div class="search-detail-table__inner">
+                  <table class="ui-table__modal">
+                    <colgroup>
+                      <col style="width:8.2rem">
+                      <col style="width:auto">
+                      <col style="width:15rem">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>원료코드</th>
+                        <th>원료명</th>
+                        <th>LOT #01 함량</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>6021804</td>
+                        <td class="text-left pl-10">슈퍼베리 추출액(Superberry extract)</td>
+                        <td>92.5</td>
+                      </tr>
+                      <tr>
+                        <td>6021804</td>
+                        <td class="text-left pl-10">슈퍼베리 추출액(Superberry extract)</td>
+                        <td>92.5</td>
+                      </tr>
+                      <tr>
+                        <td>6021804</td>
+                        <td class="text-left pl-10">슈퍼베리 추출액(Superberry extract)</td>
+                        <td>92.5</td>
+                      </tr>
+                      <tr>
+                        <td>6021804</td>
+                        <td class="text-left pl-10">슈퍼베리 추출액(Superberry extract)</td>
+                        <td>92.5</td>
+                      </tr>
+                      <tr>
+                        <td>6021804</td>
+                        <td class="text-left pl-10">슈퍼베리 추출액(Superberry extract)</td>
+                        <td>92.5</td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="search-detail-total">
+                <div class="search-detail-total__inner">
+                  <div class="search-detail-total__text">합계</div>
+                  <div class="search-detail-total__num search-detail-total__num--width-150">99.79</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+  <!--// modal 모달 -->
+
+
+
+
+</body>
+
+</html>

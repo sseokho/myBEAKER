@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70.64 62.7">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #4b7ae4;
+      }
+
+      .cls-3 {
+        stroke: #373737;
+      }
+
+      .cls-3, .cls-4 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        stroke-width: 1.5px;
+      }
+
+      .cls-4, .cls-5 {
+        stroke: #232323;
+      }
+
+      .cls-5 {
+        fill: #ffce00;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <g id="_타이틀" data-name="타이틀">
+    <g>
+      <rect class="cls-1" x=".75" y="10" width="69.14" height="24.92"/>
+      <rect class="cls-2" x=".75" y="33.06" width="69.14" height="24.92"/>
+      <rect class="cls-4" x=".75" y="9.25" width="69.14" height="48.74"/>
+      <polyline class="cls-4" points="25.97 8.52 25.97 .75 44.67 .75 44.67 9.16"/>
+      <polyline class="cls-4" points="58.77 59.09 58.77 61.95 50.83 61.95 50.83 58.24"/>
+      <polyline class="cls-4" points="20.57 59.09 20.57 61.95 12.64 61.95 12.64 58.24"/>
+      <line class="cls-3" x1="1.63" y1="33.06" x2="68.96" y2="33.06"/>
+      <polygon class="cls-5" points="44.67 30.14 38.51 30.14 38.51 23.98 32.13 23.98 32.13 30.14 25.97 30.14 25.97 36.53 32.13 36.53 32.13 42.69 38.51 42.69 38.51 36.53 44.67 36.53 44.67 30.14"/>
+    </g>
+  </g>
+</svg>

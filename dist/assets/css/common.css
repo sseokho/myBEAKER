@@ -1,0 +1,292 @@
+@charset "UTF-8";
+/* 로그인 */
+.wrap-common {
+  min-width: unset;
+  min-height: unset;
+  height: 100%;
+}
+
+.ui-layout__common .ui-layout__inner {
+  padding: 0;
+}
+.ui-layout__common .login {
+  width: 100%;
+  height: 100%;
+}
+.ui-layout__common .login__inner {
+  display: flex;
+  -ms-display: flexbox;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  height: 100%;
+  padding: 11rem 14rem;
+  background: url(../images/background/bg-login.jpg) no-repeat bottom center;
+  background-size: cover;
+  box-sizing: border-box;
+}
+.ui-layout__common .login-box {
+  display: flex;
+  -ms-display: flexbox;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: column;
+  width: 41rem;
+  margin-top: auto;
+}
+.ui-layout__common .login-logo {
+  width: 17.9rem;
+  height: 8.1rem;
+  margin-top: auto;
+  background: url(../images/common/login-logo.png) no-repeat left center;
+  background-size: contain;
+}
+.ui-layout__common .login-text {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  color: #232323;
+  line-height: 100%;
+}
+.ui-layout__common .login-input {
+  /* checking style */
+  /* move */
+}
+.ui-layout__common .login-input .cell-col + .cell-col {
+  margin-top: 0.8rem;
+}
+.ui-layout__common .login-input .save-id {
+  display: flex;
+  -ms-display: flexbox;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 0.8rem;
+}
+.ui-layout__common .login-input .save-id__text {
+  margin-left: 1rem;
+  font-size: 1.4rem;
+  color: #000000;
+}
+.ui-layout__common .login-input .switch_label {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  width: 4.5rem;
+  height: 2.4rem;
+  background: #dee2ea;
+  border-radius: 2rem;
+  transition: 0.2s;
+  box-shadow: inset 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.12);
+}
+.ui-layout__common .login-input .onf_btn {
+  position: absolute;
+  top: 0.4rem;
+  left: 0.3rem;
+  display: inline-block;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 20px;
+  background: #ffffff;
+  transition: 0.2s;
+}
+.ui-layout__common .login-input #switch {
+  position: absolute;
+  /* hidden */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.ui-layout__common .login-input #switch:checked + .switch_label {
+  background: #8cb0f4;
+  box-shadow: none;
+}
+.ui-layout__common .login-input #switch:checked + .switch_label .onf_btn {
+  left: 2.5rem;
+}
+.ui-layout__common .login .ui-input__login {
+  height: 5rem;
+  border: 0;
+  padding: 0 2rem;
+}
+.ui-layout__common .login-button {
+  width: 100%;
+  height: 5rem;
+  background: #4886ff;
+  font-size: 1.6rem;
+  color: #ffffff;
+  border-radius: 0.6rem;
+}
+.ui-layout__common .login-button__wrap {
+  margin-top: 3rem;
+}
+
+/* 관리자 메인 */
+.admin-main {
+  width: 100%;
+}
+.admin-main .admin-main__inner {
+  display: flex;
+  -ms-display: flexbox;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  height: 100%;
+  background: url(../images/background/bg-adminMain.jpg) no-repeat bottom center;
+  background-size: cover;
+}
+.admin-main .admin-main__left {
+  display: flex;
+  -ms-display: flexbox;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  padding: 0 12rem;
+  box-sizing: border-box;
+}
+.admin-main .admin-main__right {
+  flex: 1;
+  background: url(../images/background/bg-adminMain.jpg) no-repeat center;
+  background-size: cover;
+}
+.admin-main .admin-main__box {
+  height: auto;
+  margin: 1rem;
+}
+.admin-main .admin-main__box--wrap {
+  display: flex;
+  -ms-display: flexbox;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: -1rem;
+}
+.admin-main .admin-main__link {
+  display: flex;
+  -ms-display: flexbox;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 22rem;
+  height: 27rem;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.8rem;
+  box-shadow: 0.8rem 0.8rem 1.6rem rgba(12, 58, 148, 0.2);
+  overflow: hidden;
+  transition: all 0.2s;
+}
+.admin-main .admin-main__link:hover {
+  color: #ffffff;
+  position: relative;
+  box-shadow: none;
+  transition: all 0.2s;
+}
+.admin-main .admin-main__skincare {
+  background: url(../images/background/bg-adminMainBox01.png);
+}
+.admin-main .admin-main__skincare:hover {
+  background: #3b61ac;
+}
+.admin-main .admin-main__makeup {
+  background: url(../images/background/bg-adminMainBox02.png);
+}
+.admin-main .admin-main__makeup:hover {
+  background: #287592;
+}
+.admin-main .admin-main__hbd {
+  background: url(../images/background/bg-adminMainBox03.png);
+}
+.admin-main .admin-main__hbd:hover {
+  background: #3170b1;
+}
+.admin-main .admin-main__drug {
+  background: url(../images/background/bg-adminMainBox04.png);
+}
+.admin-main .admin-main__drug:hover {
+  background: #5663a4;
+}
+
+/* 404, 500 에러 페이지 */
+.error-page {
+  display: flex;
+  -ms-display: flexbox;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.error-page__inner {
+  display: flex;
+  -ms-display: flexbox;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 91.6rem;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  background: #f6f7fb;
+}
+.error-text__code {
+  font-size: 16rem;
+  font-weight: 600;
+  color: #4886ff;
+  line-height: 16rem;
+}
+.error-text__text {
+  margin-top: 5rem;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #6f84ab;
+  line-height: 3rem;
+}
+.error-text__detail {
+  margin-top: 4rem;
+  font-size: 1.8rem;
+  color: #6f84ab;
+  line-height: 3rem;
+}
+
+/*====================================================================================*/
+/*================================= responsive =======================================*/
+/*====================================================================================*/
+@media (max-width: 1540px) {
+  body, html {
+    font-size: 61.4%;
+  }
+}
+@media (max-width: 1470px) {
+  body, html {
+    font-size: 58.9622641509%;
+  }
+}

@@ -1,0 +1,98 @@
+@charset 'utf-8';
+
+/* 선미 start */ 
+.search-form__inner {
+    position:relative;
+}
+.total {
+    position:absolute;
+    display:inline-block;
+    left:0;
+    span {
+        display:inline-block;
+        font-size:1.4rem;
+        font-weight: 600;
+    }
+    p {
+        display:inline-block;
+        margin-left:5px;
+        color:#485469;
+        font-size:1.4rem;
+        font-weight: 500;
+        color: red;
+    }
+}
+.Answers {
+    &-table {
+        &.top{
+            &-blue {
+                border-top:2px solid #86affc;
+            }
+        }
+        .ui-table {
+            tr {
+                border-bottom:1px solid #eff1f8;
+                &:not(.tr-contents):hover {
+                    position:relative;
+                    background-color:transparent;
+                    z-index: 1;
+                }
+                th {
+                    position:relative;
+                    padding:0 2rem;
+                    background-color:#f7fafe;
+                    box-sizing: border-box;
+                    z-index: 0;
+                    .num {
+                        color:#7283a2;
+                        font-size:1.3rem;
+                        text-align: left;
+                        p {
+                            margin: 1rem 0 0 0;
+                            font-weight:600;
+                        }
+                        &+.num {
+                            padding-top:1.8rem;
+                        }
+                    }
+
+                }
+                td {
+                    padding: 2.5rem 2rem;
+                    box-sizing: border-box;
+                    .tit {
+                        margin-bottom:1.5rem;
+                        font-size:1.8rem;
+                        font-weight:600;
+                        letter-spacing: -0.5px;
+                        text-align: left;
+                        color:#000;
+                    }
+                    .cont {
+                        font-size:1.4rem;
+                        text-align: left;
+                        color:#3f3f3f;
+                    }
+                    .tag {
+                        @include d-flex;
+                        p {
+                            margin: 0;
+                            margin-top: 2rem;
+                            padding: 0.6rem 1.1rem;
+                            border-radius: 1.5rem;;
+                            font-size:1.2rem;
+                            color:#347cd4;
+                            background-color: #ecf3ff;
+                            box-sizing: border-box;
+                            &+p {
+                                margin-left:0.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 선미 end */ 

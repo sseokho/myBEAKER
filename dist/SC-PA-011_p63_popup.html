@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>myBEAKER</title>
+
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- favicon -->
+  <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+  <!-- //favicon -->
+
+  <!-- style -->
+  <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+  <!-- //style -->
+
+
+</head>
+
+<!-- 전달사항 :: 모달 표출시 .modal-open 붙여주세요 -->
+
+<body class="modal-open">
+
+  <!-- modal 모달 -->
+  <!-- 전달사항 :: 클래스 in 있을 때 모달 표출 -->
+  <div class="modal-backdrop fade in"></div>
+  <div id="myModal" class="modal fade in">
+    <div class="modal-dialog">
+      <div class="modal-content modal-content__width--922">
+        <div class="modal-header">
+          <div class="modal-title">실험결과</div>
+          <button type="button" class="modal-close"></button>
+        </div>
+
+        <div class="modal-body">
+
+          <div class="modal-body__item">
+            <div class="modal-des modal-des__red">
+              *LOT에 대한 규격설정 값입니다.
+            </div>
+            <section class="search-bar p-0">
+              <h2 class="for-a11y">검색</h2>
+  
+              <div class="search-bar__left">
+  
+                <div class="search-bar__row">
+                  <dl class="search-bar__item">
+                    <dd class="search-bar__val">
+                      <div class="form-flex">
+                        <div class=" form-flex-cell form-flex__cell--5">
+                          <div class="ui-select-block">
+                            <select class="ui-select ui-select__width--110 ui-select__color--deepgray" title="title">
+                              <option value="">점도</option>
+                              <option value="">option 2</option>
+                              <option value="">option 3</option>
+                              <option value="">option 4</option>
+                              <option value="">option 5</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-flex-cell form-flex__cell--5">
+                          <div class="search-form">
+                            <div class="search-form__inner">
+                              <input type="text" class="ui-input ui-input__width--318" placeholder="예시) 0000±0000, Spindle: 64qjs, 12rpm, 2m">
+                              <button type="button" class="button-search">±입력</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </dd>
+                  </dl>
+                  <dl class="search-bar__item search-bar__item--flexible ml-20">
+                    <dt class="search-bar__key">pH</dt>
+                    <dd class="search-bar__val search-bar__val--flexible">
+                      <input type="text" class="ui-input ui-input__width--full">
+                    </dd>
+                  </dl>
+                </div>
+  
+                <div class="search-bar__col">
+  
+                  <dl class="search-bar__item">
+                    <dt class="search-bar__key">실험결과 LOT 메모</dt>
+                    <dd class="search-bar__val">
+                      <div class="ui-textarea-box ui-textarea-box__height--100">
+                        <textarea class="ui-textarea"></textarea>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+
+            </section>
+
+            <div class="board-bottom ">
+              <div class="board-bottom__inner">
+                <div class="ui-buttons ml-auto ui-buttons__right">
+                  <button type="button" class="ui-button ui-button__bg--skyblue font-weight__300">저장</button>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
+          <div class="modal-body__item">
+            <div class="modal-des modal-des__red">
+              *실제 측정날짜를 입력해야만 저장이 됩니다. 
+            </div>
+            
+            <section class="search-bar p-0">
+              <h2 class="for-a11y">검색</h2>
+  
+              <div class="search-bar__left">
+  
+                <div class="search-bar__row">
+                  <dl class="search-bar__item">
+                    <dt class="search-bar__key search-bar__key--width-107">그램</dt>
+                    <dd class="search-bar__val">
+                      <div class="ui-radio__list">
+                        <div class="ui-radio__inner">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" checked="">
+                            <label class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">100g</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="search-bar__row">
+                  <dl class="search-bar__item">
+                    <dt class="search-bar__key search-bar__key--width-107">실험기간</dt>
+                    <dd class="search-bar__val">
+                      <div class="form-flex">
+                        <div class="form-flex-cell">
+                          <input type="text" class="ui-input ui-input__date ui-input__width--130">
+                        </div>
+                        <div class="form-flex-cell form-flex-cell--date-hyphen">~</div>
+                        <div class="form-flex-cell">
+                          <input type="text" class="ui-input ui-input__date ui-input__width--130">
+                        </div>
+                        <div class="form-flex-cell ml-05">
+                          <div class="ui-buttons">
+                            <button type="button" class="ui-button ui-button__bg--lightgray">초기</button>
+                            <button type="button" class="ui-button ui-button__bg--lightgray">익일</button>
+                            <button type="button" class="ui-button ui-button__bg--lightgray">1주</button>
+                            <button type="button" class="ui-button ui-button__bg--lightgray">2주</button>
+                            <button type="button" class="ui-button ui-button__bg--lightgray">3주</button>
+                            <button type="button" class="ui-button ui-button__bg--lightgray">4주</button>
+                          </div>
+                        </div>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+  
+              </div>
+
+            </section>
+
+            <div class="mt-15">
+              <div class="ui-table__wrap ui-table__scroll-x">
+                <table class="ui-table ui-table__material-pop  text-center ui-table__th--border-radius--0 ui-table__border-all" style="width:1000px;">
+                  <colgroup>
+                    <col style="width:10rem;">
+                    <col style="width:18%;">
+                    <col style="width:7%;">
+              
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th rowspan="2" class="border-left">날짜</th>
+                      <th rowspan="2">실제 측정날짜</th>
+                      <th rowspan="2">점도</th>
+                      <th rowspan="2">ph</th>
+                      <th colspan="4" class="th-height__32 border-bottom">안정도</th>
+                    </tr>
+                    <tr>
+                      <th class="th-height__28">실온 </th>
+                      <th class="th-height__28 border-left__none">냉장</th>
+                      <th class="th-height__28 border-left__none">냉동</th>
+                      <th class="th-height__28 border-left__none">30</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="2">
+                        <div class="material-pop__date">초기<br><span class="material-pop__date--gray">2022.06.03</span></div>
+                      </td>
+                      <td rowspan="2">
+                        <div class="form-flex form-flex__col">
+                          <div class="form-flex-cell">
+                            <input type="text" class="ui-input ui-input__date ui-input__width--130">
+                          </div>
+                          <div class="form-flex-cell mt-10">
+                            <div class="ui-checkbox__list">
+                              <div class="ui-checkbox__inner">
+                                <div class="ui-checkbox-block">
+                                  <input type="checkbox" class="ui-checkbox">
+                                  <label for="" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                    <span class="ui-label__text">측정불가</span>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td rowspan="2">
+                        <input type="text" class="ui-input ui-input__width--130">
+                      </td>
+                      <td rowspan="2">
+                        <input type="text" class="ui-input ui-input__width--130">
+                      </td>
+                      <td>
+                        <div class="ui-buttons__material-result">
+                          <!-- 전달사항 :: 활성화 시 is-active 붙습니다. -->
+                          <button class="ui-button__material-result ui-button__material-result--o is-active"></button>
+                          <button class="ui-button__material-result ui-button__material-result--triangle"></button>
+                          <button class="ui-button__material-result ui-button__material-result--x"></button>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="ui-buttons__material-result">
+                          <!-- 전달사항 :: 활성화 시 is-active 붙습니다. -->
+                          <button class="ui-button__material-result ui-button__material-result--o"></button>
+                          <button class="ui-button__material-result ui-button__material-result--triangle is-active"></button>
+                          <button class="ui-button__material-result ui-button__material-result--x"></button>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="ui-buttons__material-result">
+                          <!-- 전달사항 :: 활성화 시 is-active 붙습니다. -->
+                          <button class="ui-button__material-result ui-button__material-result--o"></button>
+                          <button class="ui-button__material-result ui-button__material-result--triangle"></button>
+                          <button class="ui-button__material-result ui-button__material-result--x is-active"></button>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="ui-buttons__material-result">
+                          <button class="ui-button__material-result ui-button__material-result--o"></button>
+                          <button class="ui-button__material-result ui-button__material-result--triangle"></button>
+                          <button class="ui-button__material-result ui-button__material-result--x"></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="4">
+                        <input type="text" class="ui-input ui-input__width--full">
+                      </td>
+                      
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          
+
+
+
+        </div>
+
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+  <!--// modal 모달 -->
+
+</body>
+
+</html>

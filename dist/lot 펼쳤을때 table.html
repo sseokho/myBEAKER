@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>myBEAKER</title>
+
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- favicon -->
+  <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+  <!-- //favicon -->
+
+  <!-- style -->
+  <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+  <!-- //style -->
+
+  <!-- 메뉴 기능 위한 스크립트 -->
+  <script src="../dist/assets/js/jquery.js"></script>
+  <script src="../dist/assets/js/ui-script.js"></script>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="ui-layout">
+      <div class="ui-layout__inner">
+        <div class="material-excel">
+
+          <div class="d-flex">
+            <!-- 전달사항 :: lot 펼쳤을때 table -->
+            <table class="ui-table__reset material-excel__table material-excel__table--lot text-center ">
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="lot-cell">
+                      <div class="lot-tags">
+                        <button class="lot-tag lot-tag__bg-blue">확정 처방</button>
+                      </div>
+                      <button class="lot-cell__button"></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="lot-cell">
+                      <div class="lot-tags">
+                        <button class="lot-tag lot-tag__border-gray ml-auto">전성분 확인</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="lot-detail">
+                      <button type="button" class="button-plus__etc"></button>
+                      <div class="lot-detail__items">
+                        <div class="lot-detail__item">
+
+                          <div class="lot-detail__header">
+                            <!-- 
+                              색상 값
+                              button-color__change--green
+                              button-color__change--yellow
+                              button-color__change--gray
+                              button-color__change--red
+                            -->
+                            <button class="button-color__change button-color__change--green"></button>
+                            <div class="lot-detail__title">안정도</div>
+                            <button class="lot-detail__button-modify"></button>
+                            <div class="lot-detail__date">2023.04.04</div>
+                            <button class="lot-detail__button-delete"></button>
+                          </div>
+
+                        </div>
+                        <!-- 전달사항 : 활성화시 .is-active 붙습니다. -->
+                        <div class="lot-detail__item is-active">
+                          <div class="lot-detail__header">
+                            <button class="button-color__change button-color__change--red"></button>
+                            <div class="lot-detail__title">안정도</div>
+                            <button class="lot-detail__button lot-detail__button-modify"></button>
+                            <div class="lot-detail__date">2023.04.04</div>
+                            <button class="lot-detail__button lot-detail__button-delete"></button>
+                          </div>
+                          <div class="lot-detail__body">
+                            <div class="lot-detail__body--item">
+                              <select class="lot-detail__select">
+                                <option>점도</option>
+                                <option>경도</option>
+                                <option>비중</option>
+                              </select>
+                            </div>
+                            <div class="lot-detail__body--item">
+                              <div class="lot-detail__body--title">pH</div>
+                              <div class="lot-detail__body--contents">
+                                <input type="text">
+                              </div>
+                            </div>
+                            <div class="lot-detail__body--item">
+                              <div class="lot-detail__body--contents">
+                                <div class="lot-textarea__wrap">
+                                  <textarea placeholder="텍스트 입력 창입니다.&#13;&#10;메모하고 싶은 내용을 써주세요."></textarea>
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div>
+                          <div class="lot-detail__footer">
+                            <button class="lot-detail__button lot-detail__button-camera"></button>
+                            <button class="lot-detail__button lot-detail__button-file"></button>
+                            <button class="lot-detail__button lot-detail__button-zoom"></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="ui-table__reset material-excel__table--lot text-center">
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="lot-tags">
+                      <button class="lot-tag lot-tag__bom">BOM임시전송</button>
+                      <button class="lot-tag lot-tag__pilot">파일럿 처방</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="lot-tags">
+                      <button class="lot-tag lot-tag__border-gray ml-auto">전성분 확인</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table class="ui-table__reset material-excel__table--lot text-center">
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="lot-cell">
+                      <div class="lot-tags">
+                        <button class="lot-tag lot-tag__bg-gray">전성분 승인</button>
+                        <button class="lot-tag lot-tag__border-red">파일럿 처방</button>
+                      </div>
+                      <button class="lot-cell__button"></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="lot-tags">
+                      <button class="lot-tag lot-tag__border-gray ml-auto">전성분 확인</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table class="ui-table__reset material-excel__table--lot text-center">
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="lot-tags">
+                      <button class="lot-tag lot-tag__bg-red">전성분 승인</button>
+                      <button class="lot-tag lot-tag__border-red">파일럿 처방</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="lot-tags">
+                      <button class="lot-tag lot-tag__border-gray ml-auto">전성분 확인</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- 전달사항 :: lot 펼쳤을때 table -->
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>

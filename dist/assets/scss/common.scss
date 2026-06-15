@@ -1,0 +1,279 @@
+@import './helper/index';
+
+/* 로그인 */
+.wrap-common {
+	min-width: unset;
+	min-height: unset;
+	height: 100%;
+}
+
+.ui-layout__common {
+	.ui-layout__inner {
+		padding: 0;
+	}
+	.login {
+		width: 100%;
+		height: 100%;
+		&__inner {
+			@include d-flex;
+			height: 100%;
+			padding: 11rem 14rem;
+			background: url(../images/background/bg-login.jpg) no-repeat bottom center;
+			background-size: cover;
+			box-sizing: border-box;
+		}
+		&-box {
+			@include d-flex;
+			flex-direction: column;
+			width: 41rem;
+			margin-top: auto;
+		}
+		&-logo {
+			width: 17.9rem;
+			height: 8.1rem;
+			margin-top: auto;
+			background: url(../images/common/login-logo.png) no-repeat left center;
+			background-size: contain;
+		}
+		&-text {
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+			font-size: 1.4rem;
+			color: #232323;
+			line-height: 100%;
+			//text-shadow: .6rem .6rem 1.8rem rgba($color: #000000, $alpha: 0.5);
+		}
+		&-input {
+			.cell-col {
+				&+.cell-col {
+					margin-top: .8rem;
+				}
+			}
+			.save-id {
+				@include d-flex;
+				@include align-center;
+				margin-top: .8rem;
+				&__text{
+					margin-left: 1rem;
+					font-size: 1.4rem;
+					color:#000000;
+				}
+			}
+			.switch_label {
+				position: relative;
+				cursor: pointer;
+				display: inline-block;
+				width: 4.5rem;
+				height: 2.4rem;
+				background: #dee2ea;
+				border-radius: 2rem;
+				transition: 0.2s;
+				box-shadow: inset .2rem .2rem .5rem rgba($color: #000000, $alpha: 0.12);
+			}
+			.onf_btn {
+				position: absolute;
+				top: .4rem;
+				left: .3rem;
+				display: inline-block;
+				width: 1.6rem;
+				height: 1.6rem;
+				border-radius: 20px;
+				background: #ffffff;
+				transition: 0.2s;
+			}
+			#switch {
+				position: absolute;
+				/* hidden */
+				appearance: none;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+			}
+
+			/* checking style */
+			#switch:checked+.switch_label {
+				background: #8cb0f4;
+				box-shadow: none;
+			}
+
+			/* move */
+			#switch:checked+.switch_label .onf_btn {
+				left: 2.5rem;
+			}
+		}
+		.ui-input__login {
+			height: 5rem;
+			border: 0;
+			padding: 0 2rem;
+		}
+		&-button{
+			&__wrap{
+				margin-top: 3rem;
+			}
+			width:100%;
+			height:5rem;
+			background: #4886ff;
+			font-size: 1.6rem;
+			color:#ffffff;
+			border-radius: .6rem;
+		}
+	}
+}
+
+/* 관리자 메인 */ 
+.admin-main{
+	width: 100%;
+	.admin-main{
+		&__inner{
+			@include d-flex;
+			height: 100%;
+			//background: #ffffff;
+			background: url(../images/background/bg-adminMain.jpg) no-repeat bottom center;
+			background-size: cover;
+		}
+		&__left{
+			@include d-flex-center;
+			align-content: center;
+			width: 100%;
+			padding: 0 12rem;
+			//flex: none;
+			box-sizing: border-box;
+		}
+		&__right{
+			flex:1;
+			background: url(../images/background/bg-adminMain.jpg) no-repeat center;
+			background-size: cover;
+		}
+		&__box{
+			height: auto;
+			margin: 1rem;
+			&--wrap{
+				@include d-flex-center;
+				flex-wrap: wrap;
+				margin: -1rem;
+			}
+		}
+		&__link{
+			@include d-flex-center;
+			width:22rem;
+			height: 27rem;
+			font: {
+				size:2.2rem;
+				weight:600;
+			};
+			color:#ffffff;
+			text-decoration: none;
+			border-radius: .8rem;
+			box-shadow: .8rem .8rem 1.6rem rgba($color: #0c3a94, $alpha: 0.2);
+			overflow: hidden;
+			transition:all .2s;
+			&:hover{
+				color:#ffffff;
+				position: relative;
+				box-shadow: none;
+				transition:all .2s;
+			}
+		}
+		&__skincare{
+			background: url(../images/background/bg-adminMainBox01.png);
+			&:hover{
+				background: #3b61ac ;
+			}
+		}
+		&__makeup{
+			background: url(../images/background/bg-adminMainBox02.png);
+			&:hover{
+				background: #287592;
+			}
+		}
+		&__hbd{
+			background: url(../images/background/bg-adminMainBox03.png);
+			&:hover{
+				background: #3170b1;
+			}
+		}
+		&__drug{
+			background: url(../images/background/bg-adminMainBox04.png);
+			&:hover{
+				background: #5663a4;
+			}
+		}
+		//$adminMainBox: skincare, makeup, hbd, drug ;
+		// @each $adminMainBoxBg in $adminMainBox{
+		// 	&__#{$adminMainBoxBg}{
+		// 		//@for $i from 1 through 3
+		// 		background-image: url(../images/background/bg-adminMainBox0__#{$adminMainBoxBg}.png);
+		// 		&:hover{
+		// 			background-image: url(../images/background/bg-adminMainBox__#{$adminMainBoxBg}__hover.png);
+		// 		}
+		// 	}
+		// }
+			
+		
+		// &__#{i}{
+		// 	background-image: url(../images/background/bg-adminMainBox0#{i}.png);
+		// }
+	}
+}
+
+/* 404, 500 에러 페이지 */ 
+.error{
+	&-page{
+		@include d-flex-center;
+		width:100%;
+		height:100%;
+		&__inner{
+			@include d-flex;
+			@include align-center;
+			max-width: 91.6rem;
+			justify-content: space-between;
+			width:100%;
+			margin: 0 auto;
+			background: #f6f7fb;
+		}
+	}
+	&-text{
+		&__code{
+			font: {
+				size: 16rem;
+				weight:600;
+			};
+			color:#4886ff;
+			line-height: 16rem;
+		}
+		&__text{
+			margin-top: 5rem;
+			font: {
+				size: 3rem;
+				weight:500;
+			};
+			color:#6f84ab;
+			line-height: 3rem;
+		}
+		&__detail{
+			margin-top: 4rem;
+			font-size: 1.8rem;
+			color:#6f84ab;
+			line-height: 3rem;
+		}
+	}
+
+}
+
+
+/*====================================================================================*/ 
+/*================================= responsive =======================================*/ 
+/*====================================================================================*/ 
+
+
+@media (max-width:1540px) {
+	body, html{
+		//font-size: calc(62.5% / 1.1);
+		font-size: 61.4%;
+	}
+}
+
+@media (max-width:1470px) {
+	body, html{
+		font-size: calc(62.5% / 1.06);
+	}
+}

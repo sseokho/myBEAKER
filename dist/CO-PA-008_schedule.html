@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>myBEAKER</title>
+
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- favicon -->
+  <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+  <!-- //favicon -->
+
+  <!-- style -->
+  <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+  <!-- //style -->
+
+  <!-- 메뉴 기능 위한 스크립트 -->
+  <script src="../dist/assets/js/jquery.js"></script>
+  <script src="../dist/assets/js/ui-script.js"></script>
+</head>
+
+<body>
+
+  <div class="wrap">
+    <header class="header">
+      <div class="header__inner">
+        <div class="header-logo">
+          <a href="javascript:void(0)" class="header-logo__link"></a>
+        </div>
+        <div class="header-menu">
+          <div class="header-menu__inner">
+            <!-- 전달사항 :: 클릭시 클래스 is-active 추가 됩니다. -->
+            <div class="header-menu__item header-menu__inquiry">
+              <a href="javascript:void(0)" class="header-menu__link"></a>
+              <div class="header-menu__dropdown">
+                <div class="header-menu__dropdown--inner">
+                  <div class="header-menu__dropdown--body">
+                    <div class="ui-buttons">
+                      <a href="javascript:void(0)" class="ui-button ui-button__link ui-button__bg--blue">오류/일반 문의</a>
+                      <a href="javascript:void(0)" class="ui-button ui-button__link ui-button__bg--blue">my BEAKER 개선
+                        제안</a>
+                      <a href="javascript:void(0)" class="ui-button ui-button__link ui-button__bg--blue">데이터 수정/추출</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-menu__item header-menu__qr">
+              <a href="javascript:void(0)" class="header-menu__link"></a>
+              <div class="header-menu__dropdown">
+                <div class="header-menu__dropdown--inner">
+                  <div class="header-menu__dropdown--header">
+                    <div class="header-menu__dropdown--title">QR코드를 스캔해 주세요.</div>
+                  </div>
+                  <div class="header-menu__dropdown--body">
+                    <div class="qr-img__wrap">
+                      <div class="qr-img">
+                        <img src="./assets/images/_dummy/img-qr.png" alt="">
+                      </div>
+                      <div class="qr-text">사각 테두리안에 QR코드를 <br>
+                        인식해 주세요.</div>
+                    </div>
+                    <div class="qr-checkbox">
+                      <div class="ui-checkbox__list">
+                        <div class="ui-checkbox__inner">
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox">
+                            <label for="" class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="ui-label__text">웹캠사용</span>
+                            </label>
+                          </div>
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox" checked="">
+                            <label for="" class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="ui-label__text">새창으로</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 전달사항 :: 미확인 알람 있을때 클래스 is-alarm 추가 됩니다. -->
+            <div class="header-menu__item header-menu__alarm is-alarm">
+              <a href="javascript:void(0)" class="header-menu__link"></a>
+              <div class="header-menu__dropdown">
+                <div class="header-menu__dropdown--inner">
+                  <div class="header-menu__dropdown--body header-menu__dropdown--body-alarm">
+                    <div class="dropdown-alarm">
+                      <div class="dropdown-alarm__inner">
+                        <ul class="ui-list dropdown-alarm__lists">
+                          <li class="dropdown-alarm__list">
+                            <a href="javascript:void(0)" class="dropdown-alarm__link">
+                              <span class="font-weight__600">김상현</span>님이 <span class="font-weight__600">3102376 프리메라
+                                에센셜
+                                마사지크림(22AD)</span> BOM을 전송했습니다.
+                            </a>
+                            <span class="dropdown-alarm__time">12 minutes ago</span>
+                          </li>
+                          <li class="dropdown-alarm__list">
+                            <a href="javascript:void(0)" class="dropdown-alarm__link">
+                              <span class="font-weight__600">김상현</span>님이 <span class="font-weight__600">3102376 프리메라
+                                에센셜
+                                마사지크림(22AD)</span> BOM을 전송했습니다.
+                            </a>
+                            <span class="dropdown-alarm__time">12 minutes ago</span>
+                          </li>
+                          <li class="dropdown-alarm__list">
+                            <a href="javascript:void(0)" class="dropdown-alarm__link">
+                              <span class="font-weight__600">김상현</span>님이 <span class="font-weight__600">3102376 프리메라
+                                에센셜
+                                마사지크림(22AD)</span> BOM을 전송했습니다.
+                            </a>
+                            <span class="dropdown-alarm__time">12 minutes ago</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-menu__item header-menu__setting">
+              <a href="javascript:void(0)" class="header-menu__link"></a>
+              <div class="header-menu__dropdown">
+                <div class="header-menu__dropdown--inner">
+                  <div class="header-menu__dropdown--header">
+                    <div class="header-menu__dropdown--title">설정</div>
+                  </div>
+                  <div class="header-menu__dropdown--body header-menu__dropdown--body-setting">
+                    <div class="dropdown-item">
+                      <div class="dropdown-item__title">메인</div>
+                      <div class="dropdown-item__contents">
+                        <div class="setting-myBoard">
+                          <div class="setting-myBoard__inner">
+                            <ul class="ui-list setting-myBoard__lists">
+                              <!-- 전달사항 :: 클릭시 클래스 is-active 추가 됩니다. -->
+                              <li class="setting-myBoard__list is-active">
+                                <a href="javascript:void(0)" class="setting-myBoard__link setting-myBoard__link--note">
+                                  <i class="setting-myBoard__icon"></i>
+                                  <span class="setting-myBoard__title">Note</span>
+                                </a>
+                              </li>
+                              <li class="setting-myBoard__list">
+                                <a href="javascript:void(0)"
+                                  class="setting-myBoard__link setting-myBoard__link--schedule">
+                                  <i class="setting-myBoard__icon"></i>
+                                  <span class="setting-myBoard__title">Schedule</span>
+                                </a>
+                              </li>
+                              <li class="setting-myBoard__list">
+                                <a href="javascript:void(0)"
+                                  class="setting-myBoard__link setting-myBoard__link--examination">
+                                  <i class="setting-myBoard__icon"></i>
+                                  <span class="setting-myBoard__title">Examination</span>
+                                </a>
+                              </li>
+                              <li class="setting-myBoard__list">
+                                <a href="javascript:void(0)" class="setting-myBoard__link setting-myBoard__link--memo">
+                                  <i class="setting-myBoard__icon"></i>
+                                  <span class="setting-myBoard__title">Memo</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dropdown-item">
+                      <div class="dropdown-item__title">알림수신</div>
+                      <div class="dropdown-item__contents">
+                        <div class="ui-checkbox__list ui-check-list--bipartite">
+                          <div class="ui-checkbox__inner ">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">전체 수신</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" checked="">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">실험 시작</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" checked="">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">BOM 전송</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" checked="">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">내용물 입고</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" checked="">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">개발 완료</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-menu__item header-menu__logout">
+              <a href="javascript:void(0)" class="header-menu__link"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="ui-layout">
+      <div class="ui-layout__inner">
+        <!-- 전달사항 :: 메뉴 펼쳤을때 .is-open 붙습니다. -->
+        <div class="left-menu is-open">
+          <div class="left-menu__inner">
+            <button type="button" class="left-menu__button"><i class="left-menu__button--icon"></i></button>
+            <div class="left-menu__box">
+              <!-- 전달사항 :: 클릭시 .left-menu__list에 is-active 붙여주세요. -->
+              <div class="left-menu__item">
+                <ul class="ui-list left-menu__lists left-menu__lists--height-60">
+                  <li class="left-menu__list is-active">
+                    <a href="javascript:void(0)" class="left-menu__link"><i
+                        class="left-menu__icon left-menu__icon--basicInfo"></i><span class="left-menu__text">Basic
+                        Information</span><span class="left-menu__tooltip">Basic Information</span></a>
+                  </li>
+                  <li class="left-menu__list">
+                    <a href="javascript:void(0)" class="left-menu__link">
+                      <i class="left-menu__icon left-menu__icon--folmula"></i><span
+                        class="left-menu__text">Folmula</span><span class="left-menu__tooltip">Folmula</span>
+                    </a>
+                  </li>
+                  <li class="left-menu__list">
+                    <a href="javascript:void(0)" class="left-menu__link">
+                      <i class="left-menu__icon left-menu__icon--test"></i><span
+                        class="left-menu__text">Test</span><span class="left-menu__tooltip">Test</span>
+                    </a>
+                  </li>
+                  <li class="left-menu__list">
+                    <a href="javascript:void(0)" class="left-menu__link">
+                      <i class="left-menu__icon left-menu__icon--process"></i><span
+                        class="left-menu__text">Process</span><span class="left-menu__tooltip">Process</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="left-menu__copyright">© Amorepacific Corp.</div>
+          </div>
+        </div>
+
+        <div class="contents">
+          <div class="contents__inner">
+            <div class="contents-core">
+              <div class="contents-cell__wrap">
+                <div class="contents-cell">
+                  <div class="contents-box contents-box__full">
+                    <div class="contents-box__inner p-0">
+                      <div class="page-tab m-0">
+                        <div class="page-tab__inner">
+
+                          <nav class="history-tab">
+                            <h2 class="for-a11y">History Tab</h2>
+                            <div class="history-tab__inner">
+                              <div class="">
+                                <div class="">
+                                  <ul class="ui-list history-tab__list">
+                                    <!-- DD : 현재 페이지면 is-active 클래스 값 추가 -->
+                                    <li class="history-tab__item is-active">
+                                      <div class="history-tab__block">
+                                        <a href="" class="history-tab__link">3012376</a>
+                                        <button type="button" class="ui-button history-tab__delete">
+                                          <span class="for-a11y">삭제</span>
+                                        </button>
+                                      </div>
+                                    </li>
+                                    <li class="history-tab__item">
+                                      <div class="history-tab__block">
+                                        <a href="" class="history-tab__link">3012544</a>
+                                        <button type="button" class="ui-button history-tab__delete">
+                                          <span class="for-a11y">삭제</span>
+                                        </button>
+                                      </div>
+                                    </li>
+                                    <li class="history-tab__item">
+                                      <div class="history-tab__block">
+                                        <a href="" class="history-tab__link">3012648</a>
+                                        <button type="button" class="ui-button history-tab__delete">
+                                          <span class="for-a11y">삭제</span>
+                                        </button>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </nav>
+
+                          <div class="page-tab__contents">
+                            <div class="nav">
+                              <div class="nav__inner">
+                                <div class="nav-title"></div>
+                              </div>
+                            </div>
+
+                            <div class="page-tab__item">
+                              <div class="page-tab__item--inner">
+                                
+
+
+                              </div>
+                            </div>
+
+                          </div>
+
+
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div><!-- end :: .contents-cell -->
+                <div class="page-bottom">
+                  <div class="page-bottom__inner">
+                    <div class="ui-buttons ui-buttons__right">
+                      <button type="button" class="ui-button ui-button__bg--skyblue font-weight__300">저장</button>
+                      <button type="button" class="ui-button ui-button__border--gray">목록</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!--//.contents__inner -->
+        </div>
+
+        <!-- 전달사항 :: 메뉴 펼쳤을때 .is-open 붙습니다. -->
+
+        
+
+        <!-- shedule -->
+        <div class="right-menu is-open">
+          <div class="right-menu__inner">
+            <button type="button" class="right-menu__button"><i class="right-menu__button--icon"></i></button>
+            <div class="right-menu__tab">
+              <div class="right-menu__tab--header">
+                <ul class="ui-list right-menu__tab--lists">
+                  <!-- 전달사항 :: 활성 tab에 .is-active 붙습니다. -->
+                  <li class="right-menu__tab--list">
+                    <!-- 2023.04.20 : mod : Com. → Comment 텍스트 수정 -->
+                    <a href="javascript:void(0)"
+                      class="right-menu__tab--link">Comment</a></li>
+                  <li class="right-menu__tab--list is-active"><a href="javascript:void(0)"
+                      class="right-menu__tab--link">schedule</a></li>
+                  <li class="right-menu__tab--list"><a href="javascript:void(0)" class="right-menu__tab--link">issue</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="right-menu__tab--body">
+                <div class="right-menu__tab--body-inner">
+
+                  <div class="right-menu__schedule">
+                    <div class="right-menu__schedule--inner">
+
+
+                      <div class="schedule-process">
+                        <div class="schedule-process__inner">
+
+                          <!-- 전달사항 :: 상태에 따른 클래스 구분 해주세요. is-past, is-active -->
+                          <div class="schedule-process__item is-past">
+                            <div class="schedule-status">
+                              <div class="schedule-status__num">1</div>
+                            </div>
+                            <div class="schedule-detail">
+                              <div class="schedule-title">
+                                <div class="schedule-title__text">개발의뢰</div>
+                                <div class="schedule-title__dday">D-401</div>
+                              </div>
+                              <div class="schedule-history__item">
+                                <ul class="ui-list schedule-history">
+                                  <li class="schedule-history__list">
+                                    <span class="schedule-history__date">2022.11.02</span>
+                                    <span class="schedule-history__text">내용물 개발의뢰 승인</span>
+                                  </li>
+                                  <li class="schedule-history__list">
+                                    <span class="schedule-history__date">2022.11.02</span>
+                                    <span class="schedule-history__text">내용물 개발의뢰 승인</span>
+                                  </li>
+                                  <li class="schedule-history__list">
+                                    <span class="schedule-history__date">2022.11.02</span>
+                                    <span class="schedule-history__text">내용물 개발의뢰 승인내용물 개발의뢰 승인내용물 개발의뢰 승인내용물 개발의뢰 승인내용물 개발의뢰 승인</span>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="schedule-process__item is-past">
+                            <div class="schedule-status">
+                              <div class="schedule-status__num">2</div>
+                            </div>
+                            <div class="schedule-detail">
+                              <div class="schedule-title">
+                                <div class="schedule-title__text">실험 중</div>
+                                <div class="schedule-title__dday">D-370</div>
+                              </div>
+                              <div class="schedule-history__item">
+                                <ul class="ui-list schedule-history">
+                                  <li class="schedule-history__list">
+                                    <span class="schedule-history__date">2022.11.02</span>
+                                    <span class="schedule-history__text">내용물 개발의뢰 승인</span>
+                                  </li>
+                                  <li class="schedule-history__list">
+                                    <span class="schedule-history__date">2022.11.02</span>
+                                    <span class="schedule-history__text">Ver1-Lot#2 부향 시험 의뢰</span>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+
+
+                          <div class="schedule-process__item is-active">
+                            <div class="schedule-status">
+                              <div class="schedule-status__num">3</div>
+                            </div>
+                            <div class="schedule-detail">
+                              <div class="schedule-title">
+                                <div class="schedule-title__text">파일럿</div>
+                                <div class="schedule-title__dday">D-290</div>
+                              </div>
+                              <div class="schedule-history__item">
+                                <ul class="ui-list schedule-history">
+                                  <li class="schedule-history__list">
+                                    <span class="schedule-history__date">2022.11.02</span>
+                                    <span class="schedule-history__text">내용물 개발의뢰 승인</span>
+                                  </li>
+                                  <li class="schedule-history__list">
+                                    <span class="schedule-history__date">2022.11.02</span>
+                                    <span class="schedule-history__text">Ver1-Lot#2 부향 시험 의뢰</span>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="schedule-process__item">
+                            <div class="schedule-status">
+                              <div class="schedule-status__num">4</div>
+                            </div>
+                            <div class="schedule-detail">
+                              <div class="schedule-title">
+                                <div class="schedule-title__text">처방확정</div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="schedule-process__item">
+                            <div class="schedule-status">
+                              <div class="schedule-status__num">5</div>
+                            </div>
+                            <div class="schedule-detail">
+                              <div class="schedule-title">
+                                <div class="schedule-title__text">전성분 승인</div>  
+                              </div>
+                              
+                            </div>
+                          </div>
+                          <div class="schedule-process__item">
+                            <div class="schedule-status">
+                              <div class="schedule-status__num">6</div>
+                            </div>
+                            <div class="schedule-detail">
+                              <div class="schedule-title">
+                                <div class="schedule-title__text">내용물 입고</div>  
+                              </div>
+                              
+                            </div>
+                          </div>
+                          <div class="schedule-process__item">
+                            <div class="schedule-status">
+                              <div class="schedule-status__num">5</div>
+                            </div>
+                            <div class="schedule-detail">
+                              <div class="schedule-title">
+                                <div class="schedule-title__text">개발 완료</div>  
+                              </div>
+                              
+                            </div>
+                          </div>
+
+
+                        </div>
+                      </div>
+
+                      <div class="schedule-expect__day">*출시 예정일: 2024년 5월 1일</div>
+
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

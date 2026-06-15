@@ -1,0 +1,2828 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>myBEAKER</title>
+
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- favicon -->
+  <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+  <!-- //favicon -->
+
+  <!-- style -->
+  <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+  <!-- //style -->
+
+  <!-- 메뉴 기능 위한 스크립트 -->
+  <script src="../dist/assets/js/jquery.js"></script>
+  <script src="../dist/assets/js/ui-script.js"></script>
+</head>
+
+<body>
+
+  <div class="wrap">
+    <header class="header">
+      <div class="header__inner">
+        <div class="header-logo">
+          <a href="javascript:void(0)" class="header-logo__link"></a>
+        </div>
+        <div class="header-menu">
+          <div class="header-menu__inner">
+            <!-- 전달사항 :: 클릭시 클래스 is-active 추가 됩니다. -->
+            <div class="header-menu__item header-menu__inquiry">
+              <a href="javascript:void(0)" class="header-menu__link"></a>
+              <div class="header-menu__dropdown">
+                <div class="header-menu__dropdown--inner">
+                  <div class="header-menu__dropdown--body">
+                    <div class="ui-buttons">
+                      <a href="javascript:void(0)" class="ui-button ui-button__link ui-button__bg--blue">오류/일반 문의</a>
+                      <a href="javascript:void(0)" class="ui-button ui-button__link ui-button__bg--blue">my BEAKER 개선
+                        제안</a>
+                      <a href="javascript:void(0)" class="ui-button ui-button__link ui-button__bg--blue">데이터 수정/추출</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-menu__item header-menu__qr">
+              <a href="javascript:void(0)" class="header-menu__link"></a>
+              <div class="header-menu__dropdown">
+                <div class="header-menu__dropdown--inner">
+                  <div class="header-menu__dropdown--header">
+                    <div class="header-menu__dropdown--title">QR코드를 스캔해 주세요.</div>
+                  </div>
+                  <div class="header-menu__dropdown--body">
+                    <div class="qr-img__wrap">
+                      <div class="qr-img">
+                        <img src="./assets/images/_dummy/img-qr.png" alt="">
+                      </div>
+                      <div class="qr-text">사각 테두리안에 QR코드를 <br>
+                        인식해 주세요.</div>
+                    </div>
+                    <div class="qr-checkbox">
+                      <div class="ui-checkbox__list">
+                        <div class="ui-checkbox__inner">
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox">
+                            <label class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="ui-label__text">웹캠사용</span>
+                            </label>
+                          </div>
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox" checked="">
+                            <label class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="ui-label__text">새창으로</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 전달사항 :: 미확인 알람 있을때 클래스 is-alarm 추가 됩니다. -->
+            <div class="header-menu__item header-menu__alarm is-alarm">
+              <a href="javascript:void(0)" class="header-menu__link"></a>
+              <div class="header-menu__dropdown">
+                <div class="header-menu__dropdown--inner">
+                  <div class="header-menu__dropdown--body header-menu__dropdown--body-alarm">
+                    <div class="dropdown-alarm">
+                      <div class="dropdown-alarm__inner">
+                        <ul class="ui-list dropdown-alarm__lists">
+                          <li class="dropdown-alarm__list">
+                            <a href="javascript:void(0)" class="dropdown-alarm__link">
+                              <span class="font-weight__600">김상현</span>님이 <span class="font-weight__600">3102376 프리메라
+                                에센셜
+                                마사지크림(22AD)</span> BOM을 전송했습니다.
+                            </a>
+                            <span class="dropdown-alarm__time">12 minutes ago</span>
+                          </li>
+                          <li class="dropdown-alarm__list">
+                            <a href="javascript:void(0)" class="dropdown-alarm__link">
+                              <span class="font-weight__600">김상현</span>님이 <span class="font-weight__600">3102376 프리메라
+                                에센셜
+                                마사지크림(22AD)</span> BOM을 전송했습니다.
+                            </a>
+                            <span class="dropdown-alarm__time">12 minutes ago</span>
+                          </li>
+                          <li class="dropdown-alarm__list">
+                            <a href="javascript:void(0)" class="dropdown-alarm__link">
+                              <span class="font-weight__600">김상현</span>님이 <span class="font-weight__600">3102376 프리메라
+                                에센셜
+                                마사지크림(22AD)</span> BOM을 전송했습니다.
+                            </a>
+                            <span class="dropdown-alarm__time">12 minutes ago</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-menu__item header-menu__setting">
+              <a href="javascript:void(0)" class="header-menu__link"></a>
+              <div class="header-menu__dropdown">
+                <div class="header-menu__dropdown--inner">
+                  <div class="header-menu__dropdown--header">
+                    <div class="header-menu__dropdown--title">설정</div>
+                  </div>
+                  <div class="header-menu__dropdown--body header-menu__dropdown--body-setting">
+                    <div class="dropdown-item">
+                      <div class="dropdown-item__title">메인</div>
+                      <div class="dropdown-item__contents">
+                        <div class="setting-myBoard">
+                          <div class="setting-myBoard__inner">
+                            <ul class="ui-list setting-myBoard__lists">
+                              <!-- 전달사항 :: 클릭시 클래스 is-active 추가 됩니다. -->
+                              <li class="setting-myBoard__list is-active">
+                                <a href="javascript:void(0)" class="setting-myBoard__link setting-myBoard__link--note">
+                                  <i class="setting-myBoard__icon"></i>
+                                  <span class="setting-myBoard__title">Note</span>
+                                </a>
+                              </li>
+                              <li class="setting-myBoard__list">
+                                <a href="javascript:void(0)"
+                                  class="setting-myBoard__link setting-myBoard__link--schedule">
+                                  <i class="setting-myBoard__icon"></i>
+                                  <span class="setting-myBoard__title">Schedule</span>
+                                </a>
+                              </li>
+                              <li class="setting-myBoard__list">
+                                <a href="javascript:void(0)"
+                                  class="setting-myBoard__link setting-myBoard__link--examination">
+                                  <i class="setting-myBoard__icon"></i>
+                                  <span class="setting-myBoard__title">Examination</span>
+                                </a>
+                              </li>
+                              <li class="setting-myBoard__list">
+                                <a href="javascript:void(0)" class="setting-myBoard__link setting-myBoard__link--memo">
+                                  <i class="setting-myBoard__icon"></i>
+                                  <span class="setting-myBoard__title">Memo</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dropdown-item">
+                      <div class="dropdown-item__title">알림수신</div>
+                      <div class="dropdown-item__contents">
+                        <div class="ui-checkbox__list ui-check-list--bipartite">
+                          <div class="ui-checkbox__inner ">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">전체 수신</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" checked="">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">실험 시작</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" checked="">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">BOM 전송</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" checked="">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">내용물 입고</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" checked="">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">개발 완료</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-menu__item header-menu__logout">
+              <a href="javascript:void(0)" class="header-menu__link"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="ui-layout">
+      <div class="ui-layout__inner">
+        <!-- 전달사항 :: 메뉴 펼쳤을때 .is-open 붙습니다. -->
+        <div class="left-menu is-open">
+          <div class="left-menu__inner">
+            <button type="button" class="left-menu__button"><i class="left-menu__button--icon"></i></button>
+            <div class="left-menu__box">
+              <!-- 전달사항 :: 클릭시 .left-menu__list에 is-active 붙여주세요. -->
+
+              <div class="left-menu__item">
+                <ul class="ui-list left-menu__lists left-menu__lists--myBoard">
+                  <li class="left-menu__list">
+                    <a href="javascript:void(0)" class="left-menu__link"><i
+                        class="left-menu__icon left-menu__icon--myBoard"></i><span class="left-menu__text">My
+                        board</span><span class="left-menu__tooltip">My board</span></a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="left-menu__item">
+                <ul class="ui-list left-menu__lists left-menu__lists--notes">
+                  <li class="left-menu__list is-active">
+                    <a href="javascript:void(0)" class="left-menu__link">
+                      <i class="left-menu__icon left-menu__icon--labNotes"></i><span class="left-menu__text">All lab
+                        notes</span><span class="left-menu__tooltip">All lab notes</span>
+                    </a>
+                  </li>
+                  <li class="left-menu__list">
+                    <a href="javascript:void(0)" class="left-menu__link">
+                      <i class="left-menu__icon left-menu__icon--4codeNotes"></i><span class="left-menu__text">4code
+                        notes</span><span class="left-menu__tooltip">4code notes</span>
+                    </a>
+                  </li>
+                  <li class="left-menu__list">
+                    <a href="javascript:void(0)" class="left-menu__link">
+                      <i class="left-menu__icon left-menu__icon--projectsNotes"></i><span
+                        class="left-menu__text">Projects notes</span><span class="left-menu__tooltip">Projects
+                        notes</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="left-menu__item">
+                <ul class="ui-list left-menu__lists">
+                  <!-- 전달사항 :: 필터 있을때 .is-filter 붙여주세요. , 필터 오픈 될때 .is-filter__open 붙습니다. -->
+                  <li class="left-menu__list is-filter">
+                    <a href="javascript:void(0)" class="left-menu__link">
+                      <i class="left-menu__icon left-menu__icon--myLabNotes"></i><span class="left-menu__text">My lab
+                        notes</span><span class="left-menu__tooltip">My lab notes</span>
+                      <button type="button" class="button-filter__show"></button>
+                    </a>
+
+                    <!-- 필터 -->
+                    <ul class="ui-list filter-lists">
+                      <li class="filter-list">
+                        3012376<button type="button" class="filter-button__close"></button>
+                      </li>
+                      <li class="filter-list">
+                        3012592<button type="button" class="filter-button__close"></button>
+                      </li>
+                      <li class="filter-list">
+                        3012378<button type="button" class="filter-button__close"></button>
+                      </li>
+                    </ul>
+                    <!--// 필터 -->
+                  </li>
+                </ul>
+              </div>
+
+              <div class="left-menu__item">
+                <ul class="ui-list left-menu__lists left-menu__lists--other">
+                  <li class="left-menu__list">
+                    <a href="javascript:void(0)" class="left-menu__link">
+                      <i class="left-menu__icon left-menu__icon--discussionLab"></i><span
+                        class="left-menu__text">Discussion lab</span><span class="left-menu__tooltip">Discussion
+                        lab</span>
+                    </a>
+                  </li>
+                  <li class="left-menu__list">
+                    <a href="javascript:void(0)" class="left-menu__link">
+                      <i class="left-menu__icon left-menu__icon--inventory"></i><span
+                        class="left-menu__text">Inventory</span><span class="left-menu__tooltip">Inventory</span>
+                    </a>
+                  </li>
+                  <li class="left-menu__list">
+                    <a href="javascript:void(0)" class="left-menu__link">
+                      <i class="left-menu__icon left-menu__icon--frameRecipe"></i><span class="left-menu__text">Frame
+                        recipe</span><span class="left-menu__tooltip">Frame recipe</span>
+                    </a>
+                  </li>
+                  <li class="left-menu__list">
+                    <a href="javascript:void(0)" class="left-menu__link">
+                      <i class="left-menu__icon left-menu__icon--coaRequest"></i><span class="left-menu__text">COA
+                        request</span><span class="left-menu__tooltip">COA request</span>
+                    </a>
+                  </li>
+                  <li class="left-menu__list">
+                    <a href="javascript:void(0)" class="left-menu__link">
+                      <i class="left-menu__icon left-menu__icon--search"></i><span
+                        class="left-menu__text">Search</span><span class="left-menu__tooltip">Search</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="left-menu__copyright">© Amorepacific Corp.</div>
+          </div>
+        </div>
+
+        <div class="contents">
+          <div class="contents__inner">
+
+            <div class="nav">
+              <div class="nav__inner">
+                <div class="nav-title">All lab notes</div>
+                <ul class="ui-list nav-lists">
+                  <li class="nav-list nav-list__home"><a href="javascript:void(0)" class="nav-link"></a></li>
+                  <li class="nav-list nav-list__depth2 is-active"><a href="javascript:void(0)" class="nav-link">ALL LAB
+                      NOTES</a></li>
+                </ul>
+              </div>
+            </div>
+
+
+            <div class="contents-core">
+              <div class="contents-cell__wrap">
+
+                <!-- Basic Information -->
+                <div class="contents-cell flex-none">
+                  <div class="contents-box contents-box__full">
+                    <div class="contents-box__inner min-height__unset">
+                      <!-- 전달사항 :: 열렸을때 .is-active 붙습니다. -->
+                      <div class="arrordion-item is-active">
+                        <div class="arrordion-header">
+                          <div class="arrordion-title">Basic Information</div>
+                          <button type="button" class="ui-button__accordion"></button>
+                        </div>
+                        <div class="arrordion-body">
+                          <div class="basic-info__table">
+                            <table class="ui-table__contents">
+                              <colgroup>
+                                <col style="width:17rem">
+                                <col style="width:auto">
+                                <col style="width:17rem">
+                                <col style="width:auto">
+                              </colgroup>
+                              <tbody>
+                                <tr>
+                                  <th>내용물명<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                                  <td>
+                                    <input type="text" class="ui-input ui-input__width--340"
+                                      placeholder="내용물 명을 입력해 주세요.">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th>브랜드<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                                  <td>
+                                    <select class="ui-select ui-select__width--200">
+                                      <option>선택</option>
+                                    </select>
+                                  </td>
+                                  <th>플랜트<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                                  <td>
+                                    <div class="form-flex">
+                                      <div class="ui-select-box ui-form-box__width--200  form-flex__cell--5">
+                                        <select class="ui-select ui-select__width--full">
+                                          <option>선택</option>
+                                        </select>
+                                      </div>
+                                      <div class="ui-select-box ui-form-box__width--200  form-flex__cell--5">
+                                        <select class="ui-select ui-select__width--full">
+                                          <option>선택</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th>예산코드<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                                  <td>
+                                    <div class="search-form">
+                                      <div class="search-form__inner">
+                                        <input type="text" class="ui-input ui-input__width--340"
+                                          placeholder="검색어를 입력하세요. ">
+                                        <button type="button" class="button-search">검색</button>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th>신상품 여부<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                                  <td>
+                                    <div class="ui-radio__list">
+                                      <div class="ui-radio__inner">
+                                        <div class="ui-radio-block">
+                                          <input type="radio" class="ui-radio" checked>
+                                          <label class="ui-label">
+                                            <span class="ui-radio-object"></span>
+                                            <span class="ui-label__text">New</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-radio-block">
+                                          <input type="radio" class="ui-radio">
+                                          <label class="ui-label">
+                                            <span class="ui-radio-object"></span>
+                                            <span class="ui-label__text">AD</span>
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th>제품유형<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                                  <td>
+                                    <div class="form-flex">
+                                      <div class="ui-select-box ui-form-box__width--200  form-flex__cell--5">
+                                        <select class="ui-select ui-select__width--full">
+                                          <option>선택</option>
+                                        </select>
+                                      </div>
+                                      <div class="ui-select-box ui-form-box__width--200  form-flex__cell--5">
+                                        <select class="ui-select ui-select__width--full">
+                                          <option>선택</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <th>TDD 제품유형<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                                  <td>
+                                    <div class="form-flex">
+                                      <div class="ui-select-box ui-form-box__width--200  form-flex__cell--5">
+                                        <select class="ui-select ui-select__width--full">
+                                          <option>선택</option>
+                                        </select>
+                                      </div>
+                                      <div class="ui-select-box ui-form-box__width--200  form-flex__cell--5">
+                                        <select class="ui-select ui-select__width--full">
+                                          <option>선택</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th>적용 부위/방식</th>
+                                  <td>
+                                    <div class="form-flex">
+                                      <div class="ui-select-box ui-form-box__width--200  form-flex__cell--5">
+                                        <select class="ui-select ui-select__width--full">
+                                          <option>선택</option>
+                                        </select>
+                                      </div>
+                                      <div class="ui-select-box ui-form-box__width--200  form-flex__cell--5">
+                                        <select class="ui-select ui-select__width--full">
+                                          <option>선택</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th>용기정보</th>
+                                  <td>
+                                    <div class="form-flex">
+                                      <div class="ui-select-box ui-form-box__width--200  form-flex__cell--5">
+                                        <select class="ui-select ui-select__width--full">
+                                          <option>선택</option>
+                                        </select>
+                                      </div>
+                                      <div class="ui-select-box ui-form-box__width--200  form-flex__cell--5">
+                                        <input type="text" class="ui-input ui-input__width--full">
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th>출시 국가/시기</th>
+                                  <td>
+                                    <!-- 2023.03.24 : mod -->
+                                    <div class="ui-select-box ui-form-box__width--200  form-flex__cell--5">
+                                      <input type="text" class="ui-input ui-input__width--full ui-input__date">
+                                    </div>
+                                    <!--// 2023.03.24 : mod  -->
+                                  </td>
+                                </tr>
+                                <!-- 2023.03.24 : add  -->
+                                
+                                <tr>
+                                  <!-- 2023.04.06 : mod : 클래스 .inside-td__nation 추가 -->
+                                  <td colspan="4" class="inside-td inside-td__nation">
+                                    <!-- 2023.04.06 : mod : table에 클래스 ui-table__contents--nation 추가 -->
+                                    <table class="ui-table__contents ui-table__contents--nation">
+                                      <colgroup>
+                                        <col style="width:14rem">
+                                      </colgroup>
+                                      <tbody>
+                                        <!-- 2023.04.06 : mod : tr에 클래스 ui-table__contents--item 추가 -->
+                                        <tr class="ui-table__contents--item">
+                                          <th>아시아</th>
+                                          <td>
+                                            <div class="form-flex form-flex__col form-flex--nation">
+                                              <div class="form-flex__cell">
+                                                <div class="ui-checkbox__list">
+                                                  <div class="ui-checkbox__inner">
+                                                    <div class="ui-checkbox-block">
+                                                      <input type="checkbox" class="ui-checkbox">
+                                                      <label class="ui-label">
+                                                        <span class="ui-checkbox-object"></span>
+                                                        <span class="ui-label__text">대상아님</span>
+                                                      </label>
+                                                    </div>
+                                                    <div class="ui-checkbox-block">
+                                                      <input type="checkbox" class="ui-checkbox">
+                                                      <label class="ui-label">
+                                                        <span class="ui-checkbox-object"></span>
+                                                        <span class="ui-label__text">전체선택</span>
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="ui-checkbox__list ui-checkbox__list--col8">
+                                                  <div class="ui-checkbox__inner">
+                                                    <div class="ui-checkbox-block">
+                                                      <input type="checkbox" class="ui-checkbox" checked="">
+                                                      <label class="ui-label">
+                                                        <span class="ui-checkbox-object"></span>
+                                                        <span class="ui-label__text">한국</span>
+                                                      </label>
+                                                    </div>
+                                                    <div class="ui-checkbox-block">
+                                                      <input type="checkbox" class="ui-checkbox">
+                                                      <label class="ui-label">
+                                                        <span class="ui-checkbox-object"></span>
+                                                        <span class="ui-label__text">중국</span>
+                                                      </label>
+                                                    </div>
+                                                    <div class="ui-checkbox-block">
+                                                      <input type="checkbox" class="ui-checkbox">
+                                                      <label class="ui-label">
+                                                        <span class="ui-checkbox-object"></span>
+                                                        <span class="ui-label__text">중국전용</span>
+                                                      </label>
+                                                    </div>
+                                                    <div class="ui-checkbox-block">
+                                                      <input type="checkbox" class="ui-checkbox">
+                                                      <label class="ui-label">
+                                                        <span class="ui-checkbox-object"></span>
+                                                        <span class="ui-label__text">일본</span>
+                                                      </label>
+                                                    </div>
+                                                    <div class="ui-checkbox-block">
+                                                      <input type="checkbox" class="ui-checkbox">
+                                                      <label class="ui-label">
+                                                        <span class="ui-checkbox-object"></span>
+                                                        <span class="ui-label__text">대만</span>
+                                                      </label>
+                                                    </div>
+                                                    <div class="ui-checkbox-block">
+                                                      <input type="checkbox" class="ui-checkbox">
+                                                      <label class="ui-label">
+                                                        <span class="ui-checkbox-object"></span>
+                                                        <span class="ui-label__text">홍콩</span>
+                                                      </label>
+                                                    </div>
+                                                    <div class="ui-checkbox-block">
+                                                      <input type="checkbox" class="ui-checkbox">
+                                                      <label class="ui-label">
+                                                        <span class="ui-checkbox-object"></span>
+                                                        <span class="ui-label__text">러시아</span>
+                                                      </label>
+                                                    </div>
+                                                    <div class="ui-checkbox-block">
+                                                      <input type="checkbox" class="ui-checkbox">
+                                                      <label class="ui-label">
+                                                        <span class="ui-checkbox-object"></span>
+                                                        <span class="ui-label__text">인도</span>
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="form-flex__cell">
+                                                <div class="form-flex">
+                                                  <div class="form-flex__cell--5">
+                                                    <input type="text" class="ui-input ui-input__width--124 ui-input__date">
+                                                  </div>
+                                                  <div class="form-flex__cell--5">
+                                                    <input type="text" class="ui-input ui-input__width--124 ui-input__date">
+                                                  </div>
+                                                  <div class="form-flex__cell--5">
+                                                    <input type="text" class="ui-input ui-input__width--124 ui-input__date">
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                        <tr class="ui-table__contents--item">
+                                          <th>아세안</th>
+                                          <td>
+                                            <div class="form-flex form-flex__col form-flex--nation">
+                                              <div class="form-flex__cell">
+                                                <div class="ui-checkbox__list">
+                                                  <div class="ui-checkbox__inner">
+                                                    <div class="ui-checkbox-block">
+                                                      <input type="checkbox" class="ui-checkbox">
+                                                      <label class="ui-label">
+                                                        <span class="ui-checkbox-object"></span>
+                                                        <span class="ui-label__text">대상아님</span>
+                                                      </label>
+                                                    </div>
+                                                    <div class="ui-checkbox-block">
+                                                      <input type="checkbox" class="ui-checkbox">
+                                                      <label class="ui-label">
+                                                        <span class="ui-checkbox-object"></span>
+                                                        <span class="ui-label__text">전체선택</span>
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="ui-checkbox__list ui-checkbox__list--col8">
+                                                  <div class="ui-checkbox__inner">
+                                                    <div class="ui-checkbox-block">
+                                                      <input type="checkbox" class="ui-checkbox" checked="">
+                                                      <label class="ui-label">
+                                                        <span class="ui-checkbox-object"></span>
+                                                        <span class="ui-label__text">한국</span>
+                                                      </label>
+                                                    </div>
+                                                    <div class="ui-checkbox-block">
+                                                      <input type="checkbox" class="ui-checkbox">
+                                                      <label class="ui-label">
+                                                        <span class="ui-checkbox-object"></span>
+                                                        <span class="ui-label__text">중국</span>
+                                                      </label>
+                                                    </div>
+                                                    <div class="ui-checkbox-block">
+                                                      <input type="checkbox" class="ui-checkbox">
+                                                      <label class="ui-label">
+                                                        <span class="ui-checkbox-object"></span>
+                                                        <span class="ui-label__text">중국전용</span>
+                                                      </label>
+                                                    </div>
+                                                    <div class="ui-checkbox-block">
+                                                      <input type="checkbox" class="ui-checkbox">
+                                                      <label class="ui-label">
+                                                        <span class="ui-checkbox-object"></span>
+                                                        <span class="ui-label__text">일본</span>
+                                                      </label>
+                                                    </div>
+                                                    <div class="ui-checkbox-block">
+                                                      <input type="checkbox" class="ui-checkbox">
+                                                      <label class="ui-label">
+                                                        <span class="ui-checkbox-object"></span>
+                                                        <span class="ui-label__text">대만</span>
+                                                      </label>
+                                                    </div>
+                                                    <div class="ui-checkbox-block">
+                                                      <input type="checkbox" class="ui-checkbox">
+                                                      <label class="ui-label">
+                                                        <span class="ui-checkbox-object"></span>
+                                                        <span class="ui-label__text">홍콩</span>
+                                                      </label>
+                                                    </div>
+                                                    <div class="ui-checkbox-block">
+                                                      <input type="checkbox" class="ui-checkbox">
+                                                      <label class="ui-label">
+                                                        <span class="ui-checkbox-object"></span>
+                                                        <span class="ui-label__text">러시아</span>
+                                                      </label>
+                                                    </div>
+                                                    <div class="ui-checkbox-block">
+                                                      <input type="checkbox" class="ui-checkbox">
+                                                      <label class="ui-label">
+                                                        <span class="ui-checkbox-object"></span>
+                                                        <span class="ui-label__text">인도</span>
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="form-flex__cell">
+                                                <div class="form-flex">
+                                                  <div class="form-flex__cell--5">
+                                                    <input type="text" class="ui-input ui-input__width--124 ui-input__date">
+                                                  </div>
+                                                  <div class="form-flex__cell--5">
+                                                    <input type="text" class="ui-input ui-input__width--124 ui-input__date">
+                                                  </div>
+                                                  <div class="form-flex__cell--5">
+                                                    <input type="text" class="ui-input ui-input__width--124 ui-input__date">
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                        <tr class="ui-table__contents--item">
+                                          <th>기타</th>
+                                          <td>
+                                            <div class="form-flex form-flex__col">
+                                              <div class="form-flex__cell">
+                                                <div class="ui-checkbox__list">
+                                                  <div class="ui-checkbox__inner">
+                                                    <div class="ui-checkbox-block">
+                                                      <input type="checkbox" class="ui-checkbox">
+                                                      <label class="ui-label">
+                                                        <span class="ui-checkbox-object"></span>
+                                                        <span class="ui-label__text">대상아님</span>
+                                                      </label>
+                                                    </div>
+                                                    <div class="ui-checkbox-block">
+                                                      <input type="checkbox" class="ui-checkbox">
+                                                      <label class="ui-label">
+                                                        <span class="ui-checkbox-object"></span>
+                                                        <span class="ui-label__text">전체선택</span>
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="ui-checkbox__list ui-checkbox__list--col8">
+                                                  <div class="ui-checkbox__inner">
+                                                    <div class="ui-checkbox-block">
+                                                      <input type="checkbox" class="ui-checkbox" checked="">
+                                                      <label class="ui-label">
+                                                        <span class="ui-checkbox-object"></span>
+                                                        <span class="ui-label__text">한국</span>
+                                                      </label>
+                                                    </div>
+                                                    <div class="ui-checkbox-block">
+                                                      <input type="checkbox" class="ui-checkbox">
+                                                      <label class="ui-label">
+                                                        <span class="ui-checkbox-object"></span>
+                                                        <span class="ui-label__text">중국</span>
+                                                      </label>
+                                                    </div>
+                                                    <div class="ui-checkbox-block">
+                                                      <input type="checkbox" class="ui-checkbox">
+                                                      <label class="ui-label">
+                                                        <span class="ui-checkbox-object"></span>
+                                                        <span class="ui-label__text">중국전용</span>
+                                                      </label>
+                                                    </div>
+                                                    <div class="ui-checkbox-block">
+                                                      <input type="checkbox" class="ui-checkbox">
+                                                      <label class="ui-label">
+                                                        <span class="ui-checkbox-object"></span>
+                                                        <span class="ui-label__text">일본</span>
+                                                      </label>
+                                                    </div>
+                                                    <div class="ui-checkbox-block">
+                                                      <input type="checkbox" class="ui-checkbox">
+                                                      <label class="ui-label">
+                                                        <span class="ui-checkbox-object"></span>
+                                                        <span class="ui-label__text">대만</span>
+                                                      </label>
+                                                    </div>
+                                                    <div class="ui-checkbox-block">
+                                                      <input type="checkbox" class="ui-checkbox">
+                                                      <label class="ui-label">
+                                                        <span class="ui-checkbox-object"></span>
+                                                        <span class="ui-label__text">홍콩</span>
+                                                      </label>
+                                                    </div>
+                                                    <div class="ui-checkbox-block">
+                                                      <input type="checkbox" class="ui-checkbox">
+                                                      <label class="ui-label">
+                                                        <span class="ui-checkbox-object"></span>
+                                                        <span class="ui-label__text">러시아</span>
+                                                      </label>
+                                                    </div>
+                                                    <div class="ui-checkbox-block">
+                                                      <input type="checkbox" class="ui-checkbox">
+                                                      <label class="ui-label">
+                                                        <span class="ui-checkbox-object"></span>
+                                                        <span class="ui-label__text">인도</span>
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="form-flex__cell">
+                                                <div class="form-flex">
+                                                  <div class="form-flex__cell--5">
+                                                    <input type="text" class="ui-input ui-input__width--124 ui-input__date">
+                                                  </div>
+                                                  <div class="form-flex__cell--5">
+                                                    <input type="text" class="ui-input ui-input__width--124 ui-input__date">
+                                                  </div>
+                                                  <div class="form-flex__cell--5">
+                                                    <input type="text" class="ui-input ui-input__width--124 ui-input__date">
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <!--// 2023.03.24 : add  -->
+                                <tr>
+                                  <th>파일럿</th>
+                                  <td>
+                                    <input type="text" class="ui-input ui-input__width--200 ui-input__date">
+                                  </td>
+                                  <th>생산회의</th>
+                                  <td>
+                                    <input type="text" class="ui-input ui-input__width--200 ui-input__date">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th>타겟 Cost/용량<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                                  <td>
+
+                                    <div class="form-flex">
+                                      <div class="ui-select-box ui-form-box__width--200  form-flex__cell--5">
+                                        <input type="text" class="ui-input ui-input__width--full">
+                                      </div>
+                                      <div class="ui-select-box ui-form-box__width--200  form-flex__cell--5">
+                                        <input type="text" class="ui-input ui-input__width--full">
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th>사용고객</th>
+                                  <td colspan="3">
+                                    <div class="ui-checkbox__list">
+                                      <div class="ui-checkbox__inner">
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox" checked="">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">전체</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">일반</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">가족용</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">영유아(만 3세 이하)</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">어린이(만 4세 이상, 만 13세 이하)</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">임산부</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">기타</span>
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th>비고</th>
+                                  <td colspan="3">
+                                    <div class="ui-textarea-box ui-textarea-box__height--100">
+                                      <textarea class="ui-textarea"></textarea>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th>첨부파일</th>
+                                  <td colspan="3">
+                                    <div class="file-upload">
+                                      <div class="file-upload__inner">
+                                        <div class="file-upload__button">
+                                          <button type="button"
+                                            class="ui-button ui-button__bg--blue font-weight__300">첨부파일</button>
+                                        </div>
+                                        <ul class="ui-list file-upload__lists">
+                                          <li class="file-upload__list">
+                                            <span class="file-upload__name">제품 basic information.pptx</span>
+                                            <button type="button" class="file-upload__button--delete"></button>
+                                          </li>
+                                          <li class="file-upload__list">
+                                            <span class="file-upload__name">제품 basic information.pptx</span>
+                                            <button type="button" class="file-upload__button--delete"></button>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--// Basic Information -->
+
+                <!-- Product Information -->
+                <div class="contents-cell flex-none">
+                  <div class="contents-box contents-box__full">
+                    <div class="contents-box__inner min-height__unset">
+                      <div class="arrordion-item is-active">
+                        <div class="arrordion-header">
+                          <div class="arrordion-title">Product Information</div>
+                          <button type="button" class="ui-button__accordion"></button>
+                        </div>
+                        <div class="arrordion-body">
+                          <div class="basic-info__table">
+                            <table class="ui-table__contents">
+                              <colgroup>
+                                <col style="width:17rem">
+                                <col style="width:auto">
+                                <col style="width:17rem">
+                                <col style="width:auto">
+                              </colgroup>
+                              <tbody>
+                                <tr>
+                                  <th>카운터</th>
+                                  <td>
+                                    <div class="ui-radio__list">
+                                      <div class="ui-radio__inner">
+                                        <div class="ui-radio-block">
+                                          <input type="radio" class="ui-radio">
+                                          <label class="ui-label">
+                                            <span class="ui-radio-object"></span>
+                                            <span class="ui-label__text">없음</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-radio-block">
+                                          <input type="radio" class="ui-radio" checked>
+                                          <label class="ui-label">
+                                            <span class="ui-radio-object"></span>
+                                            <span class="ui-label__text">자사</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-radio-block">
+                                          <input type="radio" class="ui-radio">
+                                          <label class="ui-label">
+                                            <span class="ui-radio-object"></span>
+                                            <span class="ui-label__text">타사</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-radio-block">
+                                          <input type="radio" class="ui-radio">
+                                          <label class="ui-label">
+                                            <span class="ui-radio-object"></span>
+                                            <span class="ui-label__text">신제품(SP)</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-radio-block">
+                                          <input type="radio" class="ui-radio">
+                                          <label class="ui-label">
+                                            <span class="ui-radio-object"></span>
+                                            <span class="ui-label__text">골격처방</span>
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td colspan="4" class="inside-td">
+                                    <table class="ui-table__contents">
+                                      <colgroup>
+                                        <col style="width:14rem">
+                                      </colgroup>
+                                      <tbody>
+                                        <tr>
+                                          <th>자사 카운터 찾기</th>
+                                          <td>
+                                            <div class="search-form">
+                                              <div class="search-form__inner">
+                                                <input type="text" class="ui-input ui-input__width--340"
+                                                  placeholder="검색어를 검색해주세요.">
+                                                <button type="button" class="button-search">검색</button>
+                                              </div>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>비고</th>
+                                          <td>
+                                            <div class="ui-textarea-box ui-textarea-box__height--100">
+                                              <textarea class="ui-textarea"></textarea>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th>신원료 유무</th>
+                                  <td>
+                                    <div class="ui-radio__list">
+                                      <div class="ui-radio__inner">
+                                        <div class="ui-radio-block">
+                                          <input type="radio" class="ui-radio" checked>
+                                          <label class="ui-label">
+                                            <span class="ui-radio-object"></span>
+                                            <span class="ui-label__text">유</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-radio-block">
+                                          <input type="radio" class="ui-radio">
+                                          <label class="ui-label">
+                                            <span class="ui-radio-object"></span>
+                                            <span class="ui-label__text">무</span>
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td colspan="4" class="inside-td">
+                                    <table class="ui-table__contents">
+                                      <colgroup>
+                                        <col style="width:14rem">
+                                      </colgroup>
+                                      <tbody>
+                                        <tr>
+                                          <th>신원료 추가</th>
+                                          <td>
+                                            <div class="search-form">
+                                              <div class="search-form__inner">
+                                                <input type="text" class="ui-input ui-input__width--340"
+                                                  placeholder="원료를 검색해주세요.">
+                                                <button type="button" class="button-search">검색</button>
+                                              </div>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td colspan="2">
+                                            <div class="search-result-table">
+                                              <table class="ui-table__reset ui-table__search-result text-center">
+                                                <thead>
+                                                  <tr>
+                                                    <th>원료코드</th>
+                                                    <th>원료명</th>
+                                                    <th>TO-100</th>
+                                                    <th>함량</th>
+                                                    <th>입고완료 예정일</th>
+                                                    <th>소재팀 담당자</th>
+                                                    <th>비고</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <!-- 결과 없을때 -->
+                                                  <tr>
+                                                    <td colspan="7">
+                                                      <div class="no-result">
+                                                        원료를 추가 해주세요.
+                                                      </div>
+                                                    </td>
+                                                  </tr>
+                                                  <!-- //결과 없을때 -->
+                                                  <tr>
+                                                    <td>100000</td>
+                                                    <td>ADGBDE</td>
+                                                    <td>100000</td>
+                                                    <td>1.2254</td>
+                                                    <td>2023.03.21</td>
+                                                    <td>홍길동</td>
+                                                    <td>-</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>100000</td>
+                                                    <td>ADGBDE</td>
+                                                    <td>100000</td>
+                                                    <td>1.2254</td>
+                                                    <td>2023.03.21</td>
+                                                    <td>홍길동</td>
+                                                    <td>-</td>
+                                                  </tr>
+
+
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th>향료정보</th>
+                                  <td>
+                                    <div class="ui-radio__list">
+                                      <div class="ui-radio__inner">
+                                        <div class="ui-radio-block">
+                                          <input type="radio" class="ui-radio" checked>
+                                          <label class="ui-label">
+                                            <span class="ui-radio-object"></span>
+                                            <span class="ui-label__text">변경</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-radio-block">
+                                          <input type="radio" class="ui-radio">
+                                          <label class="ui-label">
+                                            <span class="ui-radio-object"></span>
+                                            <span class="ui-label__text">유지</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-radio-block">
+                                          <input type="radio" class="ui-radio">
+                                          <label class="ui-label">
+                                            <span class="ui-radio-object"></span>
+                                            <span class="ui-label__text">무향제품</span>
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td colspan="4" class="inside-td">
+                                    <table class="ui-table__contents">
+                                      <colgroup>
+                                        <col style="width:14rem">
+                                      </colgroup>
+                                      <tbody>
+                                        <tr>
+                                          <th>향로 추가</th>
+                                          <td>
+
+                                            <div class="form-flex">
+                                              <div class="ui-select-box form-flex__cell--5">
+                                                <div class="ui-radio__list">
+                                                  <div class="ui-radio__inner">
+                                                    <div class="ui-radio-block">
+                                                      <input type="radio" class="ui-radio">
+                                                      <label class="ui-label">
+                                                        <span class="ui-radio-object"></span>
+                                                        <span class="ui-label__text">신향</span>
+                                                      </label>
+                                                    </div>
+                                                    <div class="ui-radio-block">
+                                                      <input type="radio" class="ui-radio">
+                                                      <label class="ui-label">
+                                                        <span class="ui-radio-object"></span>
+                                                        <span class="ui-label__text">기존향</span>
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="ui-select-box form-flex__cell--5 ml-20">
+                                                <div class="search-form">
+                                                  <div class="search-form__inner">
+                                                    <input type="text" class="ui-input ui-input__width--340"
+                                                      placeholder="향료를 검색해주세요.">
+                                                    <button type="button" class="button-search">검색</button>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+
+
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td colspan="2">
+                                            <div class="search-result-table">
+                                              <table class="ui-table__reset ui-table__search-result text-center">
+                                                <thead>
+                                                  <tr>
+                                                    <th>원료코드</th>
+                                                    <th>원료명</th>
+                                                    <th>TO-100</th>
+                                                    <th>함량</th>
+                                                    <th>입고완료 예정일</th>
+                                                    <th>소재팀 담당자</th>
+                                                    <th>비고</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <!-- 결과 없을때 -->
+                                                  <tr>
+                                                    <td colspan="7">
+                                                      <div class="no-result">
+                                                        원료를 추가 해주세요.
+                                                      </div>
+                                                    </td>
+                                                  </tr>
+                                                  <!-- //결과 없을때 -->
+                                                  <tr>
+                                                    <td>100000</td>
+                                                    <td>ADGBDE</td>
+                                                    <td>100000</td>
+                                                    <td>1.2254</td>
+                                                    <td>2023.03.21</td>
+                                                    <td>홍길동</td>
+                                                    <td>-</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>100000</td>
+                                                    <td>ADGBDE</td>
+                                                    <td>100000</td>
+                                                    <td>1.2254</td>
+                                                    <td>2023.03.21</td>
+                                                    <td>홍길동</td>
+                                                    <td>-</td>
+                                                  </tr>
+
+
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <th>기능성</th>
+                                  <td colspan="3">
+                                    <div class="ui-checkbox__list">
+                                      <div class="ui-checkbox__inner">
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox" checked="">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">자외선차단</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">미백</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">주름개선</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">자외선차단(내수성)</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">자외선차단(지속내수성)</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">제모</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">염모</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">탈모완화</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">여드름용 세정제</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">튼살</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">가려움</span>
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td colspan="4" class="inside-td">
+                                    <table class="ui-table__contents">
+                                      <colgroup>
+                                        <col style="width:17rem">
+                                      </colgroup>
+                                      <tbody>
+                                        <tr class="ui-table__contents--item">
+                                          <td colspan="4">
+                                            <div class="ui-table__contents--tr">
+                                              <div class="ui-table__contents--th">
+                                                관련근거
+                                              </div>
+                                              <div class="ui-table__contents--td">
+                                                <div class="ui-radio__list">
+                                                  <div class="ui-radio__inner">
+                                                    <div class="ui-radio-block">
+                                                      <input type="radio" class="ui-radio">
+                                                      <label class="ui-label">
+                                                        <span class="ui-radio-object"></span>
+                                                        <span class="ui-label__text">신규</span>
+                                                      </label>
+                                                    </div>
+                                                    <div class="ui-radio-block">
+                                                      <input type="radio" class="ui-radio">
+                                                      <label class="ui-label">
+                                                        <span class="ui-radio-object"></span>
+                                                        <span class="ui-label__text">변경</span>
+                                                      </label>
+                                                    </div>
+                                                    <div class="ui-radio-block">
+                                                      <input type="radio" class="ui-radio">
+                                                      <label class="ui-label">
+                                                        <span class="ui-radio-object"></span>
+                                                        <span class="ui-label__text">보고</span>
+                                                      </label>
+                                                    </div>
+                                                    <div class="ui-radio-block">
+                                                      <input type="radio" class="ui-radio">
+                                                      <label class="ui-label">
+                                                        <span class="ui-radio-object"></span>
+                                                        <span class="ui-label__text">신규심사 완료 후 보고</span>
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="ui-table__contents--tr">
+                                              <div class="ui-table__contents--th">
+                                                심사항목
+                                              </div>
+                                              <div class="ui-table__contents--td">
+                                                <div class="form-flex">
+                                                  <div class="form-flex__cell--5">
+                                                    <div class="search-form">
+                                                      <div class="search-form__inner">
+                                                        <input type="text" class="ui-input ui-input__width--340"
+                                                          placeholder="심사번호를 검색해주세요.">
+                                                          <!-- 2023.03.27 : add : .ui-button ui-button__width-auto 추가 -->
+                                                        <button type="button" class="ui-button ui-button__width-auto button-search">심사번호 찾기</button>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="form-flex__cell--5">
+                                                    <button type="button"
+                                                      class="ui-button ui-button__border--blue">추가</button>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                        <tr class="ui-table__contents--item">
+                                          <td colspan="4">
+                                            <div class="ui-table__contents--tr">
+                                              <!-- <div class="ui-table__contents--th">
+                                                기능성 원료 추가
+                                              </div> -->
+                                              <div class="ui-table__contents--td">
+                                                <div class="form-flex">
+                                                  <div class="form-flex__cell--5">
+                                                    <div class="search-form">
+                                                      <div class="search-form__inner">
+                                                        <input type="text" class="ui-input ui-input__width--340"
+                                                          placeholder="원료를 검색해주세요.">
+                                                          <!-- 2023.03.27 : add : .ui-button ui-button__width-auto 추가 -->
+                                                          <button type="button" class="ui-button ui-button__width-auto button-search">기능성 원료 추가</button>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+
+                                          </td>
+
+                                        </tr>
+                                        <tr>
+                                          <td colspan="4" class="td-padding__y--0">
+                                            <div class="search-result-table">
+                                              <table class="ui-table__reset ui-table__search-result text-center">
+                                                <thead>
+                                                  <tr>
+                                                    <th>원료코드</th>
+                                                    <th>원료명</th>
+                                                    <th>TO-100</th>
+                                                    <th>함량</th>
+                                                    <th>입고완료 예정일</th>
+                                                    <th>소재팀 담당자</th>
+                                                    <th>비고</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <!-- 결과 없을때 -->
+                                                  <tr>
+                                                    <td colspan="7">
+                                                      <div class="no-result">
+                                                        원료를 추가 해주세요.
+                                                      </div>
+                                                    </td>
+                                                  </tr>
+                                                  <!-- //결과 없을때 -->
+                                                  <tr>
+                                                    <td>100000</td>
+                                                    <td>ADGBDE</td>
+                                                    <td>100000</td>
+                                                    <td>1.2254</td>
+                                                    <td>2023.03.21</td>
+                                                    <td>홍길동</td>
+                                                    <td>-</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>100000</td>
+                                                    <td>ADGBDE</td>
+                                                    <td>100000</td>
+                                                    <td>1.2254</td>
+                                                    <td>2023.03.21</td>
+                                                    <td>홍길동</td>
+                                                    <td>-</td>
+                                                  </tr>
+
+
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                          </td>
+                                        </tr>
+
+
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <th>필수원료</th>
+                                  <td>
+                                    <div class="form-flex form-flex__col">
+                                      <div class="form-flex__cell form-flex__cell--5">
+                                        <div class="search-form">
+                                          <div class="search-form__inner">
+                                            <input type="text" class="ui-input ui-input__width--340"
+                                              placeholder="원료를 검색해주세요.">
+                                            <button type="button" class="button-search">원료추가</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th></th>
+                                  <td colspan="3">
+                                    <div class="search-result-table">
+                                      <table class="ui-table__reset ui-table__search-result text-center">
+                                        <thead>
+                                          <tr>
+                                            <th>원료코드</th>
+                                            <th>원료명</th>
+                                            <th>TO-100</th>
+                                            <th>함량</th>
+                                            <th>입고완료 예정일</th>
+                                            <th>소재팀 담당자</th>
+                                            <th>비고</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <!-- 결과 없을때 -->
+                                          <tr>
+                                            <td colspan="7">
+                                              <div class="no-result">
+                                                원료를 추가 해주세요.
+                                              </div>
+                                            </td>
+                                          </tr>
+                                          <!-- //결과 없을때 -->
+                                          <tr>
+                                            <td>100000</td>
+                                            <td>ADGBDE</td>
+                                            <td>100000</td>
+                                            <td>1.2254</td>
+                                            <td>2023.03.21</td>
+                                            <td>홍길동</td>
+                                            <td>-</td>
+                                          </tr>
+                                          <tr>
+                                            <td>100000</td>
+                                            <td>ADGBDE</td>
+                                            <td>100000</td>
+                                            <td>1.2254</td>
+                                            <td>2023.03.21</td>
+                                            <td>홍길동</td>
+                                            <td>-</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--// Product Information -->
+
+                <!-- Marketing Information -->
+                <div class="contents-cell flex-none">
+                  <div class="contents-box contents-box__full">
+                    <div class="contents-box__inner min-height__unset">
+                      <div class="arrordion-item is-active">
+                        <div class="arrordion-header">
+                          <div class="arrordion-title">Marketing Information</div>
+                          <button type="button" class="ui-button__accordion"></button>
+                        </div>
+                        <div class="arrordion-body">
+                          <div class="basic-info__table">
+                            <table class="ui-table__contents">
+                              <colgroup>
+                                <col style="width:17rem">
+                                <col style="width:auto">
+                                <col style="width:17rem">
+                                <col style="width:auto">
+                              </colgroup>
+                              <tbody>
+                                <tr>
+                                  <th>소비자 가격/실제품 용량</th>
+                                  <td>
+                                    <div class="form-flex">
+                                      <div class="ui-select-box ui-form-box__width--200  form-flex__cell--5">
+                                        <input type="text" class="ui-input ui-input__width--full">
+                                      </div>
+                                      <div class="ui-select-box ui-form-box__width--200  form-flex__cell--5">
+                                        <input type="text" class="ui-input ui-input__width--full">
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th>기타요청사항</th>
+                                  <td>
+                                    <div class="ui-checkbox__list">
+                                      <div class="ui-checkbox__inner">
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox" checked="">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">코스모스</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">화해프리</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">EWG</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">기타</span>
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th>효능임상</th>
+                                  <td colspan="3">
+                                    <div class="ui-checkbox__list">
+                                      <div class="ui-checkbox__inner">
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox" checked="">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">마케팅용 안티에이징 (시험기간+3개월)</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">마케팅용 미백 (시험기간+3개월)</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">마케팅용 보습 (시험기간+3개월)</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">자외선차단(3개월)</span>
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="ui-checkbox__list">
+                                      <div class="ui-checkbox__inner">
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">미백 (시험기간(8주 이상)+3개월)</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">주름 (시험기간(12주 이상)+3개월)</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">탈모방지(10개월)</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">기타 (시험기간+3개월)</span>
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td colspan="4" class="inside-td">
+                                    <table class="ui-table__contents">
+                                      <colgroup>
+                                        <col style="width:14rem">
+                                      </colgroup>
+                                      <tbody>
+                                        <tr>
+                                          <th>시험기간</th>
+                                          <td>
+                                            <div class="form-flex">
+                                              <div class="ui-select-box ui-form-box__width--200  form-flex__cell--5">
+                                                <input type="text" class="ui-input ui-input__width--full">
+                                              </div>
+                                              <div class="ui-select-box ui-form-box__width--200  form-flex__cell--5">
+                                                <select class="ui-select ui-select__width--full">
+                                                  <option>선택</option>
+                                                </select>
+                                              </div>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>소구문구 입력</th>
+                                          <td>
+                                            <input type="text" class="ui-input ui-input__width--full">
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>임상진행기관</th>
+                                          <td>
+                                            <div class="ui-radio__list">
+                                              <div class="ui-radio__inner">
+                                                <div class="ui-radio-block">
+                                                  <input type="radio" class="ui-radio" checked="">
+                                                  <label class="ui-label">
+                                                    <span class="ui-radio-object"></span>
+                                                    <span class="ui-label__text">내부</span>
+                                                  </label>
+                                                </div>
+                                                <div class="ui-radio-block">
+                                                  <input type="radio" class="ui-radio">
+                                                  <label class="ui-label">
+                                                    <span class="ui-radio-object"></span>
+                                                    <span class="ui-label__text">외부</span>
+                                                  </label>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>임상심의 시점</th>
+                                          <td>
+                                            <input type="text" class="ui-input ui-input__date ui-input__width--160">
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th>안전성 임상</th>
+                                  <td colspan="3">
+                                    <div class="ui-checkbox__list">
+                                      <div class="ui-checkbox__inner">
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox" checked="">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">인체피부일차(사내첩포) (3주)</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">피부과 (6~8주)</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">논코메도제닉 (8주)</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">하이포알러제닉 (12주)</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">안과 (8주)</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">안자극 (4주)</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">민감성 (8주)</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">두피 (8주)</span>
+                                          </label>
+                                        </div>
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">기타</span>
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th>ONE POINT</th>
+                                  <td colspan="3">
+                                    <input type="text" class="ui-input">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th>타겟 고객</th>
+                                  <td colspan="3">
+                                    <input type="text" class="ui-input">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th>무소구 성분</th>
+                                  <td colspan="3">
+                                    <div class="ui-checkbox__list">
+                                      <div class="ui-checkbox__inner">
+                                        <div class="ui-checkbox-block">
+                                          <input type="checkbox" class="ui-checkbox" checked="">
+                                          <label class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">무소구성분</span>
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td colspan="4" class="inside-td">
+                                    <table class="ui-table__contents">
+                                      <colgroup>
+                                        <col style="width:17rem">
+                                      </colgroup>
+                                      <tbody>
+                                        <tr>
+                                          <td colspan="4" class="">
+                                            <div class="search-result-table">
+                                              <table class="ui-table__reset ui-table__search-result ui-table__border">
+                                                <thead>
+                                                  <tr>
+                                                    <th>공통항목</th>
+                                                    <th>특화항목</th>
+                                                    <th>협의항목</th>
+                                                    <th>주의사항</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">동물성원료</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">파라벤</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">벤조페논</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                    <td rowspan="14">
+                                                      <div class="">
+                                                        ※공통 항목 <br>
+                                                        피이지 : 표시 예)PEG, PEG계면활성제, PEG화합물 등<br>
+                                                        카본블랙 : 흑색계열한정<br>
+                                                        <br>
+                                                        ※특화 항목<br>
+                                                        트리클로산 : 사용 후 씻어내는 인체세정용,<br>
+                                                        데오도런트(스트레이 제품 제외), 페이스파우더,<br>
+                                                        피부결점을 감추기 위해 국소적으로 사용하는 파운데이션<br>
+                                                        (예: 블레미쉬컨실러) 만 허용<br>
+                                                        <br>
+                                                        ※협의 항목<br>
+                                                        모든 협의항목은 선택 전, 분석담당자와의 사전협의가 <br>
+                                                        반드시 필요합니다.
+                                                      </div>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">광물성오일</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">파라벤</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">벤조페논</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+
+                                                  </tr>
+                                                  <tr>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">실리콘오일</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">파라벤</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">벤조페논</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">광물성오일</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">파라벤</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">벤조페논</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+
+                                                  </tr>
+                                                  <tr>
+                                                    <!-- 전달사항 :: 구분선 .border-top__deepgray 추가 됩니다.  -->
+                                                    <td class="border-top__deepgray">
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">합성색소</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">파라벤</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">벤조페논</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">타르색소</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">파라벤</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">벤조페논</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="border-top__deepgray">
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">실리콘오일</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">파라벤</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">벤조페논</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">실리콘오일</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">파라벤</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">벤조페논</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">실리콘오일</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">파라벤</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">벤조페논</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">실리콘오일</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">파라벤</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">벤조페논</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">실리콘오일</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">파라벤</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">벤조페논</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">실리콘오일</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                    <td></td>
+                                                    <td></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">실리콘오일</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                    <td></td>
+                                                    <td></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>
+                                                      <div class="ui-checkbox__list">
+                                                        <div class="ui-checkbox__inner">
+                                                          <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label class="ui-label">
+                                                              <span class="ui-checkbox-object"></span>
+                                                              <span class="ui-label__text">실리콘오일</span>
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </td>
+                                                    <td></td>
+                                                    <td></td>
+                                                  </tr>
+
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--// Marketing Information -->
+
+                <!-- Researcher Information -->
+                <div class="contents-cell flex-none">
+                  <div class="contents-box contents-box__full">
+                    <div class="contents-box__inner min-height__unset">
+                      <div class="arrordion-item is-active">
+                        <div class="arrordion-header">
+                          <div class="arrordion-title">Researcher Information</div>
+                          <button type="button" class="ui-button__accordion"></button>
+                        </div>
+                        <div class="arrordion-body">
+                          <div class="basic-info__table researcher-information-table">
+                            <table class="ui-table__contents">
+                              <colgroup>
+                                <col style="width:17rem">
+                                <col style="width:auto">
+                                <col style="width:17rem">
+                                <col style="width:auto">
+                              </colgroup>
+                              <tbody>
+                                <tr>
+                                  <th>연구원 코드</th>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <th>
+                                    <div class="charge-bms__th">
+                                      <div class="">담당 BSM</div>
+                                      <div class="charge-bms__button">
+                                        <button type="button" class="ui-button__plus"></button>
+                                      </div>
+                                    </div>
+                                  </th>
+                                  <td>
+                                    <div class="form-flex">
+                                      <div class="search-form ui-form-box__width--340 ui-form-box__max-width--230">
+                                        <input type="text" class="ui-input ui-input__width--full"
+                                          placeholder="검색어를 입력하세요.">
+                                      </div>
+                                      <button type="button" class="ui-button ui-button__bg--lightgray ml-5">삭제</button>
+                                    </div>
+                                  </td>
+                                  <th></th>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td colspan="4" class="inside-td">
+                                    <table class="ui-table__contents">
+                                      <colgroup>
+                                        <col style="width:14rem">
+                                        <col style="width:auto">
+                                        <col style="width:20rem">
+                                        <col style="width:auto">
+                                      </colgroup>
+                                      <tbody>
+                                        <tr>
+                                          <th>담당 BSM SUB</th>
+                                          <td>
+                                            <div class="form-flex">
+                                              <div class="search-form ui-form-box__width--340 ui-form-box__max-width--230">
+                                                <input type="text" class="ui-input ui-input__width--full"
+                                                  placeholder="검색어를 입력하세요.">
+                                              </div>
+                                              <button type="button"
+                                                class="ui-button ui-button__bg--lightgray ml-5">삭제</button>
+                                            </div>
+                                          </td>
+                                          <th>담당 BSM SUB</th>
+                                          <td>
+                                            <div class="form-flex">
+                                              <div class="search-form ui-form-box__width--340 ui-form-box__max-width--230">
+                                                <input type="text" class="ui-input ui-input__width--full"
+                                                  placeholder="검색어를 입력하세요.">
+                                              </div>
+                                              <button type="button"
+                                                class="ui-button ui-button__bg--lightgray ml-5">삭제</button>
+                                            </div>
+                                          </td>
+                                        </tr>
+
+
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th>
+                                    <div class="charge-bms__th">
+                                      <div class="">담당 BSM</div>
+                                      <div class="charge-bms__button">
+                                        <button type="button" class="ui-button__minus"></button>
+                                      </div>
+                                    </div>
+                                  </th>
+                                  <td>
+                                    <div class="form-flex">
+                                      <div class="search-form ui-form-box__width--340 ui-form-box__max-width--230">
+                                        <input type="text" class="ui-input ui-input__width--full"
+                                          placeholder="검색어를 입력하세요.">
+                                      </div>
+                                      <button type="button" class="ui-button ui-button__bg--lightgray ml-5">삭제</button>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td colspan="4" class="inside-td">
+                                    <table class="ui-table__contents">
+                                      <colgroup>
+                                        <col style="width:14rem">
+                                        <col style="width:auto">
+                                        <col style="width:20rem">
+                                        <col style="width:auto">
+                                      </colgroup>
+                                      <tbody>
+                                        <tr>
+                                          <th>담당 BSM SUB</th>
+                                          <td>
+                                            <div class="form-flex">
+                                              <div class="search-form ui-form-box__width--340 ui-form-box__max-width--230">
+                                                <input type="text" class="ui-input ui-input__width--full"
+                                                  placeholder="검색어를 입력하세요.">
+                                              </div>
+                                              <button type="button"
+                                                class="ui-button ui-button__bg--lightgray ml-5">삭제</button>
+                                            </div>
+                                          </td>
+                                          <th>담당 BSM SUB</th>
+                                          <td>
+                                            <div class="form-flex">
+                                              <div class="search-form ui-form-box__width--340 ui-form-box__max-width--230">
+                                                <input type="text" class="ui-input ui-input__width--full"
+                                                  placeholder="검색어를 입력하세요.">
+                                              </div>
+                                              <button type="button"
+                                                class="ui-button ui-button__bg--lightgray ml-5">삭제</button>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>담당 BSM SUB</th>
+                                          <td>
+                                            <div class="form-flex">
+                                              <div class="search-form ui-form-box__width--340 ui-form-box__max-width--230">
+                                                <input type="text" class="ui-input ui-input__width--full"
+                                                  placeholder="검색어를 입력하세요.">
+                                              </div>
+                                              <button type="button"
+                                                class="ui-button ui-button__bg--lightgray ml-5">삭제</button>
+                                            </div>
+                                          </td>
+                                          <th>담당 BSM SUB</th>
+                                          <td>
+                                            <div class="form-flex">
+                                              <div class="search-form ui-form-box__width--340 ui-form-box__max-width--230">
+                                                <input type="text" class="ui-input ui-input__width--full"
+                                                  placeholder="검색어를 입력하세요.">
+                                              </div>
+                                              <button type="button"
+                                                class="ui-button ui-button__bg--lightgray ml-5">삭제</button>
+                                            </div>
+                                          </td>
+                                        </tr>
+
+
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th>브랜드 담당 PM</th>
+                                  <td>
+                                    <div class="form-flex">
+                                      <div class="search-form ui-form-box__width--340 ui-form-box__max-width--230">
+                                        <input type="text" class="ui-input ui-input__width--full"
+                                          placeholder="검색어를 입력하세요.">
+                                      </div>
+                                      <button type="button" class="ui-button ui-button__bg--lightgray ml-5">삭제</button>
+                                    </div>
+                                  </td>
+                                  <th>향 담당자</th>
+                                  <td>
+                                    <div class="form-flex">
+                                      <div class="search-form ui-form-box__width--340 ui-form-box__max-width--230">
+                                        <input type="text" class="ui-input ui-input__width--full"
+                                          placeholder="검색어를 입력하세요.">
+                                      </div>
+                                      <button type="button" class="ui-button ui-button__bg--lightgray ml-5">삭제</button>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th>CTC 담당자</th>
+                                  <td>
+                                    <div class="form-flex">
+                                      <div class="search-form ui-form-box__width--340 ui-form-box__max-width--230">
+                                        <input type="text" class="ui-input ui-input__width--full"
+                                          placeholder="검색어를 입력하세요.">
+                                      </div>
+                                      <button type="button" class="ui-button ui-button__bg--lightgray ml-5">삭제</button>
+                                    </div>
+                                  </td>
+                                  <th>연구 담당자</th>
+                                  <td>
+                                    <div class="form-flex">
+                                      <div class="search-form ui-form-box__width--340 ui-form-box__max-width--230">
+                                        <input type="text" class="ui-input ui-input__width--full"
+                                          placeholder="검색어를 입력하세요.">
+                                      </div>
+                                      <button type="button" class="ui-button ui-button__bg--lightgray ml-5">삭제</button>
+                                    </div>
+                                  </td>
+                                </tr>
+
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--// Researcher Information -->
+
+
+                <div class="page-bottom">
+                  <div class="page-bottom__inner">
+                    <div class="ui-buttons ui-buttons__right">
+                      <button type="button" class="ui-button ui-button__bg--skyblue">개발의뢰</button>
+                      <button type="button" class="ui-button ui-button__border--blue">임시저장</button>
+                      <button type="button" class="ui-button ui-button__border--gray">목록</button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!--//.contents-core -->
+
+          </div>
+          <!--//.contents__inner -->
+        </div>
+
+        <!-- 전달사항 :: 메뉴 펼쳤을때 .is-open 붙습니다. -->
+        <div class="right-menu is-open">
+          <div class="right-menu__inner">
+            <button type="button" class="right-menu__button"><i class="right-menu__button--icon"></i></button>
+            <div class="right-menu__tab">
+              <div class="right-menu__tab--header">
+                <ul class="ui-list right-menu__tab--lists">
+                  <!-- 전달사항 :: 활성 tab에 .is-active 붙습니다. -->
+                  <li class="right-menu__tab--list is-active"><a href="javascript:void(0)"
+                      class="right-menu__tab--link">memo</a></li>
+                  <li class="right-menu__tab--list"><a href="javascript:void(0)"
+                      class="right-menu__tab--link">schedule</a></li>
+                  <li class="right-menu__tab--list"><a href="javascript:void(0)" class="right-menu__tab--link">issue</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="right-menu__tab--body">
+                <div class="right-menu__tab--body-inner">
+
+                  <div class="right-menu__memo">
+                    <div class="memo-notice">
+                      <div class="memo-notice__inner">
+                        <i class="memo-notice__icon"></i>
+                        <a href="javascript:void(0)" class="memo-notice__link">연구실 공지입니다.연구실
+                          공지입니다.</a>
+                      </div>
+                    </div>
+                    <div class="memo-chat">
+                      <div class="memo-chat__inner">
+                        <div class="memo-chat__view">
+
+                          <div class="memo-chat__date">
+                            <div class="memo-chat__date--inner">2월 22일 수요일</div>
+                          </div>
+
+                          <div class="memo-chat__talker memo-chat__talker--other">
+                            <div class="talker-profile">
+                              <span class="talker-profile__img"><img src="./assets/images/icon/icon-profile.png"
+                                  alt=""></span>
+                              <span class="talker-profile__detail">
+                                <span class="talker-profile__name">장동건</span>
+                                <span class="talker-profile__work">아모레 오산</span>
+                              </span>
+                            </div>
+                            <div class="talker-talk">
+                              <div class="talker-talk__content">개발중이신 제품코드를 알 수 있을까요?
+                              </div>
+                              <div class="talker-talk__time">오후 01:24</div>
+                            </div>
+
+                          </div>
+
+                          <div class="memo-chat__talker memo-chat__talker--other">
+                            <div class="talker-profile">
+                              <span class="talker-profile__img"><img src="./assets/images/icon/icon-profile.png"
+                                  alt=""></span>
+                              <span class="talker-profile__detail">
+                                <span class="talker-profile__name">이미연</span>
+                                <span class="talker-profile__work">아모레 수원</span>
+                              </span>
+                            </div>
+                            <div class="talker-talk">
+                              <div class="talker-talk__content"> AP 오산플랜트/S <br>
+                                스킨케어 저장 방식 및 <br>
+                                용기정보 보내드립니다.</div>
+                              <div class="talker-talk__time">오후 01:24</div>
+                            </div>
+                          </div>
+
+                          <div class="memo-chat__talker memo-chat__talker--my">
+                            <div class="talker-talk">
+                              <div class="talker-talk__content">네 연구원님! <br>
+                                요청하신 제품코드는 <br>
+                                11064124입니다. </div>
+                              <div class="talker-talk__time">오후 01:24</div>
+                            </div>
+                          </div>
+
+                          <div class="memo-chat__talker memo-chat__talker--other">
+                            <div class="talker-profile">
+                              <span class="talker-profile__img"><img src="./assets/images/icon/icon-profile.png"
+                                  alt=""></span>
+                              <span class="talker-profile__detail">
+                                <span class="talker-profile__name">이보영</span>
+                                <span class="talker-profile__work">아이시프트</span>
+                              </span>
+                            </div>
+                            <div class="talker-talk">
+                              <div class="talker-talk__content">일정 : 2023-02-02 <br>
+                                장소 : 아모레 본사<br>
+                                참석 : 4명</div>
+                              <div class="talker-talk__time">오후 05:40</div>
+                            </div>
+                          </div>
+
+                          <div class="memo-chat__talker memo-chat__talker--my">
+                            <div class="talker-talk">
+                              <div class="talker-talk__content">일정확인 완료 <br>
+                                13:00시 도착<br>
+                                개발협력사 및 연구원 내방</div>
+                              <div class="talker-talk__time">오후 06:03</div>
+                            </div>
+                          </div>
+
+
+                        </div>
+                        <button class="memo-chat__resize-button"></button>
+                        <div class="memo-chat__write">
+                          <div class="memo-chat__write--inner">
+                            <textarea placeholder="의견을 남겨주세요. 최소3자이상 최대200자 남기실 수 있습니다."
+                              class="memo-chat__write--text"></textarea>
+                            <button class="memo-chat__write--button">전송</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>myBEAKER</title>
+
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- favicon -->
+  <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+  <!-- //favicon -->
+
+  <!-- style -->
+  <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+  <!-- //style -->
+
+  <!-- 메뉴 기능 위한 스크립트 -->
+  <script src="../dist/assets/js/jquery.js"></script>
+  <script src="../dist/assets/js/ui-script.js"></script>
+</head>
+
+<body>
+
+  <div class="wrap">
+    <header class="header">
+      <div class="header__inner">
+        <div class="header-logo">
+          <a href="javascript:void(0)" class="header-logo__link"></a>
+        </div>
+        <div class="header-menu">
+          <div class="header-menu__inner">
+            <!-- 전달사항 :: 클릭시 클래스 is-active 추가 됩니다. -->
+            <div class="header-menu__item header-menu__inquiry">
+              <a href="javascript:void(0)" class="header-menu__link"></a>
+              <div class="header-menu__dropdown">
+                <div class="header-menu__dropdown--inner">
+                  <div class="header-menu__dropdown--body">
+                    <div class="ui-buttons">
+                      <a href="javascript:void(0)" class="ui-button ui-button__link ui-button__bg--blue">오류/일반 문의</a>
+                      <a href="javascript:void(0)" class="ui-button ui-button__link ui-button__bg--blue">my BEAKER 개선
+                        제안</a>
+                      <a href="javascript:void(0)" class="ui-button ui-button__link ui-button__bg--blue">데이터 수정/추출</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-menu__item header-menu__qr">
+              <a href="javascript:void(0)" class="header-menu__link"></a>
+              <div class="header-menu__dropdown">
+                <div class="header-menu__dropdown--inner">
+                  <div class="header-menu__dropdown--header">
+                    <div class="header-menu__dropdown--title">QR코드를 스캔해 주세요.</div>
+                  </div>
+                  <div class="header-menu__dropdown--body">
+                    <div class="qr-img__wrap">
+                      <div class="qr-img">
+                        <img src="./assets/images/_dummy/img-qr.png" alt="">
+                      </div>
+                      <div class="qr-text">사각 테두리안에 QR코드를 <br>
+                        인식해 주세요.</div>
+                    </div>
+                    <div class="qr-checkbox">
+                      <div class="ui-checkbox__list">
+                        <div class="ui-checkbox__inner">
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox">
+                            <label for="" class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="ui-label__text">웹캠사용</span>
+                            </label>
+                          </div>
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox" checked="">
+                            <label for="" class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="ui-label__text">새창으로</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 전달사항 :: 미확인 알람 있을때 클래스 is-alarm 추가 됩니다. -->
+            <div class="header-menu__item header-menu__alarm is-alarm">
+              <a href="javascript:void(0)" class="header-menu__link"></a>
+              <div class="header-menu__dropdown">
+                <div class="header-menu__dropdown--inner">
+                  <div class="header-menu__dropdown--body header-menu__dropdown--body-alarm">
+                    <div class="dropdown-alarm">
+                      <div class="dropdown-alarm__inner">
+                        <ul class="ui-list dropdown-alarm__lists">
+                          <li class="dropdown-alarm__list">
+                            <a href="javascript:void(0)" class="dropdown-alarm__link">
+                              <span class="font-weight__600">김상현</span>님이 <span class="font-weight__600">3102376 프리메라
+                                에센셜
+                                마사지크림(22AD)</span> BOM을 전송했습니다.
+                            </a>
+                            <span class="dropdown-alarm__time">12 minutes ago</span>
+                          </li>
+                          <li class="dropdown-alarm__list">
+                            <a href="javascript:void(0)" class="dropdown-alarm__link">
+                              <span class="font-weight__600">김상현</span>님이 <span class="font-weight__600">3102376 프리메라
+                                에센셜
+                                마사지크림(22AD)</span> BOM을 전송했습니다.
+                            </a>
+                            <span class="dropdown-alarm__time">12 minutes ago</span>
+                          </li>
+                          <li class="dropdown-alarm__list">
+                            <a href="javascript:void(0)" class="dropdown-alarm__link">
+                              <span class="font-weight__600">김상현</span>님이 <span class="font-weight__600">3102376 프리메라
+                                에센셜
+                                마사지크림(22AD)</span> BOM을 전송했습니다.
+                            </a>
+                            <span class="dropdown-alarm__time">12 minutes ago</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-menu__item header-menu__setting">
+              <a href="javascript:void(0)" class="header-menu__link"></a>
+              <div class="header-menu__dropdown">
+                <div class="header-menu__dropdown--inner">
+                  <div class="header-menu__dropdown--header">
+                    <div class="header-menu__dropdown--title">설정</div>
+                  </div>
+                  <div class="header-menu__dropdown--body header-menu__dropdown--body-setting">
+                    <div class="dropdown-item">
+                      <div class="dropdown-item__title">메인</div>
+                      <div class="dropdown-item__contents">
+                        <div class="setting-myBoard">
+                          <div class="setting-myBoard__inner">
+                            <ul class="ui-list setting-myBoard__lists">
+                              <!-- 전달사항 :: 클릭시 클래스 is-active 추가 됩니다. -->
+                              <li class="setting-myBoard__list is-active">
+                                <a href="javascript:void(0)" class="setting-myBoard__link setting-myBoard__link--note">
+                                  <i class="setting-myBoard__icon"></i>
+                                  <span class="setting-myBoard__title">Note</span>
+                                </a>
+                              </li>
+                              <li class="setting-myBoard__list">
+                                <a href="javascript:void(0)"
+                                  class="setting-myBoard__link setting-myBoard__link--schedule">
+                                  <i class="setting-myBoard__icon"></i>
+                                  <span class="setting-myBoard__title">Schedule</span>
+                                </a>
+                              </li>
+                              <li class="setting-myBoard__list">
+                                <a href="javascript:void(0)"
+                                  class="setting-myBoard__link setting-myBoard__link--examination">
+                                  <i class="setting-myBoard__icon"></i>
+                                  <span class="setting-myBoard__title">Examination</span>
+                                </a>
+                              </li>
+                              <li class="setting-myBoard__list">
+                                <a href="javascript:void(0)" class="setting-myBoard__link setting-myBoard__link--memo">
+                                  <i class="setting-myBoard__icon"></i>
+                                  <span class="setting-myBoard__title">Memo</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dropdown-item">
+                      <div class="dropdown-item__title">알림수신</div>
+                      <div class="dropdown-item__contents">
+                        <div class="ui-checkbox__list ui-check-list--bipartite">
+                          <div class="ui-checkbox__inner ">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">전체 수신</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" checked="">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">실험 시작</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" checked="">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">BOM 전송</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" checked="">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">내용물 입고</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" checked="">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">개발 완료</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-menu__item header-menu__logout">
+              <a href="javascript:void(0)" class="header-menu__link"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="ui-layout">
+      <div class="ui-layout__inner">
+        <!-- 전달사항 :: 메뉴 펼쳤을때 .is-open 붙습니다. -->
+        <div class="left-menu is-open">
+          <div class="left-menu__inner">
+            <button type="button" class="left-menu__button"><i class="left-menu__button--icon"></i></button>
+            <div class="left-menu__box">
+              <!-- 전달사항 :: 클릭시 .left-menu__list에 is-active 붙여주세요. -->
+              <div class="left-menu__item">
+                <ul class="ui-list left-menu__lists left-menu__lists--height-60">
+                  <li class="left-menu__list is-active">
+                    <a href="javascript:void(0)" class="left-menu__link"><i
+                        class="left-menu__icon left-menu__icon--basicInfo"></i><span class="left-menu__text">Basic
+                        Information</span><span class="left-menu__tooltip">Basic Information</span></a>
+                  </li>
+                  <li class="left-menu__list">
+                    <a href="javascript:void(0)" class="left-menu__link">
+                      <i class="left-menu__icon left-menu__icon--folmula"></i><span
+                        class="left-menu__text">Folmula</span><span class="left-menu__tooltip">Folmula</span>
+                    </a>
+                  </li>
+                  <li class="left-menu__list">
+                    <a href="javascript:void(0)" class="left-menu__link">
+                      <i class="left-menu__icon left-menu__icon--test"></i><span
+                        class="left-menu__text">Test</span><span class="left-menu__tooltip">Test</span>
+                    </a>
+                  </li>
+                  <li class="left-menu__list">
+                    <a href="javascript:void(0)" class="left-menu__link">
+                      <i class="left-menu__icon left-menu__icon--process"></i><span
+                        class="left-menu__text">Process</span><span class="left-menu__tooltip">Process</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="left-menu__copyright">© Amorepacific Corp.</div>
+          </div>
+        </div>
+
+        <div class="contents">
+          <div class="contents__inner">
+            <div class="contents-core">
+              <div class="contents-cell__wrap">
+                <div class="contents-cell">
+                  <div class="contents-box contents-box__full">
+                    <div class="contents-box__inner p-0">
+                      <div class="page-tab m-0">
+                        <div class="page-tab__inner">
+
+                          <nav class="history-tab">
+                            <h2 class="for-a11y">History Tab</h2>
+                            <div class="history-tab__inner">
+                              <div class="">
+                                <div class="">
+                                  <ul class="ui-list history-tab__list">
+                                    <!-- DD : 현재 페이지면 is-active 클래스 값 추가 -->
+                                    <li class="history-tab__item is-active">
+                                      <div class="history-tab__block">
+                                        <a href="" class="history-tab__link">3012376</a>
+                                        <button type="button" class="ui-button history-tab__delete">
+                                          <span class="for-a11y">삭제</span>
+                                        </button>
+                                      </div>
+                                    </li>
+                                    <li class="history-tab__item">
+                                      <div class="history-tab__block">
+                                        <a href="" class="history-tab__link">3012544</a>
+                                        <button type="button" class="ui-button history-tab__delete">
+                                          <span class="for-a11y">삭제</span>
+                                        </button>
+                                      </div>
+                                    </li>
+                                    <li class="history-tab__item">
+                                      <div class="history-tab__block">
+                                        <a href="" class="history-tab__link">3012648</a>
+                                        <button type="button" class="ui-button history-tab__delete">
+                                          <span class="for-a11y">삭제</span>
+                                        </button>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </nav>
+
+                          <div class="page-tab__contents">
+                            <div class="nav">
+                              <div class="nav__inner">
+                                <div class="nav-title">Formula</div>
+                              </div>
+                            </div>
+
+                            <div class="page-tab__item">
+                              <div class="page-tab__item--inner">
+                                <div class="request-status mt-15">
+                                  <div class="request-status__inner">
+                                    <div class="sub-contents__item">
+
+                                      <div class="sub-contents__title--flex">
+                                        <div class="sub-contents__title">(검출) 프리메라 에센셜 마사지 크림(22AD)</div>
+                                        <div class="ui-buttons ui-buttons__comb">
+                                          <button class="button-comb button-comb__pageInfo"></button>
+                                          <button class="button-comb button-comb__testRequest"></button>
+                                          <button class="button-comb button-comb__loadPres"></button>
+                                          <button class="button-comb button-comb__settingMaterial"></button>
+                                          <button class="button-comb button-comb__export"></button>
+                                        </div>
+                                      </div>
+
+
+
+                                      <div class="material-excel">
+                                        <div class="material-excel__inner">
+
+                                          <div class="material-excel__ver">
+                                            <ul class="ui-list material-excel__ver--lists">
+                                              <li class="material-excel__ver--list is-active"><a
+                                                  href="javascript:void(0)" class="material-excel__ver--link">ver 01</a>
+                                              </li>
+                                              <li class="material-excel__ver--list"><a href="javascript:void(0)"
+                                                  class="material-excel__ver--link">ver 02</a></li>
+                                              <li class="material-excel__ver--list"><a href="javascript:void(0)"
+                                                  class="material-excel__ver--link">ver 03</a></li>
+                                              <li class="material-excel__ver--list">
+                                                <button class="button-plus__ver"></button>
+                                              </li>
+                                            </ul>
+
+                                          </div>
+
+                                          <div class="material-excel__table--wrap">
+                                            <table class="ui-table__reset material-excel__table text-center">
+                                              <colgroup>
+                                                <col style="width:3rem;">
+                                                <col style="width:24.7rem">
+                                                <col style="width:24.7rem">
+                                                
+                                                <col style="width:8rem">
+                                                <col style="width:auto">
+                                                <col style="width:auto">
+                                                <col style="width:auto">
+                                                <col style="width:auto">
+                                                <col style="width:auto">
+                                                <col style="width:auto">
+                                                
+                                                <col style="width:auto;">
+                                              </colgroup>
+                                              <thead>
+                                                <tr>
+                                                  <th class="">NO</th>
+                                                  <th class="">CODE</th>
+                                                  <th class="">NAME</th>
+
+                                                  <th class="is-click__left">NOI</th>
+                                                  
+                                                  <th class="th-lot">
+                                                    <div class="lot-cell__wrap">
+                                                      <div class="lot-cell">Lot#1 
+                                                        <button
+                                                          class="lot-cell__button"></button>
+                                                      </div>
+                                                      <div class="lot-write">
+                                                        <div class="lot-write__inner">
+                                                          <div class="lot-write__text">부향률 0.5%  <br> 방부의뢰용 / BL<br>ANK/무향
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </th>
+                                                  <th class="th-lot">
+                                                    <div class="lot-cell__wrap">
+                                                      <div class="lot-cell">Lot#2 
+                                                        <button
+                                                          class="lot-cell__button"></button>
+                                                      </div>
+                                                      <div class="lot-write">
+                                                        <div class="lot-write__inner" style="height:20px">
+                                                          <div class="lot-write__text" >
+                                                            <div class="lot-write__text--form"></div>
+                                                          </div>
+                                                          <button class="lot-write__button"></button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </th>
+                                                  <th class="th-lot">
+                                                    <div class="lot-cell__wrap">
+                                                      <div class="lot-cell">Lot#3
+                                                        <button
+                                                          class="lot-cell__button"></button>
+                                                      </div>
+                                                      <div class="lot-write">
+                                                        <div class="lot-write__inner" style="height:20px">
+                                                          <div class="lot-write__text" >
+                                                            <textarea class="lot-write__text--form"></textarea>
+                                                          </div>
+                                                          <button class="lot-write__button"></button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </th>
+                                                  <th class="th-lot">
+                                                    <div class="lot-cell__wrap">
+                                                      <div class="lot-cell">Lot#4
+                                                        <button
+                                                          class="lot-cell__button"></button>
+                                                      </div>
+                                                      <div class="lot-write">
+                                                        <div class="lot-write__inner" style="height:20px">
+                                                          <div class="lot-write__text" >
+                                                            <textarea class="lot-write__text--form"></textarea>
+                                                          </div>
+                                                          <button class="lot-write__button"></button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </th>
+                                                  <th class="th-lot">
+                                                    <div class="lot-cell__wrap">
+                                                      <div class="lot-cell">Lot#5 
+                                                        <button
+                                                          class="lot-cell__button"></button>
+                                                      </div>
+                                                      <div class="lot-write">
+                                                        <div class="lot-write__inner" style="height:20px">
+                                                          <div class="lot-write__text" >
+                                                            <textarea class="lot-write__text--form">부향률 0.5%</textarea>
+                                                          </div>
+                                                          <button class="lot-write__button"></button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </th>
+                                                  <th class="th-lot">
+                                                    <div class="lot-cell__wrap">
+                                                      <div class="lot-cell">Lot#6
+                                                        <button
+                                                          class="lot-cell__button"></button>
+                                                      </div>
+                                                      <div class="lot-write">
+                                                        <div class="lot-write__inner" style="height:20px">
+                                                          <div class="lot-write__text" >
+                                                            <textarea class="lot-write__text--form">부향률 0.5%</textarea>
+                                                          </div>
+                                                          <button class="lot-write__button"></button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </th>
+                                                  <th class="th-lot">
+                                                    <div class="lot-cell__wrap">
+                                                      <div class="lot-cell">Lot#7
+                                                        <button
+                                                          class="lot-cell__button"></button>
+                                                      </div>
+                                                      <div class="lot-write">
+                                                        <div class="lot-write__inner" style="height:20px">
+                                                          <div class="lot-write__text" >
+                                                            <textarea class="lot-write__text--form">부향률 0.5%</textarea>
+                                                          </div>
+                                                          <button class="lot-write__button"></button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </th>
+                                                  <th class="th-lot">
+                                                  </th>
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                                <tr>
+                                                  <td></td>
+                                                  <td class="">
+                                                    <div class="material-search">
+                                                      <input type="text" class="material-search__input">
+                                                      <button class="button-search"></button>
+                                                    </div>
+                                                  </td>
+                                                  <td>
+                                                    
+                                                  </td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                  <td>
+                                                    <div class="material-code">
+                                                      <div class="material-code__text">
+                                                        6008053
+                                                      </div>
+                                                      <div class="material-tags">
+                                                        <span class="material-tag material-tag__gray">구성성분 없음</span>
+                                                      </div>
+                                                    </div>
+                                                  </td>
+                                                  <td>
+                                                    <div class="material-write">
+                                                      <input type="text" class="material-write__input">
+                                                      <button class="button-pencil"></button>
+                                                    </div>
+                                                  </td>
+                                                  <td class="text-right">5</td>
+                                                  <td>
+                                                    <div class="material-calc">
+                                                      <button class="material-calc__button"></button>
+                                                      <div class="material-calc__text">5</div>
+                                                      <!-- <input type="text" class="material-calc__text"> -->
+                                                    </div>
+                                                  </td>
+                                                  <td>
+                                                    <div class="material-calc">
+                                                      <div class="material-calc__text">5</div>
+                                                      <!-- <input type="text" class="material-calc__text" value="5"> -->
+                                                    </div>
+                                                  </td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                  <td>
+                                                    <div class="material-code">
+                                                      <div class="material-code__text">
+                                                        6008053
+                                                      </div>
+                                                      <div class="material-tags">
+                                                        <span class="material-tag material-tag__blue">문제이력</span>
+                                                        <span class="material-tag material-tag__yellow">연구용B</span>
+                                                        <span class="material-tag material-tag__green">무소구금</span>
+                                                        <span class="material-tag material-tag__function">기능성</span>
+                                                        <span class="material-tag material-tag__ban">금지</span>
+                                                        <span class="material-tag material-tag__disabled">비활성</span>
+                                                        <span class="material-tag material-tag__Gban">G금지</span>
+                                                        <span class="material-tag material-tag__Glimit">G제한</span>
+                                                      </div>
+                                                    </div>
+                                                  </td>
+                                                  <td>
+                                                    <div class="material-write">
+                                                      <input type="text" class="material-write__input" value="(PF)(기능)CRODAML DES">
+                                                      <button class="button-pencil"></button>
+                                                    </div>
+                                                  </td>
+                                                  <td class="text-right">1</td>
+                                                  <td>
+                                                    <div class="material-calc">
+                                                      <!-- DD : 활성화시에 .is-active 붙습니다. -->
+                                                      <button class="material-calc__button is-active"></button>
+                                                      <div class="material-calc__text">5</div>
+                                                      <!-- <input type="text" class="material-calc__text"> -->
+                                                    </div>
+                                                  </td>
+                                                  <td>
+                                                    <div class="material-calc">
+                                                      <div class="material-calc__text">5</div>
+                                                      <!-- <input type="text" class="material-calc__text" value="5"> -->
+                                                    </div>
+                                                  </td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                  <td>
+                                                    <div class="material-code">
+                                                      <div class="material-code__text">
+                                                        6008053
+                                                      </div>
+                                                      <div class="material-tags">
+                                                        <span class="material-tag material-tag__deepgray">단종</span>
+                                                      </div>
+                                                    </div>
+                                                  </td>
+                                                  <td>
+                                                    <div class="material-write">
+                                                      <input type="text" class="material-write__input" value="(PF)(기능)CRODAML DES">
+                                                    </div>
+                                                  </td>
+                                                  <td class="text-right">9</td>
+                                                  <td>
+                                                    <div class="material-calc">
+                                                      <button class="material-calc__button"></button>
+                                                      <div class="material-calc__text">5</div>
+                                                    </div>
+                                                  </td>
+                                                  <td>
+                                                    <div class="material-calc">
+                                                      <div class="material-calc__text">5</div>
+                                                      <!-- <input type="text" class="material-calc__text" value="5"> -->
+                                                    </div>
+                                                  </td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                  <td>
+                                                    <div class="material-code">
+                                                      <div class="material-code__text">
+                                                        6008053
+                                                      </div>
+                                                    </div>
+                                                  </td>
+                                                  <td>
+                                                    <div class="material-write">
+                                                      <input type="text" class="material-write__input" value="(PF)(기능)CRODAML DES">
+                                                    </div>
+                                                  </td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                </tr>
+
+                                                <tr>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                </tr>
+                                                
+                                              </tbody>
+                                              <tfoot>
+                                                <tr class="border-top__deepgray">
+                                                  <td colspan="3" class="border-right__deepgray">합계</td>
+                                                  <td colspan="20" class="text-left">100</td>
+                                                </tr>
+                                                <tr class="border-top__deepgray">
+                                                  <td colspan="3" class="border-right__deepgray"> 
+                                                    <div class="d-flex align-center justify-center">
+                                                      <div class="">생분해도 지수 합계  </div>
+                                                      
+                                                      <div class="caution-overlay ">
+                                                        <button class="icon-caution__gray ml-05"></button>
+                                                        <!-- 전달사항 :: 활성화시 .is-active 붙습니다. -->
+                                                        <div class="caution-overlay__text color-red is-active"><div class="caution-overlay__text--inner">
+                                                          원료의 천연유래지수(NOI)가 없을 경우, 품질&RA 담당자에게 <br>
+                                                            원료자료 확보요청을 해주시기 바랍니다.(변경예정)
+                                                        </div></div>
+                                                      </div>
+                                                    </div>
+                                                  </td>
+                                                  <td colspan="20" class="text-left">105.344</td>
+                                                </tr>
+                                              </tfoot>
+                                            </table>
+                                          </div>
+
+
+                                          <button class="button-plus__lot button-plus__lot--small"></button>
+                                        </div>
+                                      </div>
+
+
+
+                                    </div>
+                                  </div>
+                                </div>
+
+
+                              </div>
+                            </div>
+
+                          </div>
+
+
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div><!-- end :: .contents-cell -->
+                <div class="page-bottom">
+                  <div class="page-bottom__inner">
+                    <div class="ui-buttons ui-buttons__right">
+                      <button type="button" class="ui-button ui-button__bg--skyblue font-weight__300">저장</button>
+                      <button type="button" class="ui-button ui-button__border--gray">목록</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!--//.contents__inner -->
+        </div>
+
+        <!-- 전달사항 :: 메뉴 펼쳤을때 .is-open 붙습니다. -->
+        <div class="right-menu is-open">
+          <div class="right-menu__inner">
+            <button type="button" class="right-menu__button"><i class="right-menu__button--icon"></i></button>
+            <div class="right-menu__tab">
+              <div class="right-menu__tab--header">
+                <ul class="ui-list right-menu__tab--lists">
+                  <!-- 전달사항 :: 활성 tab에 .is-active 붙습니다. -->
+                  <li class="right-menu__tab--list is-active"><a href="javascript:void(0)"
+                      class="right-menu__tab--link">ing.</a></li>
+                  <li class="right-menu__tab--list"><a href="javascript:void(0)"
+                      class="right-menu__tab--link">status</a></li>
+                  <li class="right-menu__tab--list"><a href="javascript:void(0)"
+                      class="right-menu__tab--link">comment</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="right-menu__tab--body">
+                <div class="right-menu__tab--body-inner">
+
+                  <div class="material-right__ing">
+                    <div class="material-right__ing--inner">
+
+                      <div class="material-search">
+                        <input type="text" class="material-search__input" placeholder="Search...">
+                        <button class="button-search"></button>
+                      </div>
+
+                      <div class="right-content__box right-content__box--gray">
+                        <div class="right-content__title">문제이력</div>
+
+                        <div class="problem-history">
+                          <div class="problem-history__box">
+                            <div class="problem-history__title">3009215</div>
+                            <div class="problem-history__item">쿠션 담지제에 따라 역가 하락 다름</div>
+                            <div class="problem-history__item">투명(A5)의 재질과 반등으로 수지 높은 <br>
+                              가능 (내용물 닫는 부위 사용 위험)</div>
+                            <div class="problem-history__item">내용물 골격, 용기, 담지제 변경시 <br>
+                              반드시 사전 기시적합성 확인</div>
+                          </div>
+
+                        </div>
+                      </div>
+
+                      <div class="right-content__box">
+                        <div class="right-content__title--wrap">
+                          <div class="right-content__title">Recent</div>
+                        </div>
+                        <div class="recent-buttons">
+                          <!-- 전달사항 :: 활성화시 .is-active 붙습니다. -->
+                          <button class="recent-button is-active">6006075</button>
+                          <button class="recent-button">6006075</button>
+                          <button class="recent-button">6006075</button>
+                          <button class="recent-button">6006075</button>
+                          <button class="recent-button">6006075</button>
+                          <button class="recent-button">6006075</button>
+                          <button class="recent-button">6006075</button>
+                          <button class="recent-button">6006075</button>
+                          <button class="recent-button">6006075</button>
+                          <button class="recent-button">6006075</button>
+                        </div>
+                      </div>
+
+                      <div class="right-content__box">
+                        <div class="right-content__title--wrap">
+                          <div class="right-content__title">Favorites</div>
+                          <button class="button-plus"></button>
+                        </div>
+                        <div class="favorites-buttons">
+                          <!-- 전달사항 :: 활성화시 .is-active 붙습니다. -->
+                          <button class="favorites-button is-active">6006075</button>
+                          <button class="favorites-button is-active">6006075</button>
+                          <button class="favorites-button is-active">6006075</button>
+                          <button class="favorites-button is-active">6006075</button>
+                          <button class="favorites-button is-active">6006075</button>
+                          <button class="favorites-button is-active">6006075</button>
+                          <button class="favorites-button is-active">6006075</button>
+                          <button class="favorites-button is-active">6006075</button>
+                          <button class="favorites-button is-active">6006075</button>
+                          <button class="favorites-button is-active">6006075</button>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

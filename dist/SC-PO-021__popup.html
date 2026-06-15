@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>myBEAKER</title>
+
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- favicon -->
+  <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+  <!-- //favicon -->
+
+  <!-- style -->
+  <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+  <!-- //style -->
+</head>
+
+<!-- 전달사항 :: 모달 표출시 .modal-open 붙여주세요 -->
+
+<body class="modal-open">
+  <!-- modal 모달 -->
+  <!-- 전달사항 :: 클래스 in 있을 때 모달 표출 -->
+  <div class="modal-backdrop fade in"></div>
+  <div id="myModal" class="modal fade in">
+    <div class="modal-dialog">
+      <div class="modal-content modal-content__width--122">
+        <div class="modal-header">
+          <div class="modal-title">시험의뢰 (효능임상)</div>
+          <button type="button" class="modal-close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="search-detail-table">
+            <div class="search-detail-table__inner">
+              <table class="ui-table__modal pd">
+                <colgroup>
+                  <col style="width:10%">
+                  <col style="width:15%">
+                  <col style="width:15%">
+                  <col style="width:auto">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>내용물코드</th>
+                    <th>제품코드</th>
+                    <th>내용물명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="ui-checkbox-block">
+                        <input type="checkbox" class="ui-checkbox">
+                        <label class="ui-label">
+                          <span class="ui-checkbox-object"></span>
+                        </label>
+                      </div>
+                    </td>
+                    <td>3102760 </td>
+                    <td>11060004</td>
+                    <td>
+                      <div class="tit__inner">
+                        <a href="javascript:void(0)" class="tit-link">(PF)(기) 베리떼 라이트터치선스틱 SPF50+ PA++++</a>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="board-bottom ">
+            <div class="board-bottom__inner">
+              <div class="ui-buttons ml-auto ui-buttons__right">
+                <button type="button" class="ui-button ui-button__bg--skyblue font-weight__300">시험의뢰</button>
+                <button type="button" class="ui-button ui-button__bg--lightgray">닫기</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+  </div>
+  <!--// modal 모달 -->
+
+</body>
+
+</html>

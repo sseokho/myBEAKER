@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>myBEAKER</title>
+
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- favicon -->
+  <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+  <!-- //favicon -->
+
+  <!-- style -->
+  <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+  <!-- //style -->
+
+
+</head>
+
+<!-- 전달사항 :: 모달 표출시 .modal-open 붙여주세요 -->
+
+<body class="modal-open">
+
+  <!-- modal 모달 -->
+  <!-- 전달사항 :: 클래스 in 있을 때 모달 표출 -->
+  <div class="modal-backdrop fade in"></div>
+  <div id="myModal" class="modal fade in">
+    <div class="modal-dialog">
+      <div class="modal-content modal-content__width--680">
+        <!-- 2023.03.27 : del : .modal-header__mb--10 삭제 -->
+        <div class="modal-header">
+          <div class="modal-title">원료 검색</div>
+          <button type="button" class="modal-close"></button>
+        </div>
+
+        <div class="modal-body">
+
+          <!-- 2023.03.27 : mod : 위치 이동 및 .p-0 추가 -->
+          <section class="search-bar p-0">
+            <h2 class="for-a11y">검색</h2>
+
+            <div class="search-bar__left">
+              <div class="search-bar__row">
+                <dl class="search-bar__item search-bar__item--width-100">
+                  <dt class="search-bar__key">검색</dt>
+                  <dd class="search-bar__val search-bar__val--flex">
+                    <div class="search-form">
+                      <div class="search-form__inner">
+                        <input type="text" class="ui-input ui-input__width--full" placeholder="원료코드 or 원료명">
+                        <button type="button" class="button-search">검색</button>
+                      </div>
+                    </div>
+
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </section>
+
+          <div class="contents-tab">
+            <div class="contents-tab__inner">
+              <!-- 2023.03.27 : add : .mb-15 추가 -->
+              <div class="contents-tab__header mb-15">
+                <ul class="ui-list contents-tab__lists">
+                  <li class="contents-tab__list is-active"><a href="javascript:void(0)" class="contents-tab__link">SAP코드
+                      검색</a></li>
+                  <li class="contents-tab__list "><a href="javascript:void(0)" class="contents-tab__link">임시코드 검색</a>
+                  </li>
+                  <li class="contents-tab__list "><a href="javascript:void(0)" class="contents-tab__link">나의 즐겨찾기 원료</a>
+                  </li>
+                </ul>
+                <button type="button" class="tab-header__button"></button>
+              </div>
+              <div class="contents-tab__body">
+
+                
+
+                <div class="myboard-table">
+                  <div class="myboard-table__inner">
+                    <table class="ui-table ui-table__th--border-radius--0 ui-table__td--40 text-center">
+                      <colgroup>
+                        <col style="width:5rem">
+                        <col style="width:8rem">
+                        <col style="width:auto">
+                        <col style="width:30%">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>원료코드</th>
+                          <th>원료명</th>
+                          <th>플랜트</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                              </label>
+                            </div>
+                          </td>
+                          <td>3072941</td>
+                          <td class="tit">
+                            <!-- 2023.04.25 : add : .material-wrap__pop 추가 -->
+                            <div class="material-wrap material-wrap__pop">
+                              <div class="material-tags">
+                                <span class="material-tag material-tag__gray material-tag__width--auto">구성성분 없음</span>
+                                <span class="material-tag material-tag__blue">문제이력</span>
+                                <span class="material-tag material-tag__yellow">연구용B</span>
+                                <span class="material-tag material-tag__green">무소구금</span>
+                                <span class="material-tag material-tag__function">기능성</span>
+                                <span class="material-tag material-tag__ban">금지</span>
+                                <span class="material-tag material-tag__disabled">비활성</span>
+                                <span class="material-tag material-tag__Gban">G금지</span>
+                                <span class="material-tag material-tag__Glimit">G제한</span>
+                                <span class="material-tag material-tag__deepgray">단종</span>
+                              </div>
+                              <div class="material-name">
+                                CA SARATE(15%) BASE
+                              </div>
+                            </div>
+                          </td>
+                          <td>[1110] AP 오산플랜트</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                              </label>
+                            </div>
+                          </td>
+                          <td>3072941</td>
+                          <td class="tit">
+                            <!-- 2023.04.25 : add : .material-wrap__pop 추가 -->
+                            <div class="material-wrap material-wrap__pop">
+                              <div class="material-tags">
+                                <span class="material-tag material-tag__yellow">원료태그</span>
+                                <span class="material-tag material-tag__green">원료태그</span>
+                                <span class="material-tag material-tag__blue">원료태그</span>
+                              </div>
+                              <div class="material-name">
+                                CA SARATE(15%) BASE
+                              </div>
+                            </div>
+                          </td>
+                          <td>[1110] AP 오산플랜트</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                              </label>
+                            </div>
+                          </td>
+                          <td>3072941</td>
+                          <td class="tit">
+                            <!-- 2023.04.25 : add : .material-wrap__pop 추가 -->
+                            <div class="material-wrap material-wrap__pop">
+                              <div class="material-tags">
+                                <span class="material-tag material-tag__yellow">원료태그</span>
+                                <span class="material-tag material-tag__green">원료태그</span>
+                                <span class="material-tag material-tag__blue">원료태그</span>
+                              </div>
+                              <div class="material-name">
+                                CA SARATE(15%) BASE
+                              </div>
+                            </div>
+                          </td>
+                          <td>[1110] AP 오산플랜트</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                              </label>
+                            </div>
+                          </td>
+                          <td>3072941</td>
+                          <td class="tit">
+                            <!-- 2023.04.25 : add : .material-wrap__pop 추가 -->
+                            <div class="material-wrap material-wrap__pop">
+                              <div class="material-tags">
+                                <span class="material-tag material-tag__yellow">원료태그</span>
+                                <span class="material-tag material-tag__green">원료태그</span>
+                                <span class="material-tag material-tag__blue">원료태그</span>
+                              </div>
+                              <div class="material-name">
+                                CA SARATE(15%) BASE
+                              </div>
+                            </div>
+                          </td>
+                          <td>[1110] AP 오산플랜트</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                              </label>
+                            </div>
+                          </td>
+                          <td>3072941</td>
+                          <td class="tit">
+                            <!-- 2023.04.25 : add : .material-wrap__pop 추가 -->
+                            <div class="material-wrap material-wrap__pop">
+                              <div class="material-tags">
+                                <span class="material-tag material-tag__yellow">원료태그</span>
+                                <span class="material-tag material-tag__green">원료태그</span>
+                                <span class="material-tag material-tag__blue">원료태그</span>
+                              </div>
+                              <div class="material-name">
+                                CA SARATE(15%) BASE
+                              </div>
+                            </div>
+                          </td>
+                          <td>[1110] AP 오산플랜트</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                              </label>
+                            </div>
+                          </td>
+                          <td>3072941</td>
+                          <td class="tit">
+                            <!-- 2023.04.25 : add : .material-wrap__pop 추가 -->
+                            <div class="material-wrap material-wrap__pop">
+                              <div class="material-tags">
+                                <span class="material-tag material-tag__yellow">원료태그</span>
+                                <span class="material-tag material-tag__green">원료태그</span>
+                                <span class="material-tag material-tag__blue">원료태그</span>
+                              </div>
+                              <div class="material-name">
+                                CA SARATE(15%) BASE
+                              </div>
+                            </div>
+                          </td>
+                          <td>[1110] AP 오산플랜트</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                              </label>
+                            </div>
+                          </td>
+                          <td>3072941</td>
+                          <td class="tit">
+                            <!-- 2023.04.25 : add : .material-wrap__pop 추가 -->
+                            <div class="material-wrap material-wrap__pop">
+                              <div class="material-tags">
+                                <span class="material-tag material-tag__yellow">원료태그</span>
+                                <span class="material-tag material-tag__green">원료태그</span>
+                                <span class="material-tag material-tag__blue">원료태그</span>
+                              </div>
+                              <div class="material-name">
+                                CA SARATE(15%) BASE
+                              </div>
+                            </div>
+                          </td>
+                          <td>[1110] AP 오산플랜트</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                              </label>
+                            </div>
+                          </td>
+                          <td>3072941</td>
+                          <td class="tit">
+                            <!-- 2023.04.25 : add : .material-wrap__pop 추가 -->
+                            <div class="material-wrap material-wrap__pop">
+                              <div class="material-tags">
+                                <span class="material-tag material-tag__yellow">원료태그</span>
+                                <span class="material-tag material-tag__green">원료태그</span>
+                                <span class="material-tag material-tag__blue">원료태그</span>
+                              </div>
+                              <div class="material-name">
+                                CA SARATE(15%) BASE
+                              </div>
+                            </div>
+                          </td>
+                          <td>[1110] AP 오산플랜트</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                              </label>
+                            </div>
+                          </td>
+                          <td>3072941</td>
+                          <td class="tit">
+                            <!-- 2023.04.25 : add : .material-wrap__pop 추가 -->
+                            <div class="material-wrap material-wrap__pop">
+                              <div class="material-tags">
+                                <span class="material-tag material-tag__yellow">원료태그</span>
+                                <span class="material-tag material-tag__green">원료태그</span>
+                                <span class="material-tag material-tag__blue">원료태그</span>
+                              </div>
+                              <div class="material-name">
+                                CA SARATE(15%) BASE
+                              </div>
+                            </div>
+                          </td>
+                          <td>[1110] AP 오산플랜트</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                              </label>
+                            </div>
+                          </td>
+                          <td>3072941</td>
+                          <td class="tit">
+                            <!-- 2023.04.25 : add : .material-wrap__pop 추가 -->
+                            <div class="material-wrap material-wrap__pop">
+                              <div class="material-tags">
+                                <span class="material-tag material-tag__yellow">원료태그</span>
+                                <span class="material-tag material-tag__green">원료태그</span>
+                                <span class="material-tag material-tag__blue">원료태그</span>
+                              </div>
+                              <div class="material-name">
+                                CA SARATE(15%) BASE
+                              </div>
+                            </div>
+                          </td>
+                          <td>[1110] AP 오산플랜트</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="board-bottom board-bottom__with--button">
+                  <div class="board-bottom__inner">
+                    <div class="pagination">
+                      <div class="pagination__inner">
+                        <a href="javascript:void(0)" class="paging paging-prev"></a>
+                        <a href="javascript:void(0)" class="paging is-active">1</a>
+                        <a href="javascript:void(0)" class="paging">2</a>
+                        <a href="javascript:void(0)" class="paging">3</a>
+                        <a href="javascript:void(0)" class="paging">4</a>
+                        <a href="javascript:void(0)" class="paging">5</a>
+                        <a href="javascript:void(0)" class="paging paging-next"></a>
+                      </div>
+                    </div>
+                    <div class="ui-buttons ui-buttons__right">
+                      <button type="button" class="ui-button ui-button__bg--skyblue font-weight__300">선택적용</button>
+                      <button type="button" class="ui-button ui-button__bg--lightgray">닫기</button>
+                    </div>
+                  </div>
+
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+  <!--// modal 모달 -->
+
+</body>
+
+</html>

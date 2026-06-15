@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.12 63.7">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4b7ae4;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #232323;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+
+      .cls-2 {
+        fill: #ffce00;
+      }
+    </style>
+  </defs>
+  <g id="_타이틀" data-name="타이틀">
+    <g>
+      <path class="cls-1" d="m24.39,62.95c23.65-8.11,22.97-25.72,22.97-25.72V6.83s-17.23,1.52-22.55-6.08c0,0-5.07,6.08-24.07,6.08v30.4S.08,54.84,23.72,62.95h.67Z"/>
+      <path class="cls-2" d="m24.06,55.98C7.14,49.3,7.4,37.61,7.41,37.47v-.24s0-24,0-24c7.93-.64,13.29-2.37,16.81-4.11,4.76,3.02,10.95,4.13,16.49,4.41v23.93c0,.48-.08,11.96-16.65,18.51Z"/>
+    </g>
+  </g>
+</svg>

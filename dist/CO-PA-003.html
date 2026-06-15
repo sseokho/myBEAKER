@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>myBEAKER</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+
+    <!-- 메뉴 기능 위한 스크립트 -->
+    <script src="../dist/assets/js/jquery.js"></script>
+    <script src="../dist/assets/js/ui-script.js"></script>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <header class="header">
+            <div class="header__inner">
+                <div class="header-logo">
+                    <a href="javascript:void(0)" class="header-logo__link"></a>
+                </div>
+                <div class="header-menu">
+                    <div class="header-menu__inner">
+                        <!-- 전달사항 :: 클릭시 클래스 is-active 추가 됩니다. -->
+                        <div class="header-menu__item header-menu__inquiry is-active">
+                            <a href="javascript:void(0)" class="header-menu__link"></a>
+                            <div class="header-menu__dropdown">
+                                <div class="header-menu__dropdown--inner">
+                                    <div class="header-menu__dropdown--body">
+                                        <div class="ui-buttons">
+                                            <a href="javascript:void(0)" class="ui-button ui-button__link ui-button__bg--blue">오류/일반 문의</a>
+                                            <a href="javascript:void(0)" class="ui-button ui-button__link ui-button__bg--blue">my BEAKER 개선 제안</a>
+                                            <a href="javascript:void(0)" class="ui-button ui-button__link ui-button__bg--blue">데이터 수정/추출</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-menu__item header-menu__qr">
+                            <a href="javascript:void(0)" class="header-menu__link"></a>
+                            <div class="header-menu__dropdown">
+                                <div class="header-menu__dropdown--inner">
+                                    <div class="header-menu__dropdown--header">
+                                        <div class="header-menu__dropdown--title">QR코드를 스캔해 주세요.</div>
+                                    </div>
+                                    <div class="header-menu__dropdown--body">
+                                        <div class="qr-img__wrap">
+                                            <div class="qr-img">
+                                                <img src="./assets/images/_dummy/img-qr.png" alt="">
+                                            </div>
+                                            <div class="qr-text">사각 테두리안에 QR코드를 <br>
+                                                인식해 주세요.</div>
+                                        </div>
+                                        <div class="qr-checkbox">
+                                            <div class="ui-checkbox__list">
+                                                <div class="ui-checkbox__inner">
+                                                    <div class="ui-checkbox-block">
+                                                        <input type="checkbox" class="ui-checkbox">
+                                                        <label for="" class="ui-label">
+                                                            <span class="ui-checkbox-object"></span>
+                                                            <span class="ui-label__text">웹캠사용</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="ui-checkbox-block">
+                                                        <input type="checkbox" class="ui-checkbox" checked="">
+                                                        <label for="" class="ui-label">
+                                                            <span class="ui-checkbox-object"></span>
+                                                            <span class="ui-label__text">새창으로</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 전달사항 :: 미확인 알람 있을때 클래스 is-alarm 추가 됩니다. -->
+                        <div class="header-menu__item header-menu__alarm is-alarm">
+                            <a href="javascript:void(0)" class="header-menu__link"></a>
+                            <div class="header-menu__dropdown">
+                                <div class="header-menu__dropdown--inner">
+                                    <div class="header-menu__dropdown--body header-menu__dropdown--body-alarm">
+                                        <div class="dropdown-alarm">
+                                            <div class="dropdown-alarm__inner">
+                                                <ul class="ui-list dropdown-alarm__lists">
+                                                    <li class="dropdown-alarm__list">
+                                                        <a href="javascript:void(0)" class="dropdown-alarm__link">
+                                                            <span class="font-weight__600">김상현</span>님이 <span class="font-weight__600">3102376 프리메라 에센셜 마사지크림(22AD)</span> BOM을 전송했습니다.
+                                                        </a>
+                                                        <span class="dropdown-alarm__time">12 minutes ago</span>
+                                                    </li>
+                                                    <li class="dropdown-alarm__list">
+                                                        <a href="javascript:void(0)" class="dropdown-alarm__link">
+                                                            <span class="font-weight__600">김상현</span>님이 <span class="font-weight__600">3102376 프리메라 에센셜 마사지크림(22AD)</span> BOM을 전송했습니다.
+                                                        </a>
+                                                        <span class="dropdown-alarm__time">12 minutes ago</span>
+                                                    </li>
+                                                    <li class="dropdown-alarm__list">
+                                                        <a href="javascript:void(0)" class="dropdown-alarm__link">
+                                                            <span class="font-weight__600">김상현</span>님이 <span class="font-weight__600">3102376 프리메라 에센셜 마사지크림(22AD)</span> BOM을 전송했습니다.
+                                                        </a>
+                                                        <span class="dropdown-alarm__time">12 minutes ago</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-menu__item header-menu__setting">
+                            <a href="javascript:void(0)" class="header-menu__link"></a>
+                            <div class="header-menu__dropdown">
+                                <div class="header-menu__dropdown--inner">
+                                    <div class="header-menu__dropdown--header">
+                                        <div class="header-menu__dropdown--title">설정</div>
+                                    </div>
+                                    <div class="header-menu__dropdown--body header-menu__dropdown--body-setting">
+                                        <div class="dropdown-item">
+                                            <div class="dropdown-item__title">메인</div>
+                                            <div class="dropdown-item__contents">
+                                                <div class="setting-myBoard">
+                                                    <div class="setting-myBoard__inner">
+                                                        <ul class="ui-list setting-myBoard__lists">
+                                                            <!-- 전달사항 :: 클릭시 클래스 is-active 추가 됩니다. -->
+                                                            <li class="setting-myBoard__list is-active">
+                                                                <a href="javascript:void(0)" class="setting-myBoard__link setting-myBoard__link--note">
+                                                                    <i class="setting-myBoard__icon"></i>
+                                                                    <span class="setting-myBoard__title">Note</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="setting-myBoard__list">
+                                                                <a href="javascript:void(0)" class="setting-myBoard__link setting-myBoard__link--schedule">
+                                                                    <i class="setting-myBoard__icon"></i>
+                                                                    <span class="setting-myBoard__title">Schedule</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="setting-myBoard__list">
+                                                                <a href="javascript:void(0)" class="setting-myBoard__link setting-myBoard__link--examination">
+                                                                    <i class="setting-myBoard__icon"></i>
+                                                                    <span class="setting-myBoard__title">Examination</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="setting-myBoard__list">
+                                                                <a href="javascript:void(0)" class="setting-myBoard__link setting-myBoard__link--memo">
+                                                                    <i class="setting-myBoard__icon"></i>
+                                                                    <span class="setting-myBoard__title">Memo</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-item">
+                                            <div class="dropdown-item__title">알림수신</div>
+                                            <div class="dropdown-item__contents">
+                                                <div class="ui-checkbox__list ui-check-list--bipartite">
+                                                    <div class="ui-checkbox__inner ">
+                                                        <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label for="" class="ui-label">
+                                                                <span class="ui-checkbox-object"></span>
+                                                                <span class="ui-label__text">전체 수신</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox" checked="">
+                                                            <label for="" class="ui-label">
+                                                                <span class="ui-checkbox-object"></span>
+                                                                <span class="ui-label__text">실험 시작</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox" checked="">
+                                                            <label for="" class="ui-label">
+                                                                <span class="ui-checkbox-object"></span>
+                                                                <span class="ui-label__text">BOM 전송</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox" checked="">
+                                                            <label for="" class="ui-label">
+                                                                <span class="ui-checkbox-object"></span>
+                                                                <span class="ui-label__text">내용물 입고</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox" checked="">
+                                                            <label for="" class="ui-label">
+                                                                <span class="ui-checkbox-object"></span>
+                                                                <span class="ui-label__text">개발 완료</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-menu__item header-menu__logout">
+                            <a href="javascript:void(0)" class="header-menu__link"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="ui-layout">
+            <div class="ui-layout__inner">
+                <!-- 전달사항 :: 메뉴 펼쳤을때 .is-open 붙습니다. -->
+                <div class="left-menu is-open">
+                    <div class="left-menu__inner">
+                        <button type="button" class="left-menu__button"><i class="left-menu__button--icon"></i></button>
+                        <div class="left-menu__box">
+                            <!-- 전달사항 :: 클릭시 .left-menu__list에 is-active 붙여주세요. -->
+
+                            <div class="left-menu__item">
+                                <ul class="ui-list left-menu__lists left-menu__lists--myBoard">
+                                    <li class="left-menu__list is-active">
+                                        <a href="javascript:void(0)" class="left-menu__link"><i
+                                                class="left-menu__icon left-menu__icon--myBoard"></i><span
+                                                class="left-menu__text">My board</span><span
+                                                class="left-menu__tooltip">My board</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="left-menu__item">
+                                <ul class="ui-list left-menu__lists left-menu__lists--notes">
+                                    <li class="left-menu__list">
+                                        <a href="javascript:void(0)" class="left-menu__link">
+                                            <i class="left-menu__icon left-menu__icon--labNotes"></i><span
+                                                class="left-menu__text">All lab notes</span><span
+                                                class="left-menu__tooltip">All lab notes</span>
+                                        </a>
+                                    </li>
+                                    <li class="left-menu__list">
+                                        <a href="javascript:void(0)" class="left-menu__link">
+                                            <i class="left-menu__icon left-menu__icon--4codeNotes"></i><span
+                                                class="left-menu__text">4code notes</span><span
+                                                class="left-menu__tooltip">4code notes</span>
+                                        </a>
+                                    </li>
+                                    <li class="left-menu__list">
+                                        <a href="javascript:void(0)" class="left-menu__link">
+                                            <i class="left-menu__icon left-menu__icon--projectsNotes"></i><span
+                                                class="left-menu__text">Projects notes</span><span
+                                                class="left-menu__tooltip">Projects notes</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="left-menu__item">
+                                <ul class="ui-list left-menu__lists">
+                                    <!-- 전달사항 :: 필터 있을때 .is-filter 붙여주세요. , 필터 오픈 될때 .is-filter__open 붙습니다. -->
+                                    <li class="left-menu__list is-filter">
+                                        <a href="javascript:void(0)" class="left-menu__link">
+                                            <i class="left-menu__icon left-menu__icon--myLabNotes"></i><span
+                                                class="left-menu__text">My lab notes</span><span
+                                                class="left-menu__tooltip">My lab notes</span>
+                                            <button type="button" class="button-filter__show"></button>
+                                        </a>
+
+                                        <!-- 필터 -->
+                                        <ul class="ui-list filter-lists">
+                                            <li class="filter-list">
+                                                3012376<button type="button" class="filter-button__close"></button>
+                                            </li>
+                                            <li class="filter-list">
+                                                3012592<button type="button" class="filter-button__close"></button>
+                                            </li>
+                                            <li class="filter-list">
+                                                3012378<button type="button" class="filter-button__close"></button>
+                                            </li>
+                                        </ul>
+                                        <!--// 필터 -->
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="left-menu__item">
+                                <ul class="ui-list left-menu__lists left-menu__lists--other">
+                                    <li class="left-menu__list">
+                                        <a href="javascript:void(0)" class="left-menu__link">
+                                            <i class="left-menu__icon left-menu__icon--discussionLab"></i><span
+                                                class="left-menu__text">Discussion lab</span><span
+                                                class="left-menu__tooltip">Discussion lab</span>
+                                        </a>
+                                    </li>
+                                    <li class="left-menu__list">
+                                        <a href="javascript:void(0)" class="left-menu__link">
+                                            <i class="left-menu__icon left-menu__icon--inventory"></i><span
+                                                class="left-menu__text">Inventory</span><span
+                                                class="left-menu__tooltip">Inventory</span>
+                                        </a>
+                                    </li>
+                                    <li class="left-menu__list">
+                                        <a href="javascript:void(0)" class="left-menu__link">
+                                            <i class="left-menu__icon left-menu__icon--frameRecipe"></i><span
+                                                class="left-menu__text">Frame recipe</span><span
+                                                class="left-menu__tooltip">Frame recipe</span>
+                                        </a>
+                                    </li>
+                                    <li class="left-menu__list">
+                                        <a href="javascript:void(0)" class="left-menu__link">
+                                            <i class="left-menu__icon left-menu__icon--coaRequest"></i><span
+                                                class="left-menu__text">COA request</span><span
+                                                class="left-menu__tooltip">COA request</span>
+                                        </a>
+                                    </li>
+                                    <li class="left-menu__list">
+                                        <a href="javascript:void(0)" class="left-menu__link">
+                                            <i class="left-menu__icon left-menu__icon--search"></i><span
+                                                class="left-menu__text">Search</span><span
+                                                class="left-menu__tooltip">Search</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="left-menu__copyright">© Amorepacific Corp.</div>
+                    </div>
+                </div>
+
+                <div class="contents">
+                    <div class="contents__inner">
+
+
+                        <div class="contents-core">
+                            <div class="contents-cell__wrap">
+                                <div class="contents-cell">
+                                    <div class="contents-box contents-box__small">
+                                        <div class="contents-box__inner">
+                                            <div class="ui-tab">
+                                                <div class="ui-tab__inner">
+                                                    <div class="ui-tab__header">
+                                                        <ul class="ui-list ui-tab__lists">
+                                                            <li class="ui-tab__list is-active"><a href="javascript:void(0)"
+                                                                    class="ui-tab__link">My notes</a></li>
+                                                            <li class="ui-tab__list"><a href="javascript:void(0)"
+                                                                    class="ui-tab__link">Recent notes</a></li>
+                                                            <li class="ui-tab__list"><a href="javascript:void(0)"
+                                                                    class="ui-tab__link">Shared notes</a></li>
+                                                        </ul>
+                                                        <button type="button" class="tab-header__button"></button>
+                                                    </div>
+                                                    <div class="ui-tab__body">
+                                                        <div class="note-card">
+                                                            <div class="note-card__inner">
+                                                                <ul class="ui-list note-card__lists">
+                                                                    <li class="note-card__list">
+                                                                        <a href="javascript:void(0)"
+                                                                            class="note-card__link">
+                                                                            <span class="note-card__num">3102376</span>
+                                                                            <span class="note-card__brand">Primera</span>
+                                                                            <span class="note-card__name">프리메라 에센셜 마사지크림 (22AD)</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="note-card__list">
+                                                                        <a href="javascript:void(0)"
+                                                                            class="note-card__link">
+                                                                            <span class="note-card__num">3102377</span>
+                                                                            <span class="note-card__brand">innisfree</span>
+                                                                            <span class="note-card__name">(검출) 이니스프리 그린티 씨드 세럼 AD (23)</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="note-card__list">
+                                                                        <a href="javascript:void(0)"
+                                                                            class="note-card__link">
+                                                                            <span class="note-card__num">3102376</span>
+                                                                            <span class="note-card__brand">Primera</span>
+                                                                            <span class="note-card__name">프리메라 에센셜 마사지크림 (22AD)</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="note-card__list">
+                                                                        <a href="javascript:void(0)"
+                                                                            class="note-card__link">
+                                                                            <span class="note-card__num">3102377</span>
+                                                                            <span class="note-card__brand">innisfree</span>
+                                                                            <span class="note-card__name">(검출) 이니스프리 그린티 씨드 세럼 AD (23)</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="note-card__list">
+                                                                        <a href="javascript:void(0)"
+                                                                            class="note-card__link">
+                                                                            <span class="note-card__num">3102376</span>
+                                                                            <span class="note-card__brand">Primera</span>
+                                                                            <span class="note-card__name">프리메라 에센셜 마사지크림 (22AD)</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="note-card__list">
+                                                                        <a href="javascript:void(0)"
+                                                                            class="note-card__link">
+                                                                            <span class="note-card__num">3102377</span>
+                                                                            <span class="note-card__brand">innisfree</span>
+                                                                            <span class="note-card__name">(검출) 이니스프리 그린티 씨드 세럼 AD (23)</span>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contents-box contents-box__large">
+                                        <div class="contents-box__inner">
+                                            <div class="ui-tab">
+                                                <div class="ui-tab__inner">
+                                                    <div class="ui-tab__header">
+                                                        <ul class="ui-list ui-tab__lists">
+                                                            <li class="ui-tab__list is-active"><a href="javascript:void(0)"
+                                                                    class="ui-tab__link">Schedule</a></li>
+                                                            <li class="ui-tab__list"><a href="javascript:void(0)"
+                                                                    class="ui-tab__link">Assign researcher</a></li>
+                                                        </ul>
+                                                        <button type="button" class="tab-header__button"></button>
+                                                    </div>
+                                                    <div class="ui-tab__body">
+                                                        
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contents-box contents-box__large">
+                                        <div class="contents-box__inner">
+                                            <div class="ui-tab">
+                                                <div class="ui-tab__inner">
+                                                    <div class="ui-tab__header">
+                                                        <ul class="ui-list ui-tab__lists">
+                                                            <li class="ui-tab__list is-active"><a href="javascript:void(0)"
+                                                                    class="ui-tab__link">Examination</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="ui-tab__body">
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contents-box contents-box__small">
+                                        <div class="contents-box__inner">
+                                            <div class="ui-tab">
+                                                <div class="ui-tab__inner">
+                                                    <div class="ui-tab__header">
+                                                        <ul class="ui-list ui-tab__lists">
+                                                            <li class="ui-tab__list is-active">
+                                                                <a href="javascript:void(0)" class="ui-tab__link">Memo</a>
+                                                            </li>
+                                                            <li class="ui-tab__list">
+                                                                <a href="javascript:void(0)" class="ui-tab__link">Notice</a>
+                                                            </li>
+                                                            <li class="ui-tab__list">
+                                                                <a href="javascript:void(0)" class="ui-tab__link">결재함</a>
+                                                            </li>
+                                                        </ul>
+                                                        <button type="button" class="tab-header__button"></button>
+                                                    </div>
+                                                    <div class="ui-tab__body">
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <!--//.contents-core -->
+
+                    </div>
+                    <!--//.contents__inner -->
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

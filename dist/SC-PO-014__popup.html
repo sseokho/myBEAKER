@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>myBEAKER</title>
+
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- favicon -->
+  <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+  <!-- //favicon -->
+
+  <!-- style -->
+  <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+  <!-- //style -->
+
+  <!-- 메뉴 기능 위한 스크립트 -->
+  <script src="../dist/assets/js/jquery.js"></script>
+  <script src="../dist/assets/js/ui-script.js"></script>
+</head>
+
+<!-- 전달사항 :: 모달 표출시 .modal-open 붙여주세요 -->
+<body class="modal-open">
+
+    <!-- modal 모달 -->
+    <!-- 전달사항 :: 클래스 in 있을 때 모달 표출 -->
+    <div class="modal-backdrop fade in"></div>
+    <div id="myModal" class="modal fade in">
+      <div class="modal-dialog">
+        <div class="modal-content modal-content__width--640">
+          <div class="modal-header">
+            <div class="modal-title">버전 관리</div>
+            <button type="button" class="modal-close"></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="basic-info__table">
+              <table class="ui-table__contents">
+                <colgroup>
+                  <col style="width:10rem">
+                  <col style="width:auto">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>내용물코드</th>
+                    <td colspan="4">
+                      <div class="ui-label__text ta-l">3102760</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>사용 버전 체크</th>
+                    <td colspan="4">
+                      <div class="ui-checkbox__list">
+                        <div class="ui-checkbox__inner">
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox" checked="">
+                            <label class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="ui-label__text">전체</span>
+                            </label>
+                          </div>
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox">
+                            <label class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="ui-label__text">VER #01</span>
+                            </label>
+                          </div>
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox">
+                            <label class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="ui-label__text">VER #02</span>
+                            </label>
+                          </div>
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox">
+                            <label class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="ui-label__text">VER #03</span>
+                            </label>
+                          </div>
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox">
+                            <label class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="ui-label__text">VER #04</span>
+                            </label>
+                          </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="board-bottom ">
+                <div class="board-bottom__inner">
+                  <div class="ui-buttons ui-buttons__right">
+                    <button type="button" class="ui-button ui-button__bg--skyblue">저장</button>
+                    <button type="button" class="ui-button ui-button__bg--lightgray">닫기</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+    <!--// modal 모달 -->
+
+</body>
+
+</html>

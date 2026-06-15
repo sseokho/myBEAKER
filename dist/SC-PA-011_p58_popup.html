@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>myBEAKER</title>
+
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- favicon -->
+  <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+  <!-- //favicon -->
+
+  <!-- style -->
+  <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+  <!-- //style -->
+
+
+</head>
+
+<!-- 전달사항 :: 모달 표출시 .modal-open 붙여주세요 -->
+
+<body class="modal-open">
+
+  <!-- modal 모달 -->
+  <!-- 전달사항 :: 클래스 in 있을 때 모달 표출 -->
+  <div class="modal-backdrop fade in"></div>
+  <div id="myModal" class="modal fade in">
+    <div class="modal-dialog">
+      <div class="modal-content modal-content__max-20">
+        <div class="modal-header">
+          <div class="modal-title">무소구 가능항목 상세보기</div>
+          <button type="button" class="modal-close"></button>
+        </div>
+
+        <div class="modal-body">
+
+          <div class="modal-body__item">
+            <div class="modal-sub-title">
+              기본정보
+            </div>
+            <table class="ui-table__reset ui-table__ver">
+              <colgroup>
+                <col style="width:14rem">
+                <col style="width:auto">
+                <col style="width:14rem">
+                <col style="width:auto">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>내용물코드</th>
+                  <td>3102760</td>
+                  <th>Ver-Lot 번호</th>
+                  <td>VER #04 / LOT #01</td>
+                </tr>
+                <tr>
+                  <th>내용물 명</th>
+                  <td colspan="3">무펄) 라네즈 비스포크Swirl 립슬리핑 마스크_거미베어</td>
+                </tr>
+                <tr>
+                  <th>무소구 가능항목</th>
+                  <td colspan="3">
+                    <div class="text-des">*동물성원료 *광물성오일 *실리콘오일 *오일 *합성색소 *타르색소 *폴리아크릴아마이드 *이미다줄리다닐우레아 *트라이엔탄올아민 *향 *인공향
+                      *피이지 *탤크*카본블랙 *파라벤 *벤조페논 *이디티에이 *글루텐 *피티에프이
+                    </div>
+                    <div class="text-des text-des__blue">[ (인공향,향) (타르색소,합성색소) 은 각 그룹 중 선택된 항목에 한정하여 무소구 가능합니다.] <br>
+                      ※오일은 광물성오일/실리콘오일과 함께 선택 불가합니다. EX)오일+광물성오일=불가, 광물성오일+실리콘오일=가능<br>
+                      ※피이지 항목은 PEG. PEG 계면활성제, PEG 화합물 등을 포함합니다.<br>
+                      ※카본블랙은흑색 계열 제품에 한정합니다. <br>
+                      ※ 트리클로산은 데오도런트(스프레이 유형 제외)만 무소구 가능합니다.<br>
+                      ※파라벤, 벤조페논, 이디티에이, 글루텐, 과불화화합물은 협의 항목으로 무소구 의뢰 전 유관 부서(분석랩, QA 등) 협의 후 의뢰 가능합니다.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th><div class="d-flex align-center">주의사항 <i class="icon-caution__gray ml-05"></i></div></th>
+                  <td colspan="3">
+                    <div>
+                      <div class="text-des text-des__red">
+                        ※무소구 가능여부를 판단하기 위한 참고용 데이터로, 인증 프로세스를 진행 해 주세요. <br>
+                        ※파라벤, 향, 벤조페논, 이디티에이, 글루텐, 과불화화합물은 시험/평가가 필요하므로 시험품이 송부(to 분석 랩)되어야 합니다.<br>
+                        ※향 또는 인공향 무소구 인증은성분과 내용물에 대한 취를 확인하여 가능 여부를 판정합니다.<br>
+                        ※무소구인증 의뢰접수는 매달 첫째, 셋째 월~화요일 진행(2주단위)되므로 접수일을 확인하세요. (접수 후 약 2~4주 소요)
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <div class="modal-body__item">
+            <div class="modal-sub-title modal-sub-title__flex">
+              <div class="modal-sub-title__text">내용물 처방</div>
+              <div class="modal-sub-title__right">
+                ○: 무소구 가능   /   <span class="color-yellow">검토: 추가 확인 필요</span>   /   <span class="color-red">불가: 무소구 불가</span>
+              </div>
+            </div>
+
+            <div class="ui-table__wrap">
+              <table class="ui-table ui-table__material-pop text-center ui-table__td--40 ui-table__th--border-radius--0">
+                <colgroup>
+                  <col style="width:8rem;">
+                  <col style="width:18%;">
+                  <col style="width:7%;">
+
+                  
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>원료코드</th>
+                    <th>원료명</th>
+                    <th>함량(%)</th>
+                    <th>동물성<br>
+                      원료</th>
+                    <th class="bg-red">광물성<br>
+                      오일</th>
+                    <th class="bg-red">실리콘<br>
+                      오일</th>
+                    <th class="bg-red">오일</th>
+                    <th class="bg-red">합성<br>
+                      색소</th>
+                      <th class="bg-red">타르<br>
+                        색소</th>
+                      <th>폴리<br>
+                        아크릴<br>
+                        아마이드</th>
+                        <th>이미다<br>
+                          졸리디닐<br>
+                          우레아</th>
+                        <th>트라이<br>
+                          에탄올<br>
+                          아민</th>
+                        <th class="bg-red">향</th>
+                        <th class="bg-red">인공향</th>
+                        <th>피이지</th>
+                        <th>탤크</th>
+                        <th>카본<br>
+                          블랙</th>
+                        <th>파라벤</th>
+                        <th>벤조<br>
+                          페논</th>
+                        <th>이디티<br>
+                          에이</th>
+                        <th>글루텐</th>
+                        <th>피티 <br>
+                          에프이</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="bg-red">6000029</td>
+                    <td>(P비,S금)POLYBUTENE HV-300456
+                      (INDOPOL300)</td>
+                      <td>98.000000</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td><span class="color-red">불가</span></td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                  </tr>
+                  <tr>
+                    <td class="bg-red">6000029</td>
+                    <td>(P비,S금)POLYBUTENE HV-300456
+                      (INDOPOL300)</td>
+                      <td>98.000000</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td><span class="color-red">불가</span></td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                  </tr>
+                  <tr>
+                    <td class="bg-red">6000029</td>
+                    <td>(P비,S금)POLYBUTENE HV-300456
+                      (INDOPOL300)</td>
+                      <td>98.000000</td>
+                      <td><span class="color-red">불가</span></td>
+                      <td><span class="color-red">불가</span></td>
+                      <td><span class="color-red">불가</span></td>
+                      <td><span class="color-red">불가</span></td>
+                      <td><span class="color-yellow">검토</span></td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+
+
+
+        </div>
+
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+  <!--// modal 모달 -->
+
+</body>
+
+</html>

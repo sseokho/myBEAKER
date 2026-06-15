@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>myBEAKER</title>
+
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- favicon -->
+  <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+  <!-- //favicon -->
+
+  <!-- style -->
+  <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+  <!-- //style -->
+
+  <link type="text/css" rel="stylesheet" href="./assets/css/tui.css" />
+
+  <!-- 메뉴 기능 위한 스크립트 -->
+  <script src="../dist/assets/js/jquery.js"></script>
+  <script src="../dist/assets/js/ui-script.js"></script>
+</head>
+
+<body>
+
+  <div class="wrap">
+    <header class="header">
+      <div class="header__inner">
+        <div class="header-logo">
+          <a href="javascript:void(0)" class="header-logo__link"></a>
+        </div>
+        <div class="header-menu">
+          <div class="header-menu__inner">
+            <!-- 전달사항 :: 클릭시 클래스 is-active 추가 됩니다. -->
+            <div class="header-menu__item header-menu__inquiry">
+              <a href="javascript:void(0)" class="header-menu__link"></a>
+              <div class="header-menu__dropdown">
+                <div class="header-menu__dropdown--inner">
+                  <div class="header-menu__dropdown--body">
+                    <div class="ui-buttons">
+                      <a href="javascript:void(0)" class="ui-button ui-button__link ui-button__bg--blue">오류/일반 문의</a>
+                      <a href="javascript:void(0)" class="ui-button ui-button__link ui-button__bg--blue">my BEAKER 개선
+                        제안</a>
+                      <a href="javascript:void(0)" class="ui-button ui-button__link ui-button__bg--blue">데이터 수정/추출</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-menu__item header-menu__qr">
+              <a href="javascript:void(0)" class="header-menu__link"></a>
+              <div class="header-menu__dropdown">
+                <div class="header-menu__dropdown--inner">
+                  <div class="header-menu__dropdown--header">
+                    <div class="header-menu__dropdown--title">QR코드를 스캔해 주세요.</div>
+                  </div>
+                  <div class="header-menu__dropdown--body">
+                    <div class="qr-img__wrap">
+                      <div class="qr-img">
+                        <img src="./assets/images/_dummy/img-qr.png" alt="">
+                      </div>
+                      <div class="qr-text">사각 테두리안에 QR코드를 <br>
+                        인식해 주세요.</div>
+                    </div>
+                    <div class="qr-checkbox">
+                      <div class="ui-checkbox__list">
+                        <div class="ui-checkbox__inner">
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox">
+                            <label for="" class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="ui-label__text">웹캠사용</span>
+                            </label>
+                          </div>
+                          <div class="ui-checkbox-block">
+                            <input type="checkbox" class="ui-checkbox" checked="">
+                            <label for="" class="ui-label">
+                              <span class="ui-checkbox-object"></span>
+                              <span class="ui-label__text">새창으로</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 전달사항 :: 미확인 알람 있을때 클래스 is-alarm 추가 됩니다. -->
+            <div class="header-menu__item header-menu__alarm is-alarm">
+              <a href="javascript:void(0)" class="header-menu__link"></a>
+              <div class="header-menu__dropdown">
+                <div class="header-menu__dropdown--inner">
+                  <div class="header-menu__dropdown--body header-menu__dropdown--body-alarm">
+                    <div class="dropdown-alarm">
+                      <div class="dropdown-alarm__inner">
+                        <ul class="ui-list dropdown-alarm__lists">
+                          <li class="dropdown-alarm__list">
+                            <a href="javascript:void(0)" class="dropdown-alarm__link">
+                              <span class="font-weight__600">김상현</span>님이 <span class="font-weight__600">3102376 프리메라
+                                에센셜
+                                마사지크림(22AD)</span> BOM을 전송했습니다.
+                            </a>
+                            <span class="dropdown-alarm__time">12 minutes ago</span>
+                          </li>
+                          <li class="dropdown-alarm__list">
+                            <a href="javascript:void(0)" class="dropdown-alarm__link">
+                              <span class="font-weight__600">김상현</span>님이 <span class="font-weight__600">3102376 프리메라
+                                에센셜
+                                마사지크림(22AD)</span> BOM을 전송했습니다.
+                            </a>
+                            <span class="dropdown-alarm__time">12 minutes ago</span>
+                          </li>
+                          <li class="dropdown-alarm__list">
+                            <a href="javascript:void(0)" class="dropdown-alarm__link">
+                              <span class="font-weight__600">김상현</span>님이 <span class="font-weight__600">3102376 프리메라
+                                에센셜
+                                마사지크림(22AD)</span> BOM을 전송했습니다.
+                            </a>
+                            <span class="dropdown-alarm__time">12 minutes ago</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-menu__item header-menu__setting">
+              <a href="javascript:void(0)" class="header-menu__link"></a>
+              <div class="header-menu__dropdown">
+                <div class="header-menu__dropdown--inner">
+                  <div class="header-menu__dropdown--header">
+                    <div class="header-menu__dropdown--title">설정</div>
+                  </div>
+                  <div class="header-menu__dropdown--body header-menu__dropdown--body-setting">
+                    <div class="dropdown-item">
+                      <div class="dropdown-item__title">메인</div>
+                      <div class="dropdown-item__contents">
+                        <div class="setting-myBoard">
+                          <div class="setting-myBoard__inner">
+                            <ul class="ui-list setting-myBoard__lists">
+                              <!-- 전달사항 :: 클릭시 클래스 is-active 추가 됩니다. -->
+                              <li class="setting-myBoard__list is-active">
+                                <a href="javascript:void(0)" class="setting-myBoard__link setting-myBoard__link--note">
+                                  <i class="setting-myBoard__icon"></i>
+                                  <span class="setting-myBoard__title">Note</span>
+                                </a>
+                              </li>
+                              <li class="setting-myBoard__list">
+                                <a href="javascript:void(0)"
+                                  class="setting-myBoard__link setting-myBoard__link--schedule">
+                                  <i class="setting-myBoard__icon"></i>
+                                  <span class="setting-myBoard__title">Schedule</span>
+                                </a>
+                              </li>
+                              <li class="setting-myBoard__list">
+                                <a href="javascript:void(0)"
+                                  class="setting-myBoard__link setting-myBoard__link--examination">
+                                  <i class="setting-myBoard__icon"></i>
+                                  <span class="setting-myBoard__title">Examination</span>
+                                </a>
+                              </li>
+                              <li class="setting-myBoard__list">
+                                <a href="javascript:void(0)" class="setting-myBoard__link setting-myBoard__link--memo">
+                                  <i class="setting-myBoard__icon"></i>
+                                  <span class="setting-myBoard__title">Memo</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dropdown-item">
+                      <div class="dropdown-item__title">알림수신</div>
+                      <div class="dropdown-item__contents">
+                        <div class="ui-checkbox__list ui-check-list--bipartite">
+                          <div class="ui-checkbox__inner ">
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">전체 수신</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" checked="">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">실험 시작</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" checked="">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">BOM 전송</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" checked="">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">내용물 입고</span>
+                              </label>
+                            </div>
+                            <div class="ui-checkbox-block">
+                              <input type="checkbox" class="ui-checkbox" checked="">
+                              <label for="" class="ui-label">
+                                <span class="ui-checkbox-object"></span>
+                                <span class="ui-label__text">개발 완료</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-menu__item header-menu__logout">
+              <a href="javascript:void(0)" class="header-menu__link"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="ui-layout">
+      <div class="ui-layout__inner">
+        <!-- 전달사항 :: 메뉴 펼쳤을때 .is-open 붙습니다. -->
+        <div class="left-menu is-open">
+          <div class="left-menu__inner">
+            <button type="button" class="left-menu__button"><i class="left-menu__button--icon"></i></button>
+            <div class="left-menu__box">
+              <!-- 전달사항 :: 클릭시 .left-menu__list에 is-active 붙여주세요. -->
+              <div class="left-menu__item">
+                <ul class="ui-list left-menu__lists left-menu__lists--height-60">
+                  <li class="left-menu__list is-active">
+                    <a href="javascript:void(0)" class="left-menu__link"><i
+                        class="left-menu__icon left-menu__icon--basicInfo"></i><span class="left-menu__text">Basic
+                        Information</span><span class="left-menu__tooltip">Basic Information</span></a>
+                  </li>
+                  <li class="left-menu__list">
+                    <a href="javascript:void(0)" class="left-menu__link">
+                      <i class="left-menu__icon left-menu__icon--folmula"></i><span
+                        class="left-menu__text">Folmula</span><span class="left-menu__tooltip">Folmula</span>
+                    </a>
+                  </li>
+                  <li class="left-menu__list">
+                    <a href="javascript:void(0)" class="left-menu__link">
+                      <i class="left-menu__icon left-menu__icon--test"></i><span
+                        class="left-menu__text">Test</span><span class="left-menu__tooltip">Test</span>
+                    </a>
+                  </li>
+                  <li class="left-menu__list">
+                    <a href="javascript:void(0)" class="left-menu__link">
+                      <i class="left-menu__icon left-menu__icon--process"></i><span
+                        class="left-menu__text">Process</span><span class="left-menu__tooltip">Process</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="left-menu__copyright">© Amorepacific Corp.</div>
+          </div>
+        </div>
+
+        <div class="contents">
+          <div class="contents__inner">
+            <div class="contents-core">
+              <div class="contents-cell__wrap">
+                <div class="contents-cell">
+                  <div class="contents-box contents-box__full">
+                    <div class="contents-box__inner p-0">
+                      <div class="page-tab m-0">
+                        <div class="page-tab__inner">
+
+                          <nav class="history-tab">
+                            <h2 class="for-a11y">History Tab</h2>
+                            <div class="history-tab__inner">
+                              <div class="">
+                                <div class="">
+                                  <ul class="ui-list history-tab__list">
+                                    <!-- DD : 현재 페이지면 is-active 클래스 값 추가 -->
+                                    <li class="history-tab__item is-active">
+                                      <div class="history-tab__block">
+                                        <a href="" class="history-tab__link">3012376</a>
+                                        <button type="button" class="ui-button history-tab__delete">
+                                          <span class="for-a11y">삭제</span>
+                                        </button>
+                                      </div>
+                                    </li>
+                                    <li class="history-tab__item">
+                                      <div class="history-tab__block">
+                                        <a href="" class="history-tab__link">3012544</a>
+                                        <button type="button" class="ui-button history-tab__delete">
+                                          <span class="for-a11y">삭제</span>
+                                        </button>
+                                      </div>
+                                    </li>
+                                    <li class="history-tab__item">
+                                      <div class="history-tab__block">
+                                        <a href="" class="history-tab__link">3012648</a>
+                                        <button type="button" class="ui-button history-tab__delete">
+                                          <span class="for-a11y">삭제</span>
+                                        </button>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </nav>
+
+                          <div class="page-tab__contents">
+                            <div class="nav">
+                              <div class="nav__inner">
+                                <div class="nav-title">Formula</div>
+                              </div>
+                            </div>
+
+                            <div class="page-tab__item">
+                              <div class="page-tab__item--inner">
+                                <div class="request-status mt-15">
+                                  <div class="request-status__inner">
+                                    <div class="sub-contents__item">
+                                      <!-- 2023.04.07 : add : .sub-contents__title--material 추가 -->
+                                      <div class="sub-contents__title--flex sub-contents__title--material">
+                                        <div class="sub-contents__title">(검출) 프리메라 에센셜 마사지 크림(22AD)</div>
+                                        <div class="ui-buttons ui-buttons__comb">
+                                          <button class="button-comb button-comb__pageInfo"></button>
+                                          <button class="button-comb button-comb__testRequest"></button>
+                                          <button class="button-comb button-comb__loadPres"></button>
+                                          <button class="button-comb button-comb__settingMaterial"></button>
+                                          <button class="button-comb button-comb__export"></button>
+                                        </div>
+                                      </div>
+
+
+
+                                      <div class="material-excel">
+                                        <div class="material-excel__inner">
+
+                                          <div class="material-excel__ver">
+                                            <ul class="ui-list material-excel__ver--lists">
+                                              <li class="material-excel__ver--list is-active"><a
+                                                  href="javascript:void(0)" class="material-excel__ver--link">ver 01</a>
+                                              </li>
+                                              <li class="material-excel__ver--list"><a href="javascript:void(0)"
+                                                  class="material-excel__ver--link">ver 02</a></li>
+                                              <li class="material-excel__ver--list"><a href="javascript:void(0)"
+                                                  class="material-excel__ver--link">ver 03</a></li>
+                                              <li class="material-excel__ver--list">
+                                                <button class="button-plus__ver"></button>
+                                              </li>
+                                            </ul>
+
+                                          </div>
+
+                                          <div class="material-excel__table--wrap">
+                                            <!-- <div data-grid-id="1" class="tui-grid-container tui-grid-show-lside-area"
+                                              style="width: 100%;">
+                                              <div class="tui-grid-content-area tui-grid-has-summary-bottom">
+                                                <div class="tui-grid-lside-area" style="width: 450px; display: block;">
+                                                  <div class="tui-grid-header-area" style="height: 120px;">
+                                                    <table class="tui-grid-table">
+                                                      <colgroup>
+                                                        <col data-column-name="" style="width: 40px;">
+                                                        <col data-column-name="" style="width: 40px;">
+                                                        <col data-column-name="" style="width: 200px;">
+                                                        <col data-column-name="" style="width: 200px;">
+                                                      </colgroup>
+                                                      <tbody>
+                                                        <tr>
+                                                          <th data-column-name="_number"
+                                                            class="tui-grid-cell tui-grid-cell-header tui-grid-cell-row-header"
+                                                            colspan="1" rowspan="1"
+                                                            style="text-align: center; vertical-align: middle; height: 120px;">
+                                                            No. </th>
+                                                          <th data-column-name="_checked"
+                                                            class="tui-grid-cell tui-grid-cell-header tui-grid-cell-row-header"
+                                                            colspan="1" rowspan="1"
+                                                            style="text-align: center; vertical-align: middle; height: 120px;">
+                                                            <span><input type="checkbox" name="_checked"></span></th>
+                                                          <th data-column-name="name"
+                                                            class="tui-grid-cell tui-grid-cell-header" colspan="1"
+                                                            rowspan="1"
+                                                            style="text-align: center; vertical-align: middle; height: 120px;">
+                                                            Name</th>
+                                                          <th data-column-name="artist"
+                                                            class="tui-grid-cell tui-grid-cell-header" colspan="1"
+                                                            rowspan="1"
+                                                            style="text-align: center; vertical-align: middle; height: 120px;">
+                                                            Artist</th>
+                                                        </tr>
+                                                      </tbody>
+                                                    </table>
+                                                    <div class="tui-grid-column-resize-container"
+                                                      style="display: block; margin-top: -35px; height: 35px;"></div>
+                                                  </div>
+                                                  <div class="tui-grid-body-area" style="height: 360px;">
+                                                    <div class="tui-grid-body-container"
+                                                      style="width: 480px; height: 801px;">
+                                                      <div class="tui-grid-table-container"
+                                                        style="width: 480px; top: 0px; left: 0px; overflow: visible;">
+                                                        <table class="tui-grid-table">
+                                                          <colgroup>
+                                                            <col data-column-name="" style="width: 40px;">
+                                                            <col data-column-name="" style="width: 40px;">
+                                                            <col data-column-name="" style="width: 200px;">
+                                                            <col data-column-name="" style="width: 200px;">
+                                                          </colgroup>
+                                                          <tbody>
+                                                            <tr class="tui-grid-row-odd tui-grid-cell-current-row"
+                                                              style="height: 40px;">
+                                                              <td data-row-key="0" data-column-name="_number"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-row-header tui-grid-cell-selected "
+                                                                style="text-align: center; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">1</div>
+                                                              </td>
+                                                              <td data-row-key="0" data-column-name="_checked"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-row-header tui-grid-cell-selected "
+                                                                style="text-align: center; vertical-align: middle;">
+                                                                <div class="tui-grid-row-header-checkbox"><input
+                                                                    type="checkbox" name="_checked"></div>
+                                                              </td>
+                                                              <td data-row-key="0" data-column-name="name"
+                                                                class="tui-grid-cell tui-grid-cell-has-input "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">Beautiful Lies</div>
+                                                              </td>
+                                                              <td data-row-key="0" data-column-name="artist"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">Birdy</div>
+                                                              </td>
+                                                            </tr>
+                                                            <tr class="tui-grid-row-even" style="height: 40px;">
+                                                              <td data-row-key="1" data-column-name="_number"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-row-header tui-grid-cell-selected "
+                                                                style="text-align: center; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">2</div>
+                                                              </td>
+                                                              <td data-row-key="1" data-column-name="_checked"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-row-header tui-grid-cell-selected "
+                                                                style="text-align: center; vertical-align: middle;">
+                                                                <div class="tui-grid-row-header-checkbox"><input
+                                                                    type="checkbox" name="_checked"></div>
+                                                              </td>
+                                                              <td data-row-key="1" data-column-name="name"
+                                                                class="tui-grid-cell tui-grid-cell-has-input "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">X</div>
+                                                              </td>
+                                                              <td data-row-key="1" data-column-name="artist"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">Ed Sheeran</div>
+                                                              </td>
+                                                            </tr>
+                                                            <tr class="tui-grid-row-odd" style="height: 40px;">
+                                                              <td data-row-key="2" data-column-name="_number"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-row-header tui-grid-cell-selected "
+                                                                style="text-align: center; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">3</div>
+                                                              </td>
+                                                              <td data-row-key="2" data-column-name="_checked"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-row-header tui-grid-cell-selected "
+                                                                style="text-align: center; vertical-align: middle;">
+                                                                <div class="tui-grid-row-header-checkbox"><input
+                                                                    type="checkbox" name="_checked"></div>
+                                                              </td>
+                                                              <td data-row-key="2" data-column-name="name"
+                                                                class="tui-grid-cell tui-grid-cell-has-input "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">Moves Like Jagger
+                                                                </div>
+                                                              </td>
+                                                              <td data-row-key="2" data-column-name="artist"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">Maroon5</div>
+                                                              </td>
+                                                            </tr>
+                                                            <tr class="tui-grid-row-even" style="height: 40px;">
+                                                              <td data-row-key="3" data-column-name="_number"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-row-header tui-grid-cell-selected "
+                                                                style="text-align: center; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">4</div>
+                                                              </td>
+                                                              <td data-row-key="3" data-column-name="_checked"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-row-header tui-grid-cell-selected "
+                                                                style="text-align: center; vertical-align: middle;">
+                                                                <div class="tui-grid-row-header-checkbox"><input
+                                                                    type="checkbox" name="_checked"></div>
+                                                              </td>
+                                                              <td data-row-key="3" data-column-name="name"
+                                                                class="tui-grid-cell tui-grid-cell-has-input "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">A Head Full Of Dreams
+                                                                </div>
+                                                              </td>
+                                                              <td data-row-key="3" data-column-name="artist"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">Coldplay</div>
+                                                              </td>
+                                                            </tr>
+                                                            <tr class="tui-grid-row-odd" style="height: 40px;">
+                                                              <td data-row-key="4" data-column-name="_number"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-row-header tui-grid-cell-selected "
+                                                                style="text-align: center; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">5</div>
+                                                              </td>
+                                                              <td data-row-key="4" data-column-name="_checked"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-row-header tui-grid-cell-selected "
+                                                                style="text-align: center; vertical-align: middle;">
+                                                                <div class="tui-grid-row-header-checkbox"><input
+                                                                    type="checkbox" name="_checked"></div>
+                                                              </td>
+                                                              <td data-row-key="4" data-column-name="name"
+                                                                class="tui-grid-cell tui-grid-cell-has-input "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">21</div>
+                                                              </td>
+                                                              <td data-row-key="4" data-column-name="artist"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">Adele</div>
+                                                              </td>
+                                                            </tr>
+                                                            <tr class="tui-grid-row-even" style="height: 40px;">
+                                                              <td data-row-key="5" data-column-name="_number"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-row-header tui-grid-cell-selected "
+                                                                style="text-align: center; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">6</div>
+                                                              </td>
+                                                              <td data-row-key="5" data-column-name="_checked"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-row-header tui-grid-cell-selected "
+                                                                style="text-align: center; vertical-align: middle;">
+                                                                <div class="tui-grid-row-header-checkbox"><input
+                                                                    type="checkbox" name="_checked"></div>
+                                                              </td>
+                                                              <td data-row-key="5" data-column-name="name"
+                                                                class="tui-grid-cell tui-grid-cell-has-input "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">Warm On A Cold Night
+                                                                </div>
+                                                              </td>
+                                                              <td data-row-key="5" data-column-name="artist"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">HONNE</div>
+                                                              </td>
+                                                            </tr>
+                                                            <tr class="tui-grid-row-odd" style="height: 40px;">
+                                                              <td data-row-key="6" data-column-name="_number"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-row-header tui-grid-cell-selected "
+                                                                style="text-align: center; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">7</div>
+                                                              </td>
+                                                              <td data-row-key="6" data-column-name="_checked"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-row-header tui-grid-cell-selected "
+                                                                style="text-align: center; vertical-align: middle;">
+                                                                <div class="tui-grid-row-header-checkbox"><input
+                                                                    type="checkbox" name="_checked"></div>
+                                                              </td>
+                                                              <td data-row-key="6" data-column-name="name"
+                                                                class="tui-grid-cell tui-grid-cell-has-input "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">Take Me To The Alley
+                                                                </div>
+                                                              </td>
+                                                              <td data-row-key="6" data-column-name="artist"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">Gregory Porter</div>
+                                                              </td>
+                                                            </tr>
+                                                            <tr class="tui-grid-row-even" style="height: 40px;">
+                                                              <td data-row-key="7" data-column-name="_number"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-row-header tui-grid-cell-selected "
+                                                                style="text-align: center; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">8</div>
+                                                              </td>
+                                                              <td data-row-key="7" data-column-name="_checked"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-row-header tui-grid-cell-selected "
+                                                                style="text-align: center; vertical-align: middle;">
+                                                                <div class="tui-grid-row-header-checkbox"><input
+                                                                    type="checkbox" name="_checked"></div>
+                                                              </td>
+                                                              <td data-row-key="7" data-column-name="name"
+                                                                class="tui-grid-cell tui-grid-cell-has-input "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">Make Out</div>
+                                                              </td>
+                                                              <td data-row-key="7" data-column-name="artist"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">LANY</div>
+                                                              </td>
+                                                            </tr>
+                                                            <tr class="tui-grid-row-odd" style="height: 40px;">
+                                                              <td data-row-key="8" data-column-name="_number"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-row-header tui-grid-cell-selected "
+                                                                style="text-align: center; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">9</div>
+                                                              </td>
+                                                              <td data-row-key="8" data-column-name="_checked"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-row-header tui-grid-cell-selected "
+                                                                style="text-align: center; vertical-align: middle;">
+                                                                <div class="tui-grid-row-header-checkbox"><input
+                                                                    type="checkbox" name="_checked"></div>
+                                                              </td>
+                                                              <td data-row-key="8" data-column-name="name"
+                                                                class="tui-grid-cell tui-grid-cell-has-input "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">Get Lucky</div>
+                                                              </td>
+                                                              <td data-row-key="8" data-column-name="artist"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">Daft Punk</div>
+                                                              </td>
+                                                            </tr>
+                                                            <tr class="tui-grid-row-even" style="height: 40px;">
+                                                              <td data-row-key="9" data-column-name="_number"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-row-header tui-grid-cell-selected "
+                                                                style="text-align: center; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">10</div>
+                                                              </td>
+                                                              <td data-row-key="9" data-column-name="_checked"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-row-header tui-grid-cell-selected "
+                                                                style="text-align: center; vertical-align: middle;">
+                                                                <div class="tui-grid-row-header-checkbox"><input
+                                                                    type="checkbox" name="_checked"></div>
+                                                              </td>
+                                                              <td data-row-key="9" data-column-name="name"
+                                                                class="tui-grid-cell tui-grid-cell-has-input "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">Valtari</div>
+                                                              </td>
+                                                              <td data-row-key="9" data-column-name="artist"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">Sigur Rós</div>
+                                                              </td>
+                                                            </tr>
+                                                          </tbody>
+                                                        </table>
+                                                      </div>
+                                                      <div></div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="tui-grid-summary-area">
+                                                    <table class="tui-grid-table" style="height: 40px;">
+                                                      <colgroup>
+                                                        <col data-column-name="" style="width: 40px;">
+                                                        <col data-column-name="" style="width: 40px;">
+                                                        <col data-column-name="" style="width: 200px;">
+                                                        <col data-column-name="" style="width: 200px;">
+                                                      </colgroup>
+                                                      <tbody>
+                                                        <tr>
+                                                          <td class="tui-grid-cell tui-grid-cell-summary"
+                                                            data-column-name="_number"></td>
+                                                          <td class="tui-grid-cell tui-grid-cell-summary"
+                                                            data-column-name="_checked"></td>
+                                                          <td class="tui-grid-cell tui-grid-cell-summary"
+                                                            data-column-name="name"></td>
+                                                          <td class="tui-grid-cell tui-grid-cell-summary"
+                                                            data-column-name="artist"></td>
+                                                        </tr>
+                                                      </tbody>
+                                                    </table>
+                                                  </div>
+                                                  <div class="tui-grid-scrollbar-left-bottom"></div>
+                                                </div>
+                                                <div class="tui-grid-rside-area"
+                                                  style="display: block; margin-left: 451px; width: calc(100% - 451px);">
+                                                  <div class="tui-grid-header-area" style="height: 120px;">
+                                                    <table class="tui-grid-table">
+                                                      <colgroup>
+                                                        <col data-column-name="" style="width: 150px;">
+                                                        <col data-column-name="" style="width: 150px;">
+                                                        <col data-column-name="" style="width: 150px;">
+                                                        <col data-column-name="" style="width: 150px;">
+                                                        <col data-column-name="" style="width: 150px;">
+                                                        <col data-column-name="" style="width: 150px;">
+                                                      </colgroup>
+                                                      <tbody>
+                                                        <tr>
+                                                          <th data-column-name="mergeColumn1"
+                                                            class="tui-grid-cell tui-grid-cell-header" colspan="3"
+                                                            rowspan="1"
+                                                            style="text-align: center; vertical-align: middle; height: 39px;">
+                                                            Detail Info</th>
+                                                          <th data-column-name="mergeColumn3"
+                                                            class="tui-grid-cell tui-grid-cell-header" colspan="3"
+                                                            rowspan="1"
+                                                            style="text-align: center; vertical-align: middle; height: 39px;">
+                                                            Extra Info</th>
+                                                        </tr>
+                                                        <tr>
+                                                          <th data-column-name="type"
+                                                            class="tui-grid-cell tui-grid-cell-header" colspan="1"
+                                                            rowspan="2"
+                                                            style="text-align: center; vertical-align: middle; height: 81px;">
+                                                            Type</th>
+                                                          <th data-column-name="genre"
+                                                            class="tui-grid-cell tui-grid-cell-header" colspan="1"
+                                                            rowspan="2"
+                                                            style="text-align: center; vertical-align: middle; height: 81px;">
+                                                            Genre</th>
+                                                          <th data-column-name="release"
+                                                            class="tui-grid-cell tui-grid-cell-header tui-grid-cell-selected"
+                                                            colspan="1" rowspan="2"
+                                                            style="text-align: center; vertical-align: middle; height: 81px;">
+                                                            Release</th>
+                                                          <th data-column-name="price"
+                                                            class="tui-grid-cell tui-grid-cell-header" colspan="1"
+                                                            rowspan="2"
+                                                            style="text-align: center; vertical-align: middle; height: 81px;">
+                                                            Price<a class="tui-grid-btn-sorting"></a></th>
+                                                          <th data-column-name="mergeColumn2"
+                                                            class="tui-grid-cell tui-grid-cell-header" colspan="2"
+                                                            rowspan="1"
+                                                            style="text-align: center; vertical-align: middle; height: 39px;">
+                                                            Count</th>
+                                                        </tr>
+                                                        <tr>
+                                                          <th data-column-name="downloadCount"
+                                                            class="tui-grid-cell tui-grid-cell-header" colspan="1"
+                                                            rowspan="1"
+                                                            style="text-align: center; vertical-align: middle; height: 42px;">
+                                                            Download</th>
+                                                          <th data-column-name="listenCount"
+                                                            class="tui-grid-cell tui-grid-cell-header" colspan="1"
+                                                            rowspan="1"
+                                                            style="text-align: center; vertical-align: middle; height: 42px;">
+                                                            Listen</th>
+                                                        </tr>
+                                                      </tbody>
+                                                    </table>
+                                                    <div class="tui-grid-column-resize-container"
+                                                      style="display: block; margin-top: -35px; height: 35px;"></div>
+                                                  </div>
+                                                  <div class="tui-grid-body-area" style="height: 360px;">
+                                                    <div class="tui-grid-body-container"
+                                                      style="width: 899px; height: 801px;">
+                                                      <div class="tui-grid-table-container"
+                                                        style="width: 600px; top: 0px; left: 0px; overflow: visible;">
+                                                        <table class="tui-grid-table">
+                                                          <colgroup>
+                                                            <col data-column-name="" style="width: 150px;">
+                                                            <col data-column-name="" style="width: 150px;">
+                                                            <col data-column-name="" style="width: 150px;">
+                                                            <col data-column-name="" style="width: 150px;">
+                                                          </colgroup>
+                                                          <tbody>
+                                                            <tr class="tui-grid-row-odd tui-grid-cell-current-row"
+                                                              style="height: 40px;">
+                                                              <td data-row-key="0" data-column-name="type"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">Deluxe</div>
+                                                              </td>
+                                                              <td data-row-key="0" data-column-name="genre"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable tui-grid-cell-required "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">Pop</div>
+                                                              </td>
+                                                              <td data-row-key="0" data-column-name="release"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable tui-grid-cell-required "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">2016.03.26</div>
+                                                              </td>
+                                                              <td data-row-key="0" data-column-name="price"
+                                                                class="tui-grid-cell tui-grid-cell-has-input "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">10000</div>
+                                                              </td>
+                                                            </tr>
+                                                            <tr class="tui-grid-row-even" style="height: 40px;">
+                                                              <td data-row-key="1" data-column-name="type"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">Deluxe</div>
+                                                              </td>
+                                                              <td data-row-key="1" data-column-name="genre"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable tui-grid-cell-required "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">ddd</div>
+                                                              </td>
+                                                              <td data-row-key="1" data-column-name="release"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable tui-grid-cell-required "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">2023-04-06</div>
+                                                              </td>
+                                                              <td data-row-key="1" data-column-name="price"
+                                                                class="tui-grid-cell tui-grid-cell-has-input "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">20000</div>
+                                                              </td>
+                                                            </tr>
+                                                            <tr class="tui-grid-row-odd" style="height: 40px;">
+                                                              <td data-row-key="2" data-column-name="type"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">Single</div>
+                                                              </td>
+                                                              <td data-row-key="2" data-column-name="genre"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable tui-grid-cell-required "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">Pop,Rock</div>
+                                                              </td>
+                                                              <td data-row-key="2" data-column-name="release"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable tui-grid-cell-required "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">2011.08.08</div>
+                                                              </td>
+                                                              <td data-row-key="2" data-column-name="price"
+                                                                class="tui-grid-cell tui-grid-cell-has-input "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">7000</div>
+                                                              </td>
+                                                            </tr>
+                                                            <tr class="tui-grid-row-even" style="height: 40px;">
+                                                              <td data-row-key="3" data-column-name="type"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">Deluxe</div>
+                                                              </td>
+                                                              <td data-row-key="3" data-column-name="genre"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable tui-grid-cell-required "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">Rock</div>
+                                                              </td>
+                                                              <td data-row-key="3" data-column-name="release"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable tui-grid-cell-required "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">2015.12.04</div>
+                                                              </td>
+                                                              <td data-row-key="3" data-column-name="price"
+                                                                class="tui-grid-cell tui-grid-cell-has-input "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">25000</div>
+                                                              </td>
+                                                            </tr>
+                                                            <tr class="tui-grid-row-odd" style="height: 40px;">
+                                                              <td data-row-key="4" data-column-name="type"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">Deluxe</div>
+                                                              </td>
+                                                              <td data-row-key="4" data-column-name="genre"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable tui-grid-cell-required "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">Pop,R&amp;B</div>
+                                                              </td>
+                                                              <td data-row-key="4" data-column-name="release"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable tui-grid-cell-required "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">2011.01.21</div>
+                                                              </td>
+                                                              <td data-row-key="4" data-column-name="price"
+                                                                class="tui-grid-cell tui-grid-cell-has-input "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">15000</div>
+                                                              </td>
+                                                            </tr>
+                                                            <tr class="tui-grid-row-even" style="height: 40px;">
+                                                              <td data-row-key="5" data-column-name="type"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">EP</div>
+                                                              </td>
+                                                              <td data-row-key="5" data-column-name="genre"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable tui-grid-cell-required "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">R&amp;B,Electronic
+                                                                </div>
+                                                              </td>
+                                                              <td data-row-key="5" data-column-name="release"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable tui-grid-cell-required "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">2016.07.22</div>
+                                                              </td>
+                                                              <td data-row-key="5" data-column-name="price"
+                                                                class="tui-grid-cell tui-grid-cell-has-input "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">11000</div>
+                                                              </td>
+                                                            </tr>
+                                                            <tr class="tui-grid-row-odd" style="height: 40px;">
+                                                              <td data-row-key="6" data-column-name="type"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">Deluxe</div>
+                                                              </td>
+                                                              <td data-row-key="6" data-column-name="genre"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable tui-grid-cell-required "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">Jazz</div>
+                                                              </td>
+                                                              <td data-row-key="6" data-column-name="release"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable tui-grid-cell-required "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">2016.09.02</div>
+                                                              </td>
+                                                              <td data-row-key="6" data-column-name="price"
+                                                                class="tui-grid-cell tui-grid-cell-has-input "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">30000</div>
+                                                              </td>
+                                                            </tr>
+                                                            <tr class="tui-grid-row-even" style="height: 40px;">
+                                                              <td data-row-key="7" data-column-name="type"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">EP</div>
+                                                              </td>
+                                                              <td data-row-key="7" data-column-name="genre"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable tui-grid-cell-required "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">Electronic</div>
+                                                              </td>
+                                                              <td data-row-key="7" data-column-name="release"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable tui-grid-cell-required "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">2015.12.11</div>
+                                                              </td>
+                                                              <td data-row-key="7" data-column-name="price"
+                                                                class="tui-grid-cell tui-grid-cell-has-input "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">12000</div>
+                                                              </td>
+                                                            </tr>
+                                                            <tr class="tui-grid-row-odd" style="height: 40px;">
+                                                              <td data-row-key="8" data-column-name="type"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">Single</div>
+                                                              </td>
+                                                              <td data-row-key="8" data-column-name="genre"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable tui-grid-cell-required "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">Pop,Funk</div>
+                                                              </td>
+                                                              <td data-row-key="8" data-column-name="release"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable tui-grid-cell-required "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">2013.04.23</div>
+                                                              </td>
+                                                              <td data-row-key="8" data-column-name="price"
+                                                                class="tui-grid-cell tui-grid-cell-has-input "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">9000</div>
+                                                              </td>
+                                                            </tr>
+                                                            <tr class="tui-grid-row-even" style="height: 40px;">
+                                                              <td data-row-key="9" data-column-name="type"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">EP</div>
+                                                              </td>
+                                                              <td data-row-key="9" data-column-name="genre"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable tui-grid-cell-required "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">Rock</div>
+                                                              </td>
+                                                              <td data-row-key="9" data-column-name="release"
+                                                                class="tui-grid-cell tui-grid-cell-has-input tui-grid-cell-editable tui-grid-cell-required "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">2012.05.31</div>
+                                                              </td>
+                                                              <td data-row-key="9" data-column-name="price"
+                                                                class="tui-grid-cell tui-grid-cell-has-input "
+                                                                style="text-align: left; vertical-align: middle;">
+                                                                <div class="tui-grid-cell-content">10000</div>
+                                                              </td>
+                                                            </tr>
+                                                          </tbody>
+                                                        </table>
+                                                      </div>
+                                                      <div class="tui-grid-layer-focus tui-grid-layer-focus-deactive">
+                                                        <div class="tui-grid-layer-focus-border"
+                                                          style="top: 0px; left: 300px; width: 1px; height: 41px;">
+                                                        </div>
+                                                        <div class="tui-grid-layer-focus-border"
+                                                          style="top: 1px; left: 300px; width: 151px; height: 1px;">
+                                                        </div>
+                                                        <div class="tui-grid-layer-focus-border"
+                                                          style="top: 0px; left: 450px; width: 1px; height: 41px;">
+                                                        </div>
+                                                        <div class="tui-grid-layer-focus-border"
+                                                          style="top: 40px; left: 300px; width: 151px; height: 1px;">
+                                                        </div>
+                                                      </div>
+                                                      <div>
+                                                        <div class="tui-grid-layer-selection"
+                                                          style="top: 0px; height: 799px; left: 300px; width: 149px;">
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="tui-grid-summary-area">
+                                                    <table class="tui-grid-table" style="height: 40px;">
+                                                      <colgroup>
+                                                        <col data-column-name="" style="width: 150px;">
+                                                        <col data-column-name="" style="width: 150px;">
+                                                        <col data-column-name="" style="width: 150px;">
+                                                        <col data-column-name="" style="width: 150px;">
+                                                        <col data-column-name="" style="width: 150px;">
+                                                        <col data-column-name="" style="width: 150px;">
+                                                      </colgroup>
+                                                      <tbody>
+                                                        <tr>
+                                                          <td class="tui-grid-cell tui-grid-cell-summary"
+                                                            data-column-name="type"></td>
+                                                          <td class="tui-grid-cell tui-grid-cell-summary"
+                                                            data-column-name="genre"></td>
+                                                          <td class="tui-grid-cell tui-grid-cell-summary"
+                                                            data-column-name="release"></td>
+                                                          <td class="tui-grid-cell tui-grid-cell-summary"
+                                                            data-column-name="price">SUM: 13750</td>
+                                                          <td class="tui-grid-cell tui-grid-cell-summary"
+                                                            data-column-name="downloadCount">AVG: 6613.10</td>
+                                                          <td class="tui-grid-cell tui-grid-cell-summary"
+                                                            data-column-name="listenCount">MAX: 14000</td>
+                                                        </tr>
+                                                      </tbody>
+                                                    </table>
+                                                  </div>
+                                                  <div class="tui-grid-scrollbar-y-inner-border"
+                                                    style="top: 120px; height: 343px;"></div>
+                                                  <div class="tui-grid-scrollbar-y-outer-border"></div>
+                                                  <div class="tui-grid-scrollbar-right-top" style="height: 120px;">
+                                                  </div>
+                                                  <div class="tui-grid-scrollbar-frozen-border"
+                                                    style="height: 17px; width: 1px; margin-left: -2px;"></div>
+                                                  <div class="tui-grid-scrollbar-right-bottom" style="height: 57px;">
+                                                  </div>
+                                                  <div class="tui-grid-frozen-border"
+                                                    style="margin-left: -1px; width: 1px;"></div>
+                                                </div>
+                                                <div class="tui-grid-border-line tui-grid-border-line-top"></div>
+                                                <div class="tui-grid-border-line tui-grid-border-line-left"></div>
+                                                <div class="tui-grid-border-line tui-grid-border-line-right"></div>
+                                                <div class="tui-grid-border-line tui-grid-border-line-bottom"
+                                                  style="bottom: 17px;"></div>
+                                              </div>
+                                              <div class="tui-grid-layer-state"
+                                                style="display: none; top: 121px; height: 342px; left: 0px; right: 18px;">
+                                                <div class="tui-grid-layer-state-content">
+                                                  <p></p>
+                                                </div>
+                                              </div>
+                                              <div class="tui-grid-clipboard" contenteditable="true"></div>
+                                            </div> -->
+                                            <!-- <button class="button-plus__lot"></button> -->
+
+
+                                            <div id="grid"></div>
+
+                                          </div>
+
+
+
+
+
+                                        </div>
+
+
+
+                                      </div>
+
+
+
+                                    </div>
+                                  </div>
+                                </div>
+
+
+                              </div>
+                            </div>
+
+                          </div>
+
+
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div><!-- end :: .contents-cell -->
+                <div class="page-bottom">
+                  <div class="page-bottom__inner">
+                    <div class="ui-buttons ui-buttons__right">
+                      <button type="button" class="ui-button ui-button__bg--skyblue font-weight__300">저장</button>
+                      <button type="button" class="ui-button ui-button__border--gray">목록</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!--//.contents__inner -->
+        </div>
+
+        <!-- 전달사항 :: 메뉴 펼쳤을때 .is-open 붙습니다. -->
+        <div class="right-menu is-open">
+          <div class="right-menu__inner">
+            <button type="button" class="right-menu__button"><i class="right-menu__button--icon"></i></button>
+            <div class="right-menu__tab">
+              <div class="right-menu__tab--header">
+                <ul class="ui-list right-menu__tab--lists">
+                  <!-- 전달사항 :: 활성 tab에 .is-active 붙습니다. -->
+                  <li class="right-menu__tab--list"><a href="javascript:void(0)" class="right-menu__tab--link">ing.</a>
+                  </li>
+                  <li class="right-menu__tab--list is-active"><a href="javascript:void(0)"
+                      class="right-menu__tab--link">status</a></li>
+                  <li class="right-menu__tab--list"><a href="javascript:void(0)"
+                      class="right-menu__tab--link">comment</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="right-menu__tab--body">
+                <div class="right-menu__tab--body-inner">
+
+                  <div class="material-right__status">
+                    <div class="material-right__status--inner">
+
+                      <div class="material-right__status--title">Status</div>
+
+                      <div class="material-status__accordion">
+                        <div class="material-status__accordion--inner">
+
+                          <div class="material-status__accordion--item">
+                            <div class="material-status__accordion--header">
+                              <div class="ui-checkbox__list">
+                                <div class="ui-checkbox__inner">
+                                  <div class="ui-checkbox-block">
+                                    <input type="checkbox" class="ui-checkbox" checked="">
+                                    <label class="ui-label">
+                                      <span class="ui-checkbox-object"></span>
+                                      <span class="ui-label__text">Lot #1</span>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="lot-dots">
+                                <div class="lot-dots__inner">
+                                  <span class="lot-dot lot-dot__step1"></span>
+                                  <span class="lot-dot lot-dot__step2"></span>
+                                  <span class="lot-dot lot-dot__step3"></span>
+                                  <span class="lot-dot lot-dot__step4"></span>
+                                  <span class="lot-dot lot-dot__step5"></span>
+                                  <span class="lot-dot lot-dot__step6"></span>
+                                </div>
+                              </div>
+                              <div class="material-status__buttons">
+                                <!-- 전달사항 :: 활성화시 .is-active 붙습니다. -->
+                                <!-- <button type="button" class="material-status__button material-status__button--marketing is-active">마케팅 송부</button> -->
+                                <button type="button"
+                                  class="material-status__button material-status__button--hide"></button>
+                                <!-- <button type="button" class="material-status__button material-status__button--close"></button> -->
+                                <button type="button"
+                                  class="material-status__button material-status__button--slide"></button>
+                              </div>
+                            </div>
+                            <div class="material-status__accordion--body">
+                              <ul class="ui-list material-status__lists">
+                                <li class="material-status__list"><span class="material-status__text">안전성
+                                    시험의뢰</span><span class="material-status__date">2022.11.02</span></li>
+                                <li class="material-status__list"><span class="material-status__text">부향
+                                    시험의뢰</span><span class="material-status__date">2022.10.17</span></li>
+                                <li class="material-status__list"><span
+                                    class="material-status__text material-status__text--blue">1차 Pilot</span><span
+                                    class="material-status__date">2022.09.26</span></li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <!-- 전달사항 : 활성화시 is-active 붙습니다. -->
+                          <div class="material-status__accordion--item is-active">
+                            <div class="material-status__accordion--header">
+                              <div class="ui-checkbox__list">
+                                <div class="ui-checkbox__inner">
+                                  <div class="ui-checkbox-block">
+                                    <input type="checkbox" class="ui-checkbox" checked="">
+                                    <label class="ui-label">
+                                      <span class="ui-checkbox-object"></span>
+                                      <span class="ui-label__text">Lot #2</span>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="lot-dots">
+                                <div class="lot-dots__inner">
+                                  <span class="lot-dot lot-dot__step1"></span>
+                                  <span class="lot-dot lot-dot__step2"></span>
+                                  <span class="lot-dot lot-dot__step3"></span>
+                                  <span class="lot-dot lot-dot__step4"></span>
+                                  <span class="lot-dot lot-dot__step5"></span>
+                                  <span class="lot-dot lot-dot__step6"></span>
+                                </div>
+                              </div>
+                              <div class="material-status__buttons">
+                                <!-- 전달사항 :: 활성화시 .is-active 붙습니다. -->
+                                <button type="button"
+                                  class="material-status__button material-status__button--marketing is-active">마케팅
+                                  송부</button>
+                                <!-- <button type="button" class="material-status__button material-status__button--hide"></button> -->
+                                <!-- <button type="button" class="material-status__button material-status__button--close"></button> -->
+                                <button type="button"
+                                  class="material-status__button material-status__button--slide"></button>
+                              </div>
+                            </div>
+                            <div class="material-status__accordion--body">
+                              <ul class="ui-list material-status__lists">
+                                <li class="material-status__list"><span class="material-status__text">안전성
+                                    시험의뢰</span><span class="material-status__date">2022.11.02</span></li>
+                                <li class="material-status__list"><span class="material-status__text">부향
+                                    시험의뢰</span><span class="material-status__date">2022.10.17</span></li>
+                                <li class="material-status__list"><span
+                                    class="material-status__text material-status__text--blue">1차 Pilot</span><span
+                                    class="material-status__date">2022.09.26</span></li>
+                              </ul>
+                            </div>
+                          </div>
+
+
+                          <div class="material-status__accordion--item">
+                            <div class="material-status__accordion--header">
+                              <div class="ui-checkbox__list">
+                                <div class="ui-checkbox__inner">
+                                  <div class="ui-checkbox-block">
+                                    <input type="checkbox" class="ui-checkbox" checked="">
+                                    <label class="ui-label">
+                                      <span class="ui-checkbox-object"></span>
+                                      <span class="ui-label__text">Lot #3</span>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="lot-dots">
+                                <div class="lot-dots__inner">
+                                  <span class="lot-dot lot-dot__step1"></span>
+                                  <span class="lot-dot lot-dot__step2"></span>
+                                  <span class="lot-dot lot-dot__step3"></span>
+                                  <span class="lot-dot lot-dot__step4"></span>
+                                  <span class="lot-dot lot-dot__step5"></span>
+                                  <span class="lot-dot lot-dot__step6"></span>
+                                </div>
+                              </div>
+                              <div class="material-status__buttons">
+                                <!-- 전달사항 :: 활성화시 .is-active 붙습니다. -->
+                                <!-- 2023.04.05 : mod : 한줄로 수정 (br 삭제) -->
+                                <button type="button"
+                                  class="material-status__button material-status__button--marketing">마케팅 송부</button>
+                                <!-- <button type="button" class="material-status__button material-status__button--hide"></button> -->
+                                <!-- <button type="button" class="material-status__button material-status__button--close"></button> -->
+                                <button type="button"
+                                  class="material-status__button material-status__button--slide"></button>
+                              </div>
+                            </div>
+                            <div class="material-status__accordion--body">
+                              <ul class="ui-list material-status__lists">
+                                <li class="material-status__list"><span class="material-status__text">안전성
+                                    시험의뢰</span><span class="material-status__date">2022.11.02</span></li>
+                                <li class="material-status__list"><span class="material-status__text">부향
+                                    시험의뢰</span><span class="material-status__date">2022.10.17</span></li>
+                                <li class="material-status__list"><span
+                                    class="material-status__text material-status__text--blue">1차 Pilot</span><span
+                                    class="material-status__date">2022.09.26</span></li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <div class="material-status__accordion--item">
+                            <div class="material-status__accordion--header">
+                              <div class="ui-checkbox__list">
+                                <div class="ui-checkbox__inner">
+                                  <div class="ui-checkbox-block">
+                                    <input type="checkbox" class="ui-checkbox" checked="">
+                                    <label class="ui-label">
+                                      <span class="ui-checkbox-object"></span>
+                                      <span class="ui-label__text">Lot #4</span>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="lot-dots">
+                                <div class="lot-dots__inner">
+                                  <span class="lot-dot lot-dot__step1"></span>
+                                  <span class="lot-dot lot-dot__step2"></span>
+                                  <span class="lot-dot lot-dot__step3"></span>
+                                  <span class="lot-dot lot-dot__step4"></span>
+                                  <span class="lot-dot lot-dot__step5"></span>
+                                  <span class="lot-dot lot-dot__step6"></span>
+                                </div>
+                              </div>
+                              <div class="material-status__buttons">
+                                <!-- 전달사항 :: 활성화시 .is-active 붙습니다. -->
+                                <!-- 2023.04.05 : mod : 한줄로 수정 (br 삭제) -->
+                                <button type="button"
+                                  class="material-status__button material-status__button--marketing">마케팅 송부</button>
+                                <!-- <button type="button" class="material-status__button material-status__button--hide"></button> -->
+                                <!-- <button type="button" class="material-status__button material-status__button--close"></button> -->
+                                <button type="button"
+                                  class="material-status__button material-status__button--slide"></button>
+                              </div>
+                            </div>
+                            <div class="material-status__accordion--body">
+                              <ul class="ui-list material-status__lists">
+                                <li class="material-status__list"><span class="material-status__text">안전성
+                                    시험의뢰</span><span class="material-status__date">2022.11.02</span></li>
+                                <li class="material-status__list"><span class="material-status__text">부향
+                                    시험의뢰</span><span class="material-status__date">2022.10.17</span></li>
+                                <li class="material-status__list"><span
+                                    class="material-status__text material-status__text--blue">1차 Pilot</span><span
+                                    class="material-status__date">2022.09.26</span></li>
+                                <li class="material-status__list"><span
+                                    class="material-status__text material-status__text--red">처방 확정</span><span
+                                    class="material-status__date">2022.09.26</span>
+                                  <!-- <button type="button" class="material-status__button material-status__button--close"></button> -->
+                                </li>
+                                <li class="material-status__list"><span
+                                    class="material-status__text material-status__text--blue">전성분 승인</span><span
+                                    class="material-status__date">2022.09.26</span></li>
+                                <li class="material-status__list"><span
+                                    class="material-status__text material-status__text--blue">양산 승인</span><span
+                                    class="material-status__date">2022.09.26</span></li>
+                                <li class="material-status__list"><span
+                                    class="material-status__text material-status__text--red">출시 완료</span><span
+                                    class="material-status__date">2022.09.26</span></li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <div class="material-status__accordion--item is-active">
+                            <div class="material-status__accordion--header">
+                              <div class="ui-checkbox__list">
+                                <div class="ui-checkbox__inner">
+                                  <div class="ui-checkbox-block">
+                                    <input type="checkbox" class="ui-checkbox" checked="">
+                                    <label class="ui-label">
+                                      <span class="ui-checkbox-object"></span>
+                                      <span class="ui-label__text">Lot #5</span>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="lot-dots">
+                                <div class="lot-dots__inner">
+                                  <span class="lot-dot lot-dot__step1"></span>
+                                  <span class="lot-dot lot-dot__step2"></span>
+                                  <span class="lot-dot lot-dot__step3"></span>
+                                  <span class="lot-dot lot-dot__step4"></span>
+                                  <span class="lot-dot lot-dot__step5"></span>
+                                  <span class="lot-dot lot-dot__step6"></span>
+                                </div>
+                              </div>
+                              <div class="material-status__buttons">
+                                <!-- 전달사항 :: 활성화시 .is-active 붙습니다. -->
+                                <!-- 2023.04.05 : mod : 한줄로 수정 (br 삭제) -->
+                                <button type="button"
+                                  class="material-status__button material-status__button--marketing">마케팅 송부</button>
+                                <!-- <button type="button" class="material-status__button material-status__button--hide"></button> -->
+                                <!-- <button type="button" class="material-status__button material-status__button--close"></button> -->
+                                <button type="button"
+                                  class="material-status__button material-status__button--slide"></button>
+                              </div>
+                            </div>
+                            <div class="material-status__accordion--body">
+                              <ul class="ui-list material-status__lists">
+                                <li class="material-status__list"><span class="material-status__text">안전성
+                                    시험의뢰</span><span class="material-status__date">2022.11.02</span></li>
+                                <li class="material-status__list"><span class="material-status__text">부향
+                                    시험의뢰</span><span class="material-status__date">2022.10.17</span></li>
+                                <li class="material-status__list"><span
+                                    class="material-status__text material-status__text--blue">1차 Pilot</span><span
+                                    class="material-status__date">2022.09.26</span></li>
+                                <li class="material-status__list"><span
+                                    class="material-status__text material-status__text--red">처방 확정</span><span
+                                    class="material-status__date">2022.09.26</span>
+                                  <!-- 2023.04.05 : add : 해제 버튼 추가 -->
+                                  <button type="button"
+                                    class="material-status__button material-status__button--clear">해제</button>
+                                  <!-- <button type="button" class="material-status__button material-status__button--close"></button> -->
+                                </li>
+                                <li class="material-status__list"><span
+                                    class="material-status__text material-status__text--blue">전성분 승인</span><span
+                                    class="material-status__date">2022.09.26</span></li>
+                                <li class="material-status__list"><span
+                                    class="material-status__text material-status__text--blue">양산 승인</span><span
+                                    class="material-status__date">2022.09.26</span></li>
+                                <li class="material-status__list"><span
+                                    class="material-status__text material-status__text--red">출시 완료</span><span
+                                    class="material-status__date">2022.09.26</span></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<link rel="stylesheet" href="https://uicdn.toast.com/grid/latest/tui-grid.css" />
+<script src="https://uicdn.toast.com/grid/latest/tui-grid.js"></script>
+<script>
+  var Grid = tui.Grid;
+</script>
+
+</html>

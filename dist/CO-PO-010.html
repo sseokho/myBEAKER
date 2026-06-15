@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>myBEAKER</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+
+    <!-- 메뉴 기능 위한 스크립트 -->
+    <script src="../dist/assets/js/jquery.js"></script>
+    <script src="../dist/assets/js/ui-script.js"></script>
+</head>
+
+<!-- 전달사항 :: 모달 표출시 .modal-open 붙여주세요 -->
+<body class="modal-open">
+
+    <div class="wrap">
+        <header class="header">
+            <div class="header__inner">
+                <div class="header-logo">
+                    <a href="javascript:void(0)" class="header-logo__link"></a>
+                </div>
+                <div class="header-menu">
+                    <div class="header-menu__inner">
+                        <!-- 전달사항 :: 클릭시 클래스 is-active 추가 됩니다. -->
+                        <div class="header-menu__item header-menu__inquiry">
+                            <a href="javascript:void(0)" class="header-menu__link"></a>
+                            <div class="header-menu__dropdown">
+                                <div class="header-menu__dropdown--inner">
+                                    <div class="header-menu__dropdown--body">
+                                        <div class="ui-buttons">
+                                            <a href="javascript:void(0)"
+                                                class="ui-button ui-button__link ui-button__bg--blue">오류/일반 문의</a>
+                                            <a href="javascript:void(0)"
+                                                class="ui-button ui-button__link ui-button__bg--blue">my BEAKER 개선
+                                                제안</a>
+                                            <a href="javascript:void(0)"
+                                                class="ui-button ui-button__link ui-button__bg--blue">데이터 수정/추출</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-menu__item header-menu__qr is-active">
+                            <a href="javascript:void(0)" class="header-menu__link"></a>
+                            <div class="header-menu__dropdown">
+                                <div class="header-menu__dropdown--inner">
+                                    <div class="header-menu__dropdown--header">
+                                        <div class="header-menu__dropdown--title">QR코드를 스캔해 주세요.</div>
+                                    </div>
+                                    <div class="header-menu__dropdown--body">
+                                        <div class="qr-img__wrap">
+                                            <div class="qr-img">
+                                                <img src="./assets/images/_dummy/img-qr.png" alt="">
+                                            </div>
+                                            <div class="qr-text">사각 테두리안에 QR코드를 <br>
+                                                인식해 주세요.</div>
+                                        </div>
+                                        <div class="qr-checkbox">
+                                            <div class="ui-checkbox__list">
+                                                <div class="ui-checkbox__inner">
+                                                    <div class="ui-checkbox-block">
+                                                        <input type="checkbox" class="ui-checkbox">
+                                                        <label for="" class="ui-label">
+                                                            <span class="ui-checkbox-object"></span>
+                                                            <span class="ui-label__text">웹캠사용</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="ui-checkbox-block">
+                                                        <input type="checkbox" class="ui-checkbox" checked="">
+                                                        <label for="" class="ui-label">
+                                                            <span class="ui-checkbox-object"></span>
+                                                            <span class="ui-label__text">새창으로</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 전달사항 :: 미확인 알람 있을때 클래스 is-alarm 추가 됩니다. -->
+                        <div class="header-menu__item header-menu__alarm is-alarm">
+                            <a href="javascript:void(0)" class="header-menu__link"></a>
+                            <div class="header-menu__dropdown">
+                                <div class="header-menu__dropdown--inner">
+                                    <div class="header-menu__dropdown--body header-menu__dropdown--body-alarm">
+                                        <div class="dropdown-alarm">
+                                            <div class="dropdown-alarm__inner">
+                                                <ul class="ui-list dropdown-alarm__lists">
+                                                    <li class="dropdown-alarm__list">
+                                                        <a href="javascript:void(0)" class="dropdown-alarm__link">
+                                                            <span class="font-weight__600">김상현</span>님이 <span
+                                                                class="font-weight__600">3102376 프리메라 에센셜
+                                                                마사지크림(22AD)</span> BOM을 전송했습니다.
+                                                        </a>
+                                                        <span class="dropdown-alarm__time">12 minutes ago</span>
+                                                    </li>
+                                                    <li class="dropdown-alarm__list">
+                                                        <a href="javascript:void(0)" class="dropdown-alarm__link">
+                                                            <span class="font-weight__600">김상현</span>님이 <span
+                                                                class="font-weight__600">3102376 프리메라 에센셜
+                                                                마사지크림(22AD)</span> BOM을 전송했습니다.
+                                                        </a>
+                                                        <span class="dropdown-alarm__time">12 minutes ago</span>
+                                                    </li>
+                                                    <li class="dropdown-alarm__list">
+                                                        <a href="javascript:void(0)" class="dropdown-alarm__link">
+                                                            <span class="font-weight__600">김상현</span>님이 <span
+                                                                class="font-weight__600">3102376 프리메라 에센셜
+                                                                마사지크림(22AD)</span> BOM을 전송했습니다.
+                                                        </a>
+                                                        <span class="dropdown-alarm__time">12 minutes ago</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-menu__item header-menu__setting">
+                            <a href="javascript:void(0)" class="header-menu__link"></a>
+                            <div class="header-menu__dropdown">
+                                <div class="header-menu__dropdown--inner">
+                                    <div class="header-menu__dropdown--header">
+                                        <div class="header-menu__dropdown--title">설정</div>
+                                    </div>
+                                    <div class="header-menu__dropdown--body header-menu__dropdown--body-setting">
+                                        <div class="dropdown-item">
+                                            <div class="dropdown-item__title">메인</div>
+                                            <div class="dropdown-item__contents">
+                                                <div class="setting-myBoard">
+                                                    <div class="setting-myBoard__inner">
+                                                        <ul class="ui-list setting-myBoard__lists">
+                                                            <!-- 전달사항 :: 클릭시 클래스 is-active 추가 됩니다. -->
+                                                            <li class="setting-myBoard__list is-active">
+                                                                <a href="javascript:void(0)"
+                                                                    class="setting-myBoard__link setting-myBoard__link--note">
+                                                                    <i class="setting-myBoard__icon"></i>
+                                                                    <span class="setting-myBoard__title">Note</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="setting-myBoard__list">
+                                                                <a href="javascript:void(0)"
+                                                                    class="setting-myBoard__link setting-myBoard__link--schedule">
+                                                                    <i class="setting-myBoard__icon"></i>
+                                                                    <span class="setting-myBoard__title">Schedule</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="setting-myBoard__list">
+                                                                <a href="javascript:void(0)"
+                                                                    class="setting-myBoard__link setting-myBoard__link--examination">
+                                                                    <i class="setting-myBoard__icon"></i>
+                                                                    <span
+                                                                        class="setting-myBoard__title">Examination</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="setting-myBoard__list">
+                                                                <a href="javascript:void(0)"
+                                                                    class="setting-myBoard__link setting-myBoard__link--memo">
+                                                                    <i class="setting-myBoard__icon"></i>
+                                                                    <span class="setting-myBoard__title">Memo</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-item">
+                                            <div class="dropdown-item__title">알림수신</div>
+                                            <div class="dropdown-item__contents">
+                                                <div class="ui-checkbox__list ui-check-list--bipartite">
+                                                    <div class="ui-checkbox__inner ">
+                                                        <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox">
+                                                            <label for="" class="ui-label">
+                                                                <span class="ui-checkbox-object"></span>
+                                                                <span class="ui-label__text">전체 수신</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox" checked="">
+                                                            <label for="" class="ui-label">
+                                                                <span class="ui-checkbox-object"></span>
+                                                                <span class="ui-label__text">실험 시작</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox" checked="">
+                                                            <label for="" class="ui-label">
+                                                                <span class="ui-checkbox-object"></span>
+                                                                <span class="ui-label__text">BOM 전송</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox" checked="">
+                                                            <label for="" class="ui-label">
+                                                                <span class="ui-checkbox-object"></span>
+                                                                <span class="ui-label__text">내용물 입고</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="ui-checkbox-block">
+                                                            <input type="checkbox" class="ui-checkbox" checked="">
+                                                            <label for="" class="ui-label">
+                                                                <span class="ui-checkbox-object"></span>
+                                                                <span class="ui-label__text">개발 완료</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-menu__item header-menu__logout">
+                            <a href="javascript:void(0)" class="header-menu__link"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="ui-layout">
+            <div class="ui-layout__inner">
+                <!-- 전달사항 :: 메뉴 펼쳤을때 .is-open 붙습니다. -->
+                <div class="left-menu is-open">
+                    <div class="left-menu__inner">
+                        <button type="button" class="left-menu__button"><i class="left-menu__button--icon"></i></button>
+                        <div class="left-menu__box">
+                            <!-- 전달사항 :: 클릭시 .left-menu__list에 is-active 붙여주세요. -->
+
+                            <div class="left-menu__item">
+                                <ul class="ui-list left-menu__lists left-menu__lists--myBoard">
+                                    <li class="left-menu__list is-active">
+                                        <a href="javascript:void(0)" class="left-menu__link"><i
+                                                class="left-menu__icon left-menu__icon--myBoard"></i><span
+                                                class="left-menu__text">My board</span><span
+                                                class="left-menu__tooltip">My board</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="left-menu__item">
+                                <ul class="ui-list left-menu__lists left-menu__lists--notes">
+                                    <li class="left-menu__list">
+                                        <a href="javascript:void(0)" class="left-menu__link">
+                                            <i class="left-menu__icon left-menu__icon--labNotes"></i><span
+                                                class="left-menu__text">All lab notes</span><span
+                                                class="left-menu__tooltip">All lab notes</span>
+                                        </a>
+                                    </li>
+                                    <li class="left-menu__list">
+                                        <a href="javascript:void(0)" class="left-menu__link">
+                                            <i class="left-menu__icon left-menu__icon--4codeNotes"></i><span
+                                                class="left-menu__text">4code notes</span><span
+                                                class="left-menu__tooltip">4code notes</span>
+                                        </a>
+                                    </li>
+                                    <li class="left-menu__list">
+                                        <a href="javascript:void(0)" class="left-menu__link">
+                                            <i class="left-menu__icon left-menu__icon--projectsNotes"></i><span
+                                                class="left-menu__text">Projects notes</span><span
+                                                class="left-menu__tooltip">Projects notes</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="left-menu__item">
+                                <ul class="ui-list left-menu__lists">
+                                    <!-- 전달사항 :: 필터 있을때 .is-filter 붙여주세요. , 필터 오픈 될때 .is-filter__open 붙습니다. -->
+                                    <li class="left-menu__list is-filter">
+                                        <a href="javascript:void(0)" class="left-menu__link">
+                                            <i class="left-menu__icon left-menu__icon--myLabNotes"></i><span
+                                                class="left-menu__text">My lab notes</span><span
+                                                class="left-menu__tooltip">My lab notes</span>
+                                            <button type="button" class="button-filter__show"></button>
+                                        </a>
+
+                                        <!-- 필터 -->
+                                        <ul class="ui-list filter-lists">
+                                            <li class="filter-list">
+                                                3012376<button type="button" class="filter-button__close"></button>
+                                            </li>
+                                            <li class="filter-list">
+                                                3012592<button type="button" class="filter-button__close"></button>
+                                            </li>
+                                            <li class="filter-list">
+                                                3012378<button type="button" class="filter-button__close"></button>
+                                            </li>
+                                        </ul>
+                                        <!--// 필터 -->
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="left-menu__item">
+                                <ul class="ui-list left-menu__lists left-menu__lists--other">
+                                    <li class="left-menu__list">
+                                        <a href="javascript:void(0)" class="left-menu__link">
+                                            <i class="left-menu__icon left-menu__icon--discussionLab"></i><span
+                                                class="left-menu__text">Discussion lab</span><span
+                                                class="left-menu__tooltip">Discussion lab</span>
+                                        </a>
+                                    </li>
+                                    <li class="left-menu__list">
+                                        <a href="javascript:void(0)" class="left-menu__link">
+                                            <i class="left-menu__icon left-menu__icon--inventory"></i><span
+                                                class="left-menu__text">Inventory</span><span
+                                                class="left-menu__tooltip">Inventory</span>
+                                        </a>
+                                    </li>
+                                    <li class="left-menu__list">
+                                        <a href="javascript:void(0)" class="left-menu__link">
+                                            <i class="left-menu__icon left-menu__icon--frameRecipe"></i><span
+                                                class="left-menu__text">Frame recipe</span><span
+                                                class="left-menu__tooltip">Frame recipe</span>
+                                        </a>
+                                    </li>
+                                    <li class="left-menu__list">
+                                        <a href="javascript:void(0)" class="left-menu__link">
+                                            <i class="left-menu__icon left-menu__icon--coaRequest"></i><span
+                                                class="left-menu__text">COA request</span><span
+                                                class="left-menu__tooltip">COA request</span>
+                                        </a>
+                                    </li>
+                                    <li class="left-menu__list">
+                                        <a href="javascript:void(0)" class="left-menu__link">
+                                            <i class="left-menu__icon left-menu__icon--search"></i><span
+                                                class="left-menu__text">Search</span><span
+                                                class="left-menu__tooltip">Search</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="left-menu__copyright">© Amorepacific Corp.</div>
+                    </div>
+                </div>
+
+                <div class="contents">
+                    <div class="contents__inner">
+
+
+                        <div class="contents-core">
+                            <div class="contents-cell__wrap">
+                                <div class="contents-cell">
+                                    <div class="contents-box contents-box__small">
+                                        <div class="contents-box__inner">
+                                            <div class="ui-tab">
+                                                <div class="ui-tab__inner">
+                                                    <div class="ui-tab__header">
+                                                        <ul class="ui-list ui-tab__lists">
+                                                            <li class="ui-tab__list is-active"><a
+                                                                    href="javascript:void(0)" class="ui-tab__link">My
+                                                                    notes</a></li>
+                                                            <li class="ui-tab__list"><a href="javascript:void(0)"
+                                                                    class="ui-tab__link">Recent notes</a></li>
+                                                            <li class="ui-tab__list"><a href="javascript:void(0)"
+                                                                    class="ui-tab__link">Shared notes</a></li>
+                                                        </ul>
+                                                        <button type="button" class="tab-header__button"></button>
+                                                    </div>
+                                                    <div class="ui-tab__body">
+                                                        <div class="note-card">
+                                                            <div class="note-card__inner">
+                                                                <ul class="ui-list note-card__lists">
+                                                                    <li class="note-card__list">
+                                                                        <a href="javascript:void(0)"
+                                                                            class="note-card__link">
+                                                                            <span class="note-card__num">3102376</span>
+                                                                            <span
+                                                                                class="note-card__brand">Primera</span>
+                                                                            <span class="note-card__name">프리메라 에센셜 마사지크림
+                                                                                (22AD)</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="note-card__list">
+                                                                        <a href="javascript:void(0)"
+                                                                            class="note-card__link">
+                                                                            <span class="note-card__num">3102377</span>
+                                                                            <span
+                                                                                class="note-card__brand">innisfree</span>
+                                                                            <span class="note-card__name">(검출) 이니스프리 그린티
+                                                                                씨드 세럼 AD (23)</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="note-card__list">
+                                                                        <a href="javascript:void(0)"
+                                                                            class="note-card__link">
+                                                                            <span class="note-card__num">3102376</span>
+                                                                            <span
+                                                                                class="note-card__brand">Primera</span>
+                                                                            <span class="note-card__name">프리메라 에센셜 마사지크림
+                                                                                (22AD)</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="note-card__list">
+                                                                        <a href="javascript:void(0)"
+                                                                            class="note-card__link">
+                                                                            <span class="note-card__num">3102377</span>
+                                                                            <span
+                                                                                class="note-card__brand">innisfree</span>
+                                                                            <span class="note-card__name">(검출) 이니스프리 그린티
+                                                                                씨드 세럼 AD (23)</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="note-card__list">
+                                                                        <a href="javascript:void(0)"
+                                                                            class="note-card__link">
+                                                                            <span class="note-card__num">3102376</span>
+                                                                            <span
+                                                                                class="note-card__brand">Primera</span>
+                                                                            <span class="note-card__name">프리메라 에센셜 마사지크림
+                                                                                (22AD)</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="note-card__list">
+                                                                        <a href="javascript:void(0)"
+                                                                            class="note-card__link">
+                                                                            <span class="note-card__num">3102377</span>
+                                                                            <span
+                                                                                class="note-card__brand">innisfree</span>
+                                                                            <span class="note-card__name">(검출) 이니스프리 그린티
+                                                                                씨드 세럼 AD (23)</span>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contents-box contents-box__large">
+                                        <div class="contents-box__inner">
+                                            <div class="ui-tab">
+                                                <div class="ui-tab__inner">
+                                                    <div class="ui-tab__header">
+                                                        <ul class="ui-list ui-tab__lists">
+                                                            <li class="ui-tab__list is-active"><a
+                                                                    href="javascript:void(0)"
+                                                                    class="ui-tab__link">Schedule</a></li>
+                                                            <li class="ui-tab__list"><a href="javascript:void(0)"
+                                                                    class="ui-tab__link">Assign researcher</a></li>
+                                                        </ul>
+                                                        <button type="button" class="tab-header__button"></button>
+                                                    </div>
+                                                    <div class="ui-tab__body">
+
+                                                        <div class="myboard-schedule">
+                                                            <div class="myboard-schedule__inner">
+                                                                <div class="myboard-schedule__item">
+                                                                    <div class="myboard-schedule__info">
+                                                                        <div class="myboard-schedule__num">3102346</div>
+                                                                        <div class="myboard-schedule__name">프리메라 에센셜
+                                                                            마사지크림(222AD)</div>
+                                                                    </div>
+                                                                    <div class="myboard-schedule__progress">
+                                                                        <ul class="ui-list schedule-progress__lists">
+                                                                            <li class="schedule-progress__list is-done">
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="schedule-progress__link">
+                                                                                    <span
+                                                                                        class="schedule-progress__check"></span>
+                                                                                    <span
+                                                                                        class="schedule-progress__text">개발의뢰</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="schedule-progress__list is-done">
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="schedule-progress__link">
+                                                                                    <span
+                                                                                        class="schedule-progress__check"></span>
+                                                                                    <span
+                                                                                        class="schedule-progress__text">실험중</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="schedule-progress__list is-done">
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="schedule-progress__link">
+                                                                                    <span
+                                                                                        class="schedule-progress__check"></span>
+                                                                                    <span
+                                                                                        class="schedule-progress__text">파일럿</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="schedule-progress__list is-done">
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="schedule-progress__link">
+                                                                                    <span
+                                                                                        class="schedule-progress__check"></span>
+                                                                                    <span
+                                                                                        class="schedule-progress__text">처방
+                                                                                        확정</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="schedule-progress__list is-ing">
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="schedule-progress__link">
+                                                                                    <span
+                                                                                        class="schedule-progress__check"></span>
+                                                                                    <span
+                                                                                        class="schedule-progress__text">전성분
+                                                                                        승인</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="schedule-progress__list">
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="schedule-progress__link">
+                                                                                    <span
+                                                                                        class="schedule-progress__check"></span>
+                                                                                    <span
+                                                                                        class="schedule-progress__text">입고
+                                                                                        완료</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="schedule-progress__list">
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="schedule-progress__link">
+                                                                                    <span
+                                                                                        class="schedule-progress__check"></span>
+                                                                                    <span
+                                                                                        class="schedule-progress__text">개발
+                                                                                        완료</span>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="myboard-schedule__item">
+                                                                    <div class="myboard-schedule__info">
+                                                                        <div class="myboard-schedule__num">3102346</div>
+                                                                        <div class="myboard-schedule__name">(기)(PF)(이층상)
+                                                                            아이오페 글루타민
+                                                                            비타민 C23</div>
+                                                                    </div>
+                                                                    <div class="myboard-schedule__progress">
+                                                                        <ul class="ui-list schedule-progress__lists">
+                                                                            <li class="schedule-progress__list is-done">
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="schedule-progress__link">
+                                                                                    <span
+                                                                                        class="schedule-progress__check"></span>
+                                                                                    <span
+                                                                                        class="schedule-progress__text">개발의뢰</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="schedule-progress__list is-done">
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="schedule-progress__link">
+                                                                                    <span
+                                                                                        class="schedule-progress__check"></span>
+                                                                                    <span
+                                                                                        class="schedule-progress__text">실험중</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="schedule-progress__list is-ing">
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="schedule-progress__link">
+                                                                                    <span
+                                                                                        class="schedule-progress__check"></span>
+                                                                                    <span
+                                                                                        class="schedule-progress__text">파일럿</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="schedule-progress__list">
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="schedule-progress__link">
+                                                                                    <span
+                                                                                        class="schedule-progress__check"></span>
+                                                                                    <span
+                                                                                        class="schedule-progress__text">처방
+                                                                                        확정</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="schedule-progress__list">
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="schedule-progress__link">
+                                                                                    <span
+                                                                                        class="schedule-progress__check"></span>
+                                                                                    <span
+                                                                                        class="schedule-progress__text">전성분
+                                                                                        승인</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="schedule-progress__list">
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="schedule-progress__link">
+                                                                                    <span
+                                                                                        class="schedule-progress__check"></span>
+                                                                                    <span
+                                                                                        class="schedule-progress__text">입고
+                                                                                        완료</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="schedule-progress__list">
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="schedule-progress__link">
+                                                                                    <span
+                                                                                        class="schedule-progress__check"></span>
+                                                                                    <span
+                                                                                        class="schedule-progress__text">개발
+                                                                                        완료</span>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="myboard-schedule__item">
+                                                                    <div class="myboard-schedule__info">
+                                                                        <div class="myboard-schedule__num">3102346</div>
+                                                                        <div class="myboard-schedule__name">프리메라 에센셜
+                                                                            마사지크림(222AD)</div>
+                                                                    </div>
+                                                                    <div class="myboard-schedule__progress">
+                                                                        <ul class="ui-list schedule-progress__lists">
+                                                                            <li class="schedule-progress__list is-done">
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="schedule-progress__link">
+                                                                                    <span
+                                                                                        class="schedule-progress__check"></span>
+                                                                                    <span
+                                                                                        class="schedule-progress__text">개발의뢰</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="schedule-progress__list is-done">
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="schedule-progress__link">
+                                                                                    <span
+                                                                                        class="schedule-progress__check"></span>
+                                                                                    <span
+                                                                                        class="schedule-progress__text">실험중</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="schedule-progress__list is-done">
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="schedule-progress__link">
+                                                                                    <span
+                                                                                        class="schedule-progress__check"></span>
+                                                                                    <span
+                                                                                        class="schedule-progress__text">파일럿</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="schedule-progress__list is-ing">
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="schedule-progress__link">
+                                                                                    <span
+                                                                                        class="schedule-progress__check"></span>
+                                                                                    <span
+                                                                                        class="schedule-progress__text">처방
+                                                                                        확정</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="schedule-progress__list ">
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="schedule-progress__link">
+                                                                                    <span
+                                                                                        class="schedule-progress__check"></span>
+                                                                                    <span
+                                                                                        class="schedule-progress__text">전성분
+                                                                                        승인</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="schedule-progress__list">
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="schedule-progress__link">
+                                                                                    <span
+                                                                                        class="schedule-progress__check"></span>
+                                                                                    <span
+                                                                                        class="schedule-progress__text">입고
+                                                                                        완료</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="schedule-progress__list">
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="schedule-progress__link">
+                                                                                    <span
+                                                                                        class="schedule-progress__check"></span>
+                                                                                    <span
+                                                                                        class="schedule-progress__text">개발
+                                                                                        완료</span>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="myboard-schedule__item">
+                                                                    <div class="myboard-schedule__info">
+                                                                        <div class="myboard-schedule__num">3102346</div>
+                                                                        <div class="myboard-schedule__name">(기)(PF)(이층상)
+                                                                            아이오페 글루타민
+                                                                            비타민 C23</div>
+                                                                    </div>
+                                                                    <div class="myboard-schedule__progress">
+                                                                        <ul class="ui-list schedule-progress__lists">
+                                                                            <li class="schedule-progress__list is-done">
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="schedule-progress__link">
+                                                                                    <span
+                                                                                        class="schedule-progress__check"></span>
+                                                                                    <span
+                                                                                        class="schedule-progress__text">개발의뢰</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="schedule-progress__list is-done">
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="schedule-progress__link">
+                                                                                    <span
+                                                                                        class="schedule-progress__check"></span>
+                                                                                    <span
+                                                                                        class="schedule-progress__text">실험중</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="schedule-progress__list is-done">
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="schedule-progress__link">
+                                                                                    <span
+                                                                                        class="schedule-progress__check"></span>
+                                                                                    <span
+                                                                                        class="schedule-progress__text">파일럿</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="schedule-progress__list is-done">
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="schedule-progress__link">
+                                                                                    <span
+                                                                                        class="schedule-progress__check"></span>
+                                                                                    <span
+                                                                                        class="schedule-progress__text">처방
+                                                                                        확정</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="schedule-progress__list is-done">
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="schedule-progress__link">
+                                                                                    <span
+                                                                                        class="schedule-progress__check"></span>
+                                                                                    <span
+                                                                                        class="schedule-progress__text">전성분
+                                                                                        승인</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="schedule-progress__list is-done">
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="schedule-progress__link">
+                                                                                    <span
+                                                                                        class="schedule-progress__check"></span>
+                                                                                    <span
+                                                                                        class="schedule-progress__text">입고
+                                                                                        완료</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="schedule-progress__list is-ing">
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="schedule-progress__link">
+                                                                                    <span
+                                                                                        class="schedule-progress__check"></span>
+                                                                                    <span
+                                                                                        class="schedule-progress__text">개발
+                                                                                        완료</span>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contents-box contents-box__large">
+                                        <div class="contents-box__inner">
+                                            <div class="ui-tab">
+                                                <div class="ui-tab__inner">
+                                                    <div class="ui-tab__header">
+                                                        <ul class="ui-list ui-tab__lists">
+                                                            <li class="ui-tab__list is-active"><a
+                                                                    href="javascript:void(0)"
+                                                                    class="ui-tab__link">Examination</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="ui-tab__body">
+                                                        <div class="myboard-table">
+                                                            <div class="myboard-table__inner">
+                                                                <table class="ui-table text-center">
+                                                                    <colgroup>
+                                                                        <col class="col-code">
+                                                                        <col class="col-name">
+                                                                        <col class="col-no">
+                                                                        <col class="col-exam">
+                                                                        <col class="col-stat">
+                                                                        <col class="col-date">
+                                                                    </colgroup>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>CODE</th>
+                                                                            <th>NAME</th>
+                                                                            <th>LOT NO.</th>
+                                                                            <th>EXAMINATION</th>
+                                                                            <th>STATUS</th>
+                                                                            <th>DATE</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>3101191</td>
+                                                                            <td class="tit">
+                                                                                <div class="tit__inner">
+                                                                                    <a href="javascript:void(0)"
+                                                                                        class="tit-link">프리메라 에센셜 마사지크림
+                                                                                        (22+AD)</a>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>Ver1 Lot#1</td>
+                                                                            <td>방부</td>
+                                                                            <td><span class="status-success">성공</span>
+                                                                            </td>
+                                                                            <td>2022.02.28</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>16000014</td>
+                                                                            <td class="tit">
+                                                                                <div class="tit__inner">
+                                                                                    <a href="javascript:void(0)"
+                                                                                        class="tit-link">(기)(PF)(이층상)
+                                                                                        아이오페 글루타민 비타민(기)(PF)(이층상) 아이오페
+                                                                                        글루타민 비타민</a>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>Ver2 Lot#3</td>
+                                                                            <td>방부</td>
+                                                                            <td><span class="status-success">성공</span>
+                                                                            </td>
+                                                                            <td>2022.02.26</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>16002108</td>
+                                                                            <td class="tit">
+                                                                                <div class="tit__inner">
+                                                                                    <a href="javascript:void(0)"
+                                                                                        class="tit-link">(검출) 이니스프리 그린티
+                                                                                        씨드세럼 AD (23)</a>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>Ver1 Lot#1</td>
+                                                                            <td>방부</td>
+                                                                            <td><span class="status-fail">실패</span></td>
+                                                                            <td>2022.02.24</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3101194</td>
+                                                                            <td class="tit">
+                                                                                <div class="tit__inner">
+                                                                                    <a href="javascript:void(0)"
+                                                                                        class="tit-link">라네즈 레디언C 비타 캡슐
+                                                                                        슬리핑 마스크</a>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>Ver4 Lot#5</td>
+                                                                            <td> 방부</td>
+                                                                            <td><span class="status-fail">실패</span></td>
+                                                                            <td>2022.02.24</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3101195</td>
+                                                                            <td class="tit">
+                                                                                <div class="tit__inner">
+                                                                                    <a href="javascript:void(0)"
+                                                                                        class="tit-link">프리메라 에센셜
+                                                                                        마사지크림</a>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>Ver2 Lot#4</td>
+                                                                            <td>방부</td>
+                                                                            <td><span class="status-success">성공</span>
+                                                                            </td>
+                                                                            <td>2022.02.19</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contents-box contents-box__small">
+                                        <div class="contents-box__inner">
+                                            <div class="ui-tab">
+                                                <div class="ui-tab__inner">
+                                                    <div class="ui-tab__header">
+                                                        <ul class="ui-list ui-tab__lists">
+                                                            <li class="ui-tab__list is-active">
+                                                                <a href="javascript:void(0)"
+                                                                    class="ui-tab__link">Memo</a>
+                                                            </li>
+                                                            <li class="ui-tab__list">
+                                                                <a href="javascript:void(0)"
+                                                                    class="ui-tab__link">Notice</a>
+                                                            </li>
+                                                            <li class="ui-tab__list">
+                                                                <a href="javascript:void(0)"
+                                                                    class="ui-tab__link">결재함</a>
+                                                            </li>
+                                                        </ul>
+                                                        <button type="button" class="tab-header__button"></button>
+                                                    </div>
+                                                    <div class="ui-tab__body">
+                                                        <div class="myboard-memo">
+                                                            <div class="myboard-memo__inner">
+
+                                                                <div class="myboard-memo__item" style=" width:246px;">
+                                                                    <div class="myboard-memo__delete">
+                                                                        <button type="button"
+                                                                            class="myboard-memo__button--delete"></button>
+                                                                    </div>
+                                                                    <div class="myboard-memo__content">
+                                                                        <div class="myboard-memo__tit">이기태님 요청 사항</div>
+                                                                        <div class="myboard-memo__text">
+                                                                            bs_lab님이 내용물 개발을 <br>
+                                                                            의뢰중입니다.<br>
+                                                                            현재 진행중인 내용물들의<br>
+                                                                            시험의뢰 현황이 시간순으로<br>
+                                                                            뜨는 기능
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="myboard-memo__item"
+                                                                    style=" left:255px; width:236px; height:122px;">
+                                                                    <div class="myboard-memo__delete">
+                                                                        <button type="button"
+                                                                            class="myboard-memo__button--delete"></button>
+                                                                    </div>
+                                                                    <div class="myboard-memo__content">
+                                                                        <div class="myboard-memo__tit">CTC를 박주연님으로
+                                                                            지정</div>
+                                                                        <div class="myboard-memo__text">배서윤님에게 실험을 요청
+                                                                            하였습니다.<br><br></div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="myboard-memo__item"
+                                                                    style=" top:132px; left:255px; width:236px;">
+                                                                    <div class="myboard-memo__delete">
+                                                                        <button type="button"
+                                                                            class="myboard-memo__button--delete"></button>
+                                                                    </div>
+                                                                    <div class="myboard-memo__content">
+                                                                        <div class="myboard-memo__tit">3102377 프로세스
+                                                                        </div>
+                                                                        <div class="myboard-memo__text">(기)(PF)(이층상)
+                                                                            아이오페 <br>
+                                                                            글루타민 비타민 C23 제품이<br>
+                                                                            파일럿 단계를 마쳤습니다.<br>
+                                                                            이제 처방확정 단계로 이동합니다. <br>
+                                                                            [확인]</div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <!--//.contents-core -->
+
+                    </div>
+                    <!--//.contents__inner -->
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- modal 모달 -->
+        <!-- 전달사항 :: 클래스 in 있을 때 모달 표출 -->
+        <div class="modal-backdrop fade in"></div>
+        <div id="myModal" class="modal fade in">
+            <div class="modal-dialog">
+                <div class="modal-content modal-content__width--640">
+                    <div class="modal-header">
+                        <div class="modal-title">사용자 검색</div>
+                        <button type="button" class="modal-close"></button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <div class="board-top">
+                            <div class="board-flex">
+                                <div class="board-cell">
+                                    <div class="search-form">
+                                        <div class="search-form__inner">
+                                            <input type="text" class="ui-input ui-input__width--535"
+                                                placeholder="이름 / 사번">
+                                            <button type="button" class="button-search">검색</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="myboard-table">
+                            <div class="myboard-table__inner">
+                                <table class="ui-table ui-table__th--border-radius--0 ui-table__td--40 text-center">
+                                    <colgroup>
+                                        <col style="width:25%">
+                                        <col style="width:25%">
+                                        <col style="width:25%">
+                                        <col style="width:25%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>NO</th>
+                                            <th>사번</th>
+                                            <th>이름</th>
+                                            <th>부서</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>99</td>
+                                            <td>AC929647</td>
+                                            <td>김동민</td>
+                                            <td>아이시프트</td>
+                                        </tr>
+                                        <tr>
+                                            <td>98</td>
+                                            <td>AC929647</td>
+                                            <td>김동민</td>
+                                            <td>아이시프트</td>
+                                        </tr>
+                                        <tr>
+                                            <td>97</td>
+                                            <td>AC929647</td>
+                                            <td>김동민</td>
+                                            <td>아이시프트</td>
+                                        </tr>
+                                        <tr>
+                                            <td>96</td>
+                                            <td>AC929647</td>
+                                            <td>김동민</td>
+                                            <td>아이시프트</td>
+                                        </tr>
+                                        <tr>
+                                            <td>95</td>
+                                            <td>AC929647</td>
+                                            <td>김동민</td>
+                                            <td>아이시프트</td>
+                                        </tr>
+                                        <tr>
+                                            <td>94</td>
+                                            <td>AC929647</td>
+                                            <td>김동민</td>
+                                            <td>아이시프트</td>
+                                        </tr>
+                                        <tr>
+                                            <td>93</td>
+                                            <td>AC929647</td>
+                                            <td>김동민</td>
+                                            <td>아이시프트</td>
+                                        </tr>
+                                        <tr>
+                                            <td>92</td>
+                                            <td>AC929647</td>
+                                            <td>김동민</td>
+                                            <td>아이시프트</td>
+                                        </tr>
+                                        <tr>
+                                            <td>91</td>
+                                            <td>AC929647</td>
+                                            <td>김동민</td>
+                                            <td>아이시프트</td>
+                                        </tr>
+                                        <tr>
+                                            <td>90</td>
+                                            <td>AC929647</td>
+                                            <td>김동민</td>
+                                            <td>아이시프트</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="board-bottom ">
+                            <div class="board-bottom__inner">
+                                <div class="pagination">
+                                    <div class="pagination__inner">
+                                        <a href="javascript:void(0)" class="paging paging-prev"></a>
+                                        <a href="javascript:void(0)" class="paging is-active">1</a>
+                                        <a href="javascript:void(0)" class="paging">2</a>
+                                        <a href="javascript:void(0)" class="paging">3</a>
+                                        <a href="javascript:void(0)" class="paging">4</a>
+                                        <a href="javascript:void(0)" class="paging">5</a>
+                                        <a href="javascript:void(0)" class="paging paging-next"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
+        <!--// modal 모달 -->
+
+
+
+
+
+    </div>
+
+</body>
+
+</html>

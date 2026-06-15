@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>myBEAKER</title>
+
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- favicon -->
+  <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+  <!-- //favicon -->
+
+  <!-- style -->
+  <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+  <!-- //style -->
+
+  <!-- 메뉴 기능 위한 스크립트 -->
+  <script src="../dist/assets/js/jquery.js"></script>
+  <script src="../dist/assets/js/ui-script.js"></script>
+</head>
+
+<!-- 전달사항 :: 모달 표출시 .modal-open 붙여주세요 -->
+
+<body class="modal-open">
+
+  <!-- modal 모달 -->
+  <!-- 전달사항 :: 클래스 in 있을 때 모달 표출 -->
+  <div class="modal-backdrop fade in"></div>
+  <div id="myModal" class="modal fade in">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title">전성분 미리보기</div>
+          <button type="button" class="modal-close"></button>
+        </div>
+
+        <div class="modal-body">
+
+          <div class="search-depart-table">
+            <div class="search-depart-table__inner">
+              <table class="ui-table__td--40">
+                <colgroup>
+                  <col style="width:19rem">
+                  <col style="width:auto">
+                  <col style="width:19rem">
+                  <col style="width:auto">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>ZPLM34E / ZPLM34</th>
+                    <td>
+                      <div class="ui-radio__list">
+                        <div class="ui-radio__inner">
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio" checked="">
+                            <label class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">ZPLM34E</span>
+                            </label>
+                          </div>
+                          <div class="ui-radio-block">
+                            <input type="radio" class="ui-radio">
+                            <label class="ui-label">
+                              <span class="ui-radio-object"></span>
+                              <span class="ui-label__text">ZPLM34</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <th>LEAVE-ON / WASH-OFF</th>
+                    <td>
+                      <div class="form-flex">
+                        <div class="form-flex__cell">
+                          <div class="ui-radio__list">
+                            <div class="ui-radio__inner">
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" checked="">
+                                <label class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">Leave-on</span>
+                                </label>
+                              </div>
+                              <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio">
+                                <label class="ui-label">
+                                  <span class="ui-radio-object"></span>
+                                  <span class="ui-label__text">Wash-off</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-flex-cell">
+                          <button type="button" class="ui-button ui-button__width--60 ui-button__height--28 ui-button__radius--2 ui-button__bg--blue">변경</button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+
+          <div class="normal-tab mt-7">
+            <div class="normal-tab__inner">
+              <div class="normal-tab__header">
+                <ul class="ui-list normal-tab__lists">
+                  <li class="normal-tab__list is-active"><a href="javascript:void(0)" class="normal-tab__link">알러젠 표기</a></li>
+                  <li class="normal-tab__list "><a href="javascript:void(0)" class="normal-tab__link">알러젠 미표기</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="search-detail-table mt-15">
+            <div class="search-detail-table__inner">
+              <table class="ui-table__modal">
+                <colgroup>
+                  <col style="width:7%;">
+                  <col style="width:10%;">
+                  <col style="width:10%;">
+                  <col style="width:10%;">
+                  <col style="width:10%;">
+                  <col style="width:8%;">
+                  <col style="width:auto;">
+                  <col style="width:8rem">
+                  <col style="width:9rem;">
+
+
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>성분코드</th>
+                    <th>표시명(한글)</th>
+                    <th>표시명(영문)</th>
+                    <th>표시명(중문)</th>
+                    <th>함량</th>
+                    <th>원료코드</th>
+                    <th>기능</th>
+                    <th>EWG</th>
+                    <th>배합규제</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>10672</td>
+                    <td>알란토인</td>
+                    <td>ALLANTOIN</td>
+                    <td>尿囊素</td>
+                    <td>40.0000000</td>
+                    <td>600003</td>
+                    <td class="text-left">Skin-Conditioning - Miscellaneous</td>
+                    <td class="td-grade__1">1등급</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>10672</td>
+                    <td>알란토인</td>
+                    <td>ALLANTOIN</td>
+                    <td>尿囊素</td>
+                    <td>40.0000000</td>
+                    <td>600003</td>
+                    <td class="text-left">Skin-Conditioning - Miscellaneous</td>
+                    <td class="td-grade__1">1등급</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>10672</td>
+                    <td>알란토인</td>
+                    <td>ALLANTOIN</td>
+                    <td>尿囊素</td>
+                    <td>40.0000000</td>
+                    <td>600003</td>
+                    <td class="text-left">Skin-Conditioning - Miscellaneous</td>
+                    <td class="td-grade__4">4등급</td>
+                    <td>
+                      <button type="button" class="ui-button ui-button__width--70 ui-button__height--28 ui-button__radius--2 ui-button__border--blue">상세조회</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="search-detail-total search-detail-total__center">
+            <div class="search-detail-total__inner">
+              <div class="search-detail-total__text">함량합계</div>
+              <div class="search-detail-total__num">100.00000</div>
+            </div>
+          </div>
+
+
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+  <!--// modal 모달 -->
+
+</body>
+
+</html>

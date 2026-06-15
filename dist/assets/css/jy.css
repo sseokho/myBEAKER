@@ -1,0 +1,7 @@
+@charset "UTF-8";
+/* 지연 start */
+.ui-layout .left-menu__item--repeat {
+  font-size: 12px;
+}
+
+/* 지연 end */
